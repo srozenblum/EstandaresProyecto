@@ -3,7 +3,10 @@
 %% Preamble
 \usepackage{umatfgspanish}
 \usepackage{blindtext}
-
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
 \graphicspath{{images/}{../images/}}
 
 \usepackage{subfiles} % Best loaded last in the preamble
@@ -33,6 +36,121 @@
 %% Sections
 \section{Introducción}
 \subfile{sections/introduccion}
+
+\section{Diseño de una Base de Datos NoSQL para Genómica del Melanoma Acral}
+
+En el campo de la bioinformática, la gestión eficiente y el análisis de grandes volúmenes de datos genómicos y clínicos son fundamentales para avanzar en la comprensión y el tratamiento de enfermedades como el \textb{cáncer}. Este proyecto se centra en el diseño y la \textb{implementación de una base de datos NoSQL}, utilizando \textb{MongoDB}, para albergar y organizar los datos del estudio \textit{Acral Melanoma (TGEN, Genome Res 2017)}. Este conjunto de datos, disponible a través del \textb{cBioPortal for Cancer Genomics}, ofrece una rica fuente de información genómica y clínica de \textb{pacientes con melanoma acral}, un subtipo raro y agresivo de melanoma (cáncer de piel).
+
+Para estructurar la información de manera coherente y facilitar consultas complejas, se ha optado por un diseño que consta de \textb{tres colecciones interconectadas}: \texttt{patients}, \texttt{samples} y \texttt{variants}. Esta estructura nos permitirá no solo capturar la información de cada paciente de forma individual, sino también trazar las relaciones entre los pacientes, las muestras biológicas obtenidas de ellos y las variantes genómicas identificadas en dichas muestras.
+
+A continuación, se detalla la estructura propuesta para cada una de las colecciones:
+
+\subsection{Colección: \texttt{patients}}
+
+Esta colección almacena la información demográfica y clínica de cada paciente incluido en el estudio.
+
+\begin{itemize}
+    \item \textbf{Nivel 1:} Información básica del paciente.
+    \begin{itemize}
+        \item \texttt{patient\_id}: Identificador único del paciente.
+        \item \texttt{sex}: Sexo del paciente.
+        \item \texttt{race\_category}: Categoría racial del paciente.
+        \item \texttt{age\_at\_diagnosis}: Edad del paciente en el momento del diagnóstico.
+    \end{itemize}
+    \item \textbf{Nivel 2:} Historial clínico y de tratamiento.
+    \begin{itemize}
+        \item \texttt{clinical\_history}: Objeto con información sobre el historial médico del paciente.
+        \begin{itemize}
+            \item \texttt{initial\_diagnosis\_date}: Fecha del diagnóstico inicial.
+            \item \texttt{primary\_tumor\_site}: Localización del tumor primario.
+        \end{itemize}
+        \item \texttt{treatments}: Array de objetos que detalla los tratamientos recibidos.
+        \begin{itemize}
+            \item \texttt{treatment\_type}: Tipo de tratamiento (e.g., "Ipilimumab", "Interferon").
+            \item \texttt{start\_date}: Fecha de inicio del tratamiento.
+            \item \texttt{end\_date}: Fecha de finalización del tratamiento.
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{Nivel 3:} Seguimiento y estado de la enfermedad.
+    \begin{itemize}
+        \item \texttt{follow\_up}: Objeto con información de seguimiento.
+        \begin{itemize}
+            \item \texttt{disease\_free\_months}: Meses libre de enfermedad.
+            \item \texttt{disease\_free\_status}: Estado de la enfermedad (e.g., "0:DiseaseFree", "1:Recurred/Progressed").
+        \end{itemize}
+    \end{itemize}
+\end{itemize}
+
+\subsection{Colección: \texttt{samples}}
+
+Contendrá información detallada sobre cada muestra biológica extraída de los pacientes.
+
+\begin{itemize}
+    \item \textbf{Nivel 1:} Identificación y tipo de muestra.
+    \begin{itemize}
+        \item \texttt{sample\_id}: Identificador único de la muestra.
+        \item \texttt{patient\_id}: Identificador del paciente al que pertenece la muestra (referencia a la colección \texttt{patients}).
+        \item \texttt{sample\_type}: Tipo de muestra (e.g., "Primary", "Metastasis").
+    \end{itemize}
+    \item \textbf{Nivel 2:} Detalles de la recolección y procesamiento.
+    \begin{itemize}
+        \item \texttt{collection\_info}: Objeto con detalles de la recolección.
+        \begin{itemize}
+            \item \texttt{collection\_date}: Fecha de recolección de la muestra.
+            \item \texttt{collection\_method}: Método de recolección.
+        \end{itemize}
+        \item \texttt{processing\_info}: Objeto con información del procesamiento.
+        \begin{itemize}
+            \item \texttt{processing\_date}: Fecha de procesamiento.
+            \item \texttt{sequencing\_type}: Tipo de secuenciación realizada (e.g., "Whole Exome Sequencing").
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{Nivel 3:} Datos de análisis molecular.
+    \begin{itemize}
+        \item \texttt{molecular\_data}: Objeto que alberga datos moleculares.
+        \begin{itemize}
+            \item \texttt{mutation\_count}: Número de mutaciones identificadas.
+            \item \texttt{copy\_number\_alterations}: Array de objetos con información sobre alteraciones en el número de copias.
+        \end{itemize}
+    \end{itemize}
+\end{itemize}
+
+\subsection{Colección: \texttt{variants}}
+
+Esta colección albergará la información específica de cada variante genómica identificada en las muestras.
+
+\begin{itemize}
+    \item \textbf{Nivel 1:} Identificación de la variante.
+    \begin{itemize}
+        \item \texttt{variant\_id}: Identificador único de la variante.
+        \item \texttt{sample\_id}: Identificador de la muestra en la que se encontró la variante (referencia a la colección \texttt{samples}).
+        \item \texttt{gene\_symbol}: Símbolo del gen afectado.
+    \end{itemize}
+    \item \textbf{Nivel 2:} Características de la variante.
+    \begin{itemize}
+        \item \texttt{variant\_details}: Objeto con las características de la variante.
+        \begin{itemize}
+            \item \texttt{chromosome}: Cromosoma donde se localiza la variante.
+            \item \texttt{start\_position}: Posición de inicio de la variante.
+            \item \texttt{end\_position}: Posición de finalización de la variante.
+            \item \texttt{reference\_allele}: Alelo de referencia.
+            \item \texttt{alternate\_allele}: Alelo alternativo.
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{Nivel 3:} Anotación funcional y predicciones.
+    \begin{itemize}
+        \item \texttt{functional\_annotation}: Objeto con la anotación funcional.
+        \begin{itemize}
+            \item \texttt{variant\_classification}: Clasificación de la variante (e.g., "Missense\_Mutation", "Nonsense\_Mutation").
+            \item \texttt{protein\_change}: Cambio en la proteína resultante.
+            \item \texttt{sift\_prediction}: Predicción del impacto de la variante por SIFT.
+            \item \texttt{polyphen\_prediction}: Predicción del impacto de la variante por PolyPhen.
+        \end{itemize}
+    \end{itemize}
+\end{itemize}
+
+Este diseño proporciona una estructura robusta y flexible para el almacenamiento y consulta de los datos del estudio de melanoma acral, sentando las bases para futuros análisis que puedan desvelar nuevos conocimientos sobre esta enfermedad.
+
 
 \section{Conclusions and Futures Lines of Research}
 \subfile{sections/conclusion}
