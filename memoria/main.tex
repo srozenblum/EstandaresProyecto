@@ -1,59 +1,29 @@
-\documentclass[12pt, a4paper, twoside]{article}
+\documentclass[letterpaper, 11pt]{report}
+\usepackage{reportSty}
+ % define the title
 
-%% Preamble
-\usepackage{umatfgspanish}
-\usepackage{blindtext}
-\usepackage[utf8]{inputenc}
-\usepackage[spanish]{babel}
-\usepackage{geometry}
-\geometry{a4paper, margin=1in}
-\graphicspath{{images/}{../images/}}
-
-\usepackage{subfiles} % Best loaded last in the preamble
 
 \begin{document}
 
-%% Cover
-\includepdf[noautoscale=true, width=\paperwidth]{cover.pdf}
+\pagenumbering{roman}
 
-%% Title
-\clearpage
-\setcounter{page}{1}
-
-\includepdf[noautoscale=true, width=\paperwidth]{title.pdf}
-
-\newpage
-
-%% Abstract
-\subfile{sections/abstract}
-
-\newpage
-
-\subfile{sections/resumen}
+\input{front/cover.tex}
+\input{front/abstract.tex}
 
 \tableofcontents
-
-%% Sections
-\section{Introducción}
-\subfile{sections/introduccion}
-
-\section{Conclusions and Futures Lines of Research}
-\subfile{sections/conclusion}
-
-\section{Conclusiones y Líneas Futuras}
-\subfile{sections/conclusiones}
-
-%% Bibliography
-\printbibliography
+\addcontentsline{toc}{chapter}{Contenidos}
 
 \newpage
+\onehalfspacing
+\setcounter{page}{1}
+\pagenumbering{arabic}
 
-%% Apendices
-\begin{umaappendices}
-  \section{Manual de \\ Instalación}
+\input{chapters/introduction.tex}
+\input{chapters/lit_review.tex}
+\input{chapters/methodology.tex}
+\input{chapters/results.tex}
 
-\end{umaappendices}
+\printbibliography[heading=bibintoc]
 
-%% Back Cover
-\includepdf[noautoscale=true, width=\paperwidth]{backcover.pdf}
+
 \end{document}
