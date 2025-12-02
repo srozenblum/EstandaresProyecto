@@ -1,0 +1,196 @@
+[
+    {
+        "protein": {
+            "accession": "P15056",
+            "name": "BRAF_HUMAN",
+            "gene": "BRAF"
+        },
+        "organism": {
+            "name": "Homo sapiens",
+            "taxonomy_id": 9606
+        },
+        "function": {
+            "summary": null,
+            "keywords": [
+                "KW-0002",
+                "KW-0007",
+                "KW-0021",
+                "KW-0067",
+                "KW-0122",
+                "KW-1003",
+                "KW-0160",
+                "KW-0963",
+                "KW-0209",
+                "KW-0903",
+                "KW-0225",
+                "KW-0038",
+                "KW-0991",
+                "KW-1017",
+                "KW-0418",
+                "KW-0472",
+                "KW-0479",
+                "KW-0488",
+                "KW-0547",
+                "KW-0539",
+                "KW-0597",
+                "KW-1267",
+                "KW-0656",
+                "KW-1185",
+                "KW-0723",
+                "KW-0808",
+                "KW-0832",
+                "KW-0862",
+                "KW-0863"
+            ]
+        }
+    },
+    {
+        "protein": {
+            "accession": "P04637",
+            "name": "P53_HUMAN",
+            "gene": "TP53"
+        },
+        "organism": {
+            "name": "Homo sapiens",
+            "taxonomy_id": 9606
+        },
+        "function": {
+            "summary": null,
+            "keywords": [
+                "KW-0002",
+                "KW-0007",
+                "KW-0010",
+                "KW-0877",
+                "KW-0025",
+                "KW-0053",
+                "KW-0090",
+                "KW-0131",
+                "KW-0963",
+                "KW-0206",
+                "KW-0903",
+                "KW-0225",
+                "KW-0238",
+                "KW-0256",
+                "KW-0325",
+                "KW-0945",
+                "KW-1017",
+                "KW-0435",
+                "KW-0479",
+                "KW-0488",
+                "KW-0496",
+                "KW-1210",
+                "KW-0539",
+                "KW-0597",
+                "KW-1267",
+                "KW-1185",
+                "KW-0678",
+                "KW-0804",
+                "KW-0805",
+                "KW-0043",
+                "KW-0832",
+                "KW-0862"
+            ]
+        }
+    },
+    {
+        "protein": {
+            "accession": "P01111",
+            "name": "RASN_HUMAN",
+            "gene": "NRAS"
+        },
+        "organism": {
+            "name": "Homo sapiens",
+            "taxonomy_id": 9606
+        },
+        "function": {
+            "summary": null,
+            "keywords": [
+                "KW-0002",
+                "KW-0007",
+                "KW-1003",
+                "KW-0225",
+                "KW-0325",
+                "KW-0333",
+                "KW-0342",
+                "KW-0378",
+                "KW-1017",
+                "KW-0449",
+                "KW-0472",
+                "KW-0488",
+                "KW-0547",
+                "KW-0564",
+                "KW-0597",
+                "KW-0636",
+                "KW-1267",
+                "KW-0656",
+                "KW-1185",
+                "KW-0832"
+            ]
+        }
+    },
+    {
+        "protein": {
+            "accession": "Q16539",
+            "name": "MK14_HUMAN",
+            "gene": "MAPK14"
+        },
+        "organism": {
+            "name": "Homo sapiens",
+            "taxonomy_id": 9606
+        },
+        "function": {
+            "summary": null,
+            "keywords": [
+                "KW-0002",
+                "KW-0007",
+                "KW-0025",
+                "KW-0053",
+                "KW-0067",
+                "KW-0963",
+                "KW-0903",
+                "KW-0418",
+                "KW-0547",
+                "KW-0539",
+                "KW-0597",
+                "KW-1267",
+                "KW-1185",
+                "KW-0723",
+                "KW-0346",
+                "KW-0804",
+                "KW-0805",
+                "KW-0808",
+                "KW-0832"
+            ]
+        }
+    },
+    {
+        "protein": {
+            "accession": "P25963",
+            "name": "IKBA_HUMAN",
+            "gene": "NFKBIA"
+        },
+        "organism": {
+            "name": "Homo sapiens",
+            "taxonomy_id": 9606
+        },
+        "function": {
+            "summary": null,
+            "keywords": [
+                "KW-0002",
+                "KW-0040",
+                "KW-0963",
+                "KW-0225",
+                "KW-0038",
+                "KW-0945",
+                "KW-0379",
+                "KW-1017",
+                "KW-0539",
+                "KW-0597",
+                "KW-1267",
+                "KW-1185",
+                "KW-0677",
+                "KW-0832"
+            ]
+        }
+    }
+]

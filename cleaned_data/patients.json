@@ -1,0 +1,1396 @@
+[
+    {
+        "patient_id": "P-1",
+        "survival": {
+            "overall": {
+                "months": 28.0,
+                "status": {
+                    "code": 1,
+                    "label": "DECEASED"
+                }
+            },
+            "disease_free": {
+                "months": 21.0,
+                "status": {
+                    "code": 1,
+                    "label": "Recurred/Progressed"
+                }
+            }
+        },
+        "clinical": {
+            "demographics": {
+                "age_at_diagnosis": 77,
+                "sex": "Female",
+                "race": "Caucasian"
+            },
+            "tumor": {
+                "ulceration": "No",
+                "lymph_node_examined": 0.0
+            }
+        },
+        "recurrence": {
+            "metastasis": "No",
+            "details": {
+                "time_to_recurrence_months": 21.0,
+                "site_first_recurrence": "Inguinal LN"
+            }
+        },
+        "treatment": {
+            "received": "No",
+            "details": []
+        }
+    },
+    {
+        "patient_id": "P-2",
+        "survival": {
+            "overall": {
+                "months": 60.3,
+                "status": {
+                    "code": 0,
+                    "label": "LIVING"
+                }
+            },
+            "disease_free": {
+                "months": 29.1,
+                "status": {
+                    "code": 1,
+                    "label": "Recurred/Progressed"
+                }
+            }
+        },
+        "clinical": {
+            "demographics": {
+                "age_at_diagnosis": 67,
+                "sex": "Female",
+                "race": "Caucasian"
+            },
+            "tumor": {
+                "ulceration": "No",
+                "lymph_node_examined": 2.0
+            }
+        },
+        "recurrence": {
+            "metastasis": "Yes",
+            "details": {
+                "time_to_recurrence_months": 29.1,
+                "site_first_recurrence": "Inguinal LN"
+            }
+        },
+        "treatment": {
+            "received": "No",
+            "details": []
+        }
+    },
+    {
+        "patient_id": "P-3",
+        "survival": {
+            "overall": {
+                "months": 41.0,
+                "status": {
+                    "code": 1,
+                    "label": "DECEASED"
+                }
+            },
+            "disease_free": {
+                "months": 13.3,
+                "status": {
+                    "code": 1,
+                    "label": "Recurred/Progressed"
+                }
+            }
+        },
+        "clinical": {
+            "demographics": {
+                "age_at_diagnosis": 77,
+                "sex": "Female",
+                "race": "Caucasian"
+            },
+            "tumor": {
+                "ulceration": "Yes",
+                "lymph_node_examined": 1.0
+            }
+        },
+        "recurrence": {
+            "metastasis": "Yes",
+            "details": {
+                "time_to_recurrence_months": 13.3,
+                "site_first_recurrence": "Leg"
+            }
+        },
+        "treatment": {
+            "received": "No",
+            "details": []
+        }
+    },
+    {
+        "patient_id": "P-4",
+        "survival": {
+            "overall": {
+                "months": 34.1,
+                "status": {
+                    "code": 0,
+                    "label": "LIVING"
+                }
+            },
+            "disease_free": {
+                "months": 5.5,
+                "status": {
+                    "code": 1,
+                    "label": "Recurred/Progressed"
+                }
+            }
+        },
+        "clinical": {
+            "demographics": {
+                "age_at_diagnosis": 39,
+                "sex": "Male",
+                "race": "Caucasian"
+            },
+            "tumor": {
+                "ulceration": "No",
+                "lymph_node_examined": 9.0
+            }
+        },
+        "recurrence": {
+            "metastasis": "Yes",
+            "details": {
+                "time_to_recurrence_months": 5.5,
+                "site_first_recurrence": "Lung"
+            }
+        },
+        "treatment": {
+            "received": "IL-2, ipi",
+            "details": []
+        }
+    },
+    {
+        "patient_id": "P-5",
+        "survival": {
+            "overall": {
+                "months": 101.4,
+                "status": {
+                    "code": 0,
+                    "label": "LIVING"
+                }
+            },
+            "disease_free": {
+                "months": 32.6,
+                "status": {
+                    "code": 1,
+                    "label": "Recurred/Progressed"
+                }
+            }
+        },
+        "clinical": {
+            "demographics": {
+                "age_at_diagnosis": 47,
+                "sex": "Male",
+                "race": "Caucasian"
+            },
+            "tumor": {
+                "ulceration": "Yes",
+                "lymph_node_examined": 3.0
+            }
+        },
+        "recurrence": {
+            "metastasis": "Yes",
+            "details": {
+                "time_to_recurrence_months": 32.6,
+                "site_first_recurrence": "Arm in-transit"
+            }
+        },
+        "treatment": {
+            "received": "Biochemo, limb infusion, ipi, IL-2, BCG, pembrolizumab, MEK/AKTi",
+            "details": []
+        }
+    },
+    {
+        "patient_id": "P-6",
+        "survival": {
+            "overall": {
+                "months": 45.6,
+                "status": {
+                    "code": 0,
+                    "label": "LIVING"
+                }
+            },
+            "disease_free": {
+                "months": 10.7,
+                "status": {
+                    "code": 0,
+                    "label": "DiseaseFree"
+                }
+            }
+        },
+        "clinical": {
+            "demographics": {
+                "age_at_diagnosis": 56,
+                "sex": "Male",
+                "race": "Caucasian"
+            },
+            "tumor": {
+                "ulceration": "No",
+                "lymph_node_examined": 2.0
+            }
+        },
+        "recurrence": {
+            "metastasis": "No",
+            "details": {
+                "time_to_recurrence_months": 10.7,
+                "site_first_recurrence": "Inguinal LN"
+            }
+        },
+        "treatment": {
+            "received": "No",
+            "details": []
+        }
+    },
+    {
+        "patient_id": "P-7",
+        "survival": {
+            "overall": {
+                "months": 85.9,
+                "status": {
+                    "code": 1,
+                    "label": "DECEASED"
+                }
+            },
+            "disease_free": {
+                "months": 51.2,
+                "status": {
+                    "code": 1,
+                    "label": "Recurred/Progressed"
+                }
+            }
+        },
+        "clinical": {
+            "demographics": {
+                "age_at_diagnosis": 46,
+                "sex": "Male",
+                "race": "Caucasian"
+            },
+            "tumor": {
+                "ulceration": "Yes",
+                "lymph_node_examined": 1.0
+            }
+        },
+        "recurrence": {
+            "metastasis": "Yes",
+            "details": {
+                "time_to_recurrence_months": 51.2,
+                "site_first_recurrence": "Lung"
+            }
+        },
+        "treatment": {
+            "received": "IFN, Ipi, TM, carbo/taxol, IL-2, pembrolizumab",
+            "details": []
+        }
+    },
+    {
+        "patient_id": "P-8",
+        "survival": {
+            "overall": {
+                "months": 13.4,
+                "status": {
+                    "code": 1,
+                    "label": "DECEASED"
+                }
+            },
+            "disease_free": {
+                "months": 10.8,
+                "status": {
+                    "code": 1,
+                    "label": "Recurred/Progressed"
+                }
+            }
+        },
+        "clinical": {
+            "demographics": {
+                "age_at_diagnosis": 59,
+                "sex": "Female",
+                "race": "Caucasian"
+            },
+            "tumor": {
+                "ulceration": "Yes",
+                "lymph_node_examined": 2.0
+            }
+        },
+        "recurrence": {
+            "metastasis": "Yes",
+            "details": {
+                "time_to_recurrence_months": 10.8,
+                "site_first_recurrence": "Brain"
+            }
+        },
+        "treatment": {
+            "received": "No",
+            "details": []
+        }
+    },
+    {
+        "patient_id": "P-9",
+        "survival": {
+            "overall": {
+                "months": 15.4,
+                "status": {
+                    "code": 1,
+                    "label": "DECEASED"
+                }
+            },
+            "disease_free": {
+                "months": 9.8,
+                "status": {
+                    "code": 1,
+                    "label": "Recurred/Progressed"
+                }
+            }
+        },
+        "clinical": {
+            "demographics": {
+                "age_at_diagnosis": 86,
+                "sex": "Female",
+                "race": "Caucasian"
+            },
+            "tumor": {
+                "ulceration": "Yes",
+                "lymph_node_examined": null
+            }
+        },
+        "recurrence": {
+            "metastasis": "No",
+            "details": {
+                "time_to_recurrence_months": 9.8,
+                "site_first_recurrence": "Axillary LN"
+            }
+        },
+        "treatment": {
+            "received": "No",
+            "details": []
+        }
+    },
+    {
+        "patient_id": "P-10",
+        "survival": {
+            "overall": {
+                "months": 19.2,
+                "status": {
+                    "code": 1,
+                    "label": "DECEASED"
+                }
+            },
+            "disease_free": {
+                "months": 9.6,
+                "status": {
+                    "code": 1,
+                    "label": "Recurred/Progressed"
+                }
+            }
+        },
+        "clinical": {
+            "demographics": {
+                "age_at_diagnosis": 78,
+                "sex": "Male",
+                "race": "Caucasian"
+            },
+            "tumor": {
+                "ulceration": "Yes",
+                "lymph_node_examined": 0.0
+            }
+        },
+        "recurrence": {
+            "metastasis": "Yes",
+            "details": {
+                "time_to_recurrence_months": 9.6,
+                "site_first_recurrence": "Inguinal LN"
+            }
+        },
+        "treatment": {
+            "received": "No",
+            "details": []
+        }
+    },
+    {
+        "patient_id": "P-11",
+        "survival": {
+            "overall": {
+                "months": 27.7,
+                "status": {
+                    "code": 0,
+                    "label": "LIVING"
+                }
+            },
+            "disease_free": {
+                "months": 27.3,
+                "status": {
+                    "code": 0,
+                    "label": "DiseaseFree"
+                }
+            }
+        },
+        "clinical": {
+            "demographics": {
+                "age_at_diagnosis": 71,
+                "sex": "Male",
+                "race": "Caucasian"
+            },
+            "tumor": {
+                "ulceration": "Yes",
+                "lymph_node_examined": 5.0
+            }
+        },
+        "recurrence": {
+            "metastasis": "No",
+            "details": {
+                "time_to_recurrence_months": null,
+                "site_first_recurrence": null
+            }
+        },
+        "treatment": {
+            "received": "No",
+            "details": []
+        }
+    },
+    {
+        "patient_id": "P-12",
+        "survival": {
+            "overall": {
+                "months": 18.0,
+                "status": {
+                    "code": 1,
+                    "label": "DECEASED"
+                }
+            },
+            "disease_free": {
+                "months": 13.6,
+                "status": {
+                    "code": 1,
+                    "label": "Recurred/Progressed"
+                }
+            }
+        },
+        "clinical": {
+            "demographics": {
+                "age_at_diagnosis": 42,
+                "sex": "Male",
+                "race": "Caucasian"
+            },
+            "tumor": {
+                "ulceration": "Yes",
+                "lymph_node_examined": 1.0
+            }
+        },
+        "recurrence": {
+            "metastasis": "Yes",
+            "details": {
+                "time_to_recurrence_months": 13.6,
+                "site_first_recurrence": "Inguinal LN"
+            }
+        },
+        "treatment": {
+            "received": "No",
+            "details": []
+        }
+    },
+    {
+        "patient_id": "P-13",
+        "survival": {
+            "overall": {
+                "months": 18.4,
+                "status": {
+                    "code": 0,
+                    "label": "LIVING"
+                }
+            },
+            "disease_free": {
+                "months": 18.4,
+                "status": {
+                    "code": 0,
+                    "label": "DiseaseFree"
+                }
+            }
+        },
+        "clinical": {
+            "demographics": {
+                "age_at_diagnosis": 59,
+                "sex": "Male",
+                "race": "Caucasian"
+            },
+            "tumor": {
+                "ulceration": "Yes",
+                "lymph_node_examined": 1.0
+            }
+        },
+        "recurrence": {
+            "metastasis": "No",
+            "details": {
+                "time_to_recurrence_months": null,
+                "site_first_recurrence": null
+            }
+        },
+        "treatment": {
+            "received": "No",
+            "details": []
+        }
+    },
+    {
+        "patient_id": "P-14",
+        "survival": {
+            "overall": {
+                "months": 30.6,
+                "status": {
+                    "code": 1,
+                    "label": "DECEASED"
+                }
+            },
+            "disease_free": {
+                "months": 19.1,
+                "status": {
+                    "code": 1,
+                    "label": "Recurred/Progressed"
+                }
+            }
+        },
+        "clinical": {
+            "demographics": {
+                "age_at_diagnosis": 60,
+                "sex": "Female",
+                "race": "African American"
+            },
+            "tumor": {
+                "ulceration": "Yes",
+                "lymph_node_examined": 3.0
+            }
+        },
+        "recurrence": {
+            "metastasis": "Yes",
+            "details": {
+                "time_to_recurrence_months": 19.1,
+                "site_first_recurrence": "Leg in-transit"
+            }
+        },
+        "treatment": {
+            "received": "No",
+            "details": []
+        }
+    },
+    {
+        "patient_id": "P-15",
+        "survival": {
+            "overall": {
+                "months": 51.9,
+                "status": {
+                    "code": 1,
+                    "label": "DECEASED"
+                }
+            },
+            "disease_free": {
+                "months": 20.0,
+                "status": {
+                    "code": 1,
+                    "label": "Recurred/Progressed"
+                }
+            }
+        },
+        "clinical": {
+            "demographics": {
+                "age_at_diagnosis": 50,
+                "sex": "Male",
+                "race": "Caucasian"
+            },
+            "tumor": {
+                "ulceration": "No",
+                "lymph_node_examined": 1.0
+            }
+        },
+        "recurrence": {
+            "metastasis": "Yes",
+            "details": {
+                "time_to_recurrence_months": 20.0,
+                "site_first_recurrence": "Leg in-transit"
+            }
+        },
+        "treatment": {
+            "received": "No",
+            "details": []
+        }
+    },
+    {
+        "patient_id": "P-16",
+        "survival": {
+            "overall": {
+                "months": 125.7,
+                "status": {
+                    "code": 0,
+                    "label": "LIVING"
+                }
+            },
+            "disease_free": {
+                "months": 16.6,
+                "status": {
+                    "code": 0,
+                    "label": "DiseaseFree"
+                }
+            }
+        },
+        "clinical": {
+            "demographics": {
+                "age_at_diagnosis": 29,
+                "sex": "Male",
+                "race": "Caucasian"
+            },
+            "tumor": {
+                "ulceration": "Yes",
+                "lymph_node_examined": 0.0
+            }
+        },
+        "recurrence": {
+            "metastasis": "No",
+            "details": {
+                "time_to_recurrence_months": 16.6,
+                "site_first_recurrence": "Oburator LN"
+            }
+        },
+        "treatment": {
+            "received": "GM-CSF vs. placebo",
+            "details": []
+        }
+    },
+    {
+        "patient_id": "P-17",
+        "survival": {
+            "overall": {
+                "months": 162.6,
+                "status": {
+                    "code": 0,
+                    "label": "LIVING"
+                }
+            },
+            "disease_free": {
+                "months": 120.3,
+                "status": {
+                    "code": 1,
+                    "label": "Recurred/Progressed"
+                }
+            }
+        },
+        "clinical": {
+            "demographics": {
+                "age_at_diagnosis": 53,
+                "sex": "Female",
+                "race": "African American"
+            },
+            "tumor": {
+                "ulceration": "No",
+                "lymph_node_examined": 0.0
+            }
+        },
+        "recurrence": {
+            "metastasis": "Yes",
+            "details": {
+                "time_to_recurrence_months": 120.3,
+                "site_first_recurrence": "in transit"
+            }
+        },
+        "treatment": {
+            "received": "limb infusion, ipi, pd1, cvt",
+            "details": []
+        }
+    },
+    {
+        "patient_id": "P-18",
+        "survival": {
+            "overall": {
+                "months": 101.7,
+                "status": {
+                    "code": 0,
+                    "label": "LIVING"
+                }
+            },
+            "disease_free": {
+                "months": 107.1,
+                "status": {
+                    "code": 0,
+                    "label": "DiseaseFree"
+                }
+            }
+        },
+        "clinical": {
+            "demographics": {
+                "age_at_diagnosis": 37,
+                "sex": "Male",
+                "race": "Caucasian"
+            },
+            "tumor": {
+                "ulceration": "Yes",
+                "lymph_node_examined": 0.0
+            }
+        },
+        "recurrence": {
+            "metastasis": "No",
+            "details": {
+                "time_to_recurrence_months": null,
+                "site_first_recurrence": null
+            }
+        },
+        "treatment": {
+            "received": null,
+            "details": []
+        }
+    },
+    {
+        "patient_id": "P-19",
+        "survival": {
+            "overall": {
+                "months": 96.5,
+                "status": {
+                    "code": 1,
+                    "label": "DECEASED"
+                }
+            },
+            "disease_free": {
+                "months": 28.8,
+                "status": {
+                    "code": 1,
+                    "label": "Recurred/Progressed"
+                }
+            }
+        },
+        "clinical": {
+            "demographics": {
+                "age_at_diagnosis": 47,
+                "sex": "Male",
+                "race": "African American"
+            },
+            "tumor": {
+                "ulceration": "Yes",
+                "lymph_node_examined": 2.0
+            }
+        },
+        "recurrence": {
+            "metastasis": "Yes",
+            "details": {
+                "time_to_recurrence_months": 28.8,
+                "site_first_recurrence": "in transit"
+            }
+        },
+        "treatment": {
+            "received": "tem,ipi, carbo taxol, CVT",
+            "details": []
+        }
+    },
+    {
+        "patient_id": "P-20",
+        "survival": {
+            "overall": {
+                "months": 97.5,
+                "status": {
+                    "code": 1,
+                    "label": "DECEASED"
+                }
+            },
+            "disease_free": {
+                "months": 38.2,
+                "status": {
+                    "code": 1,
+                    "label": "Recurred/Progressed"
+                }
+            }
+        },
+        "clinical": {
+            "demographics": {
+                "age_at_diagnosis": 54,
+                "sex": "Female",
+                "race": "African American(Haitan)"
+            },
+            "tumor": {
+                "ulceration": "Yes",
+                "lymph_node_examined": 1.0
+            }
+        },
+        "recurrence": {
+            "metastasis": "Yes",
+            "details": {
+                "time_to_recurrence_months": 38.2,
+                "site_first_recurrence": "in transit"
+            }
+        },
+        "treatment": {
+            "received": "temodar, limb infusion",
+            "details": []
+        }
+    },
+    {
+        "patient_id": "P-21",
+        "survival": {
+            "overall": {
+                "months": 24.0,
+                "status": {
+                    "code": 1,
+                    "label": "DECEASED"
+                }
+            },
+            "disease_free": {
+                "months": 7.6,
+                "status": {
+                    "code": 1,
+                    "label": "Recurred/Progressed"
+                }
+            }
+        },
+        "clinical": {
+            "demographics": {
+                "age_at_diagnosis": 56,
+                "sex": "Male",
+                "race": "Caucasian"
+            },
+            "tumor": {
+                "ulceration": "No",
+                "lymph_node_examined": 1.0
+            }
+        },
+        "recurrence": {
+            "metastasis": "Yes",
+            "details": {
+                "time_to_recurrence_months": 7.6,
+                "site_first_recurrence": "in transit spine"
+            }
+        },
+        "treatment": {
+            "received": "ipi, radiation",
+            "details": []
+        }
+    },
+    {
+        "patient_id": "P-22",
+        "survival": {
+            "overall": {
+                "months": 38.0,
+                "status": {
+                    "code": 0,
+                    "label": "LIVING"
+                }
+            },
+            "disease_free": {
+                "months": 6.1,
+                "status": {
+                    "code": 1,
+                    "label": "Recurred/Progressed"
+                }
+            }
+        },
+        "clinical": {
+            "demographics": {
+                "age_at_diagnosis": 54,
+                "sex": "Male",
+                "race": "Caucasian"
+            },
+            "tumor": {
+                "ulceration": "No",
+                "lymph_node_examined": 1.0
+            }
+        },
+        "recurrence": {
+            "metastasis": "Yes",
+            "details": {
+                "time_to_recurrence_months": 6.1,
+                "site_first_recurrence": "Node"
+            }
+        },
+        "treatment": {
+            "received": "ipi",
+            "details": []
+        }
+    },
+    {
+        "patient_id": "P-23",
+        "survival": {
+            "overall": {
+                "months": 13.7,
+                "status": {
+                    "code": 1,
+                    "label": "DECEASED"
+                }
+            },
+            "disease_free": {
+                "months": 2.3,
+                "status": {
+                    "code": 1,
+                    "label": "Recurred/Progressed"
+                }
+            }
+        },
+        "clinical": {
+            "demographics": {
+                "age_at_diagnosis": 54,
+                "sex": "Male",
+                "race": "Caucasian"
+            },
+            "tumor": {
+                "ulceration": "Yes",
+                "lymph_node_examined": 1.0
+            }
+        },
+        "recurrence": {
+            "metastasis": "Yes",
+            "details": {
+                "time_to_recurrence_months": 2.3,
+                "site_first_recurrence": "Node"
+            }
+        },
+        "treatment": {
+            "received": "IPI",
+            "details": []
+        }
+    },
+    {
+        "patient_id": "P-24",
+        "survival": {
+            "overall": {
+                "months": 106.9,
+                "status": {
+                    "code": 1,
+                    "label": "DECEASED"
+                }
+            },
+            "disease_free": {
+                "months": 85.7,
+                "status": {
+                    "code": 1,
+                    "label": "Recurred/Progressed"
+                }
+            }
+        },
+        "clinical": {
+            "demographics": {
+                "age_at_diagnosis": 57,
+                "sex": "Female",
+                "race": "Caucasian"
+            },
+            "tumor": {
+                "ulceration": "Yes",
+                "lymph_node_examined": 0.0
+            }
+        },
+        "recurrence": {
+            "metastasis": "Yes",
+            "details": {
+                "time_to_recurrence_months": 85.7,
+                "site_first_recurrence": "soft tissue"
+            }
+        },
+        "treatment": {
+            "received": null,
+            "details": []
+        }
+    },
+    {
+        "patient_id": "P-25",
+        "survival": {
+            "overall": {
+                "months": 44.1,
+                "status": {
+                    "code": 1,
+                    "label": "DECEASED"
+                }
+            },
+            "disease_free": {
+                "months": 16.6,
+                "status": {
+                    "code": 1,
+                    "label": "Recurred/Progressed"
+                }
+            }
+        },
+        "clinical": {
+            "demographics": {
+                "age_at_diagnosis": 44,
+                "sex": "Male",
+                "race": "Caucasian"
+            },
+            "tumor": {
+                "ulceration": "No",
+                "lymph_node_examined": 0.0
+            }
+        },
+        "recurrence": {
+            "metastasis": "Yes",
+            "details": {
+                "time_to_recurrence_months": 16.6,
+                "site_first_recurrence": "Node"
+            }
+        },
+        "treatment": {
+            "received": "ipi, vem, RT, surgery",
+            "details": []
+        }
+    },
+    {
+        "patient_id": "P-26",
+        "survival": {
+            "overall": {
+                "months": 21.2,
+                "status": {
+                    "code": 0,
+                    "label": "LIVING"
+                }
+            },
+            "disease_free": {
+                "months": 4.1,
+                "status": {
+                    "code": 0,
+                    "label": "DiseaseFree"
+                }
+            }
+        },
+        "clinical": {
+            "demographics": {
+                "age_at_diagnosis": 78,
+                "sex": "Male",
+                "race": "Caucasian"
+            },
+            "tumor": {
+                "ulceration": "Yes",
+                "lymph_node_examined": 0.0
+            }
+        },
+        "recurrence": {
+            "metastasis": "Yes",
+            "details": {
+                "time_to_recurrence_months": 4.1,
+                "site_first_recurrence": "in transit"
+            }
+        },
+        "treatment": {
+            "received": "limb infusion, ipi",
+            "details": []
+        }
+    },
+    {
+        "patient_id": "P-27",
+        "survival": {
+            "overall": {
+                "months": 24.0,
+                "status": {
+                    "code": 0,
+                    "label": "LIVING"
+                }
+            },
+            "disease_free": {
+                "months": 24.0,
+                "status": {
+                    "code": 0,
+                    "label": "DiseaseFree"
+                }
+            }
+        },
+        "clinical": {
+            "demographics": {
+                "age_at_diagnosis": 60,
+                "sex": "Male",
+                "race": "Caucasian"
+            },
+            "tumor": {
+                "ulceration": "No",
+                "lymph_node_examined": 0.0
+            }
+        },
+        "recurrence": {
+            "metastasis": "No",
+            "details": {
+                "time_to_recurrence_months": null,
+                "site_first_recurrence": null
+            }
+        },
+        "treatment": {
+            "received": null,
+            "details": []
+        }
+    },
+    {
+        "patient_id": "P-28",
+        "survival": {
+            "overall": {
+                "months": 39.9,
+                "status": {
+                    "code": 1,
+                    "label": "DECEASED"
+                }
+            },
+            "disease_free": {
+                "months": 26.3,
+                "status": {
+                    "code": 1,
+                    "label": "Recurred/Progressed"
+                }
+            }
+        },
+        "clinical": {
+            "demographics": {
+                "age_at_diagnosis": 62,
+                "sex": "Male",
+                "race": "Casucasian"
+            },
+            "tumor": {
+                "ulceration": "Yes",
+                "lymph_node_examined": 1.0
+            }
+        },
+        "recurrence": {
+            "metastasis": "Yes",
+            "details": {
+                "time_to_recurrence_months": 26.3,
+                "site_first_recurrence": "systemic (SB)"
+            }
+        },
+        "treatment": {
+            "received": "carbo/taxol, limb infusion, DTIC, IPI+PD1",
+            "details": []
+        }
+    },
+    {
+        "patient_id": "P-29",
+        "survival": {
+            "overall": {
+                "months": 38.8,
+                "status": {
+                    "code": 0,
+                    "label": "LIVING"
+                }
+            },
+            "disease_free": {
+                "months": 3.2,
+                "status": {
+                    "code": 1,
+                    "label": "Recurred/Progressed"
+                }
+            }
+        },
+        "clinical": {
+            "demographics": {
+                "age_at_diagnosis": 59,
+                "sex": "Male",
+                "race": "Caucasian"
+            },
+            "tumor": {
+                "ulceration": "No",
+                "lymph_node_examined": 1.0
+            }
+        },
+        "recurrence": {
+            "metastasis": "Yes",
+            "details": {
+                "time_to_recurrence_months": 3.2,
+                "site_first_recurrence": "Node"
+            }
+        },
+        "treatment": {
+            "received": "ipi, nivo",
+            "details": []
+        }
+    },
+    {
+        "patient_id": "P-30",
+        "survival": {
+            "overall": {
+                "months": 52.1,
+                "status": {
+                    "code": 0,
+                    "label": "LIVING"
+                }
+            },
+            "disease_free": {
+                "months": 39.6,
+                "status": {
+                    "code": 1,
+                    "label": "Recurred/Progressed"
+                }
+            }
+        },
+        "clinical": {
+            "demographics": {
+                "age_at_diagnosis": 54,
+                "sex": "Female",
+                "race": "Caucasian"
+            },
+            "tumor": {
+                "ulceration": "No",
+                "lymph_node_examined": 1.0
+            }
+        },
+        "recurrence": {
+            "metastasis": "Yes",
+            "details": {
+                "time_to_recurrence_months": 39.6,
+                "site_first_recurrence": "in transit"
+            }
+        },
+        "treatment": {
+            "received": null,
+            "details": []
+        }
+    },
+    {
+        "patient_id": "P-31",
+        "survival": {
+            "overall": {
+                "months": 23.0,
+                "status": {
+                    "code": 0,
+                    "label": "LIVING"
+                }
+            },
+            "disease_free": {
+                "months": 13.5,
+                "status": {
+                    "code": 1,
+                    "label": "Recurred/Progressed"
+                }
+            }
+        },
+        "clinical": {
+            "demographics": {
+                "age_at_diagnosis": 70,
+                "sex": "Female",
+                "race": "African American"
+            },
+            "tumor": {
+                "ulceration": "Yes",
+                "lymph_node_examined": 2.0
+            }
+        },
+        "recurrence": {
+            "metastasis": "Yes",
+            "details": {
+                "time_to_recurrence_months": 13.5,
+                "site_first_recurrence": "Nodal"
+            }
+        },
+        "treatment": {
+            "received": "ipi followed by pd1",
+            "details": []
+        }
+    },
+    {
+        "patient_id": "P-32",
+        "survival": {
+            "overall": {
+                "months": 67.6,
+                "status": {
+                    "code": 1,
+                    "label": "DECEASED"
+                }
+            },
+            "disease_free": {
+                "months": 37.1,
+                "status": {
+                    "code": 1,
+                    "label": "Recurred/Progressed"
+                }
+            }
+        },
+        "clinical": {
+            "demographics": {
+                "age_at_diagnosis": 52,
+                "sex": "Male",
+                "race": "Caucasian"
+            },
+            "tumor": {
+                "ulceration": "Yes",
+                "lymph_node_examined": 0.0
+            }
+        },
+        "recurrence": {
+            "metastasis": "Yes",
+            "details": {
+                "time_to_recurrence_months": 37.1,
+                "site_first_recurrence": "lung"
+            }
+        },
+        "treatment": {
+            "received": "ipi, temodar",
+            "details": []
+        }
+    },
+    {
+        "patient_id": "P-33",
+        "survival": {
+            "overall": {
+                "months": 106.7,
+                "status": {
+                    "code": 0,
+                    "label": "LIVING"
+                }
+            },
+            "disease_free": {
+                "months": 18.2,
+                "status": {
+                    "code": 1,
+                    "label": "Recurred/Progressed"
+                }
+            }
+        },
+        "clinical": {
+            "demographics": {
+                "age_at_diagnosis": 70,
+                "sex": "Female",
+                "race": "White"
+            },
+            "tumor": {
+                "ulceration": "Yes",
+                "lymph_node_examined": 0.0
+            }
+        },
+        "recurrence": {
+            "metastasis": null,
+            "details": {
+                "time_to_recurrence_months": 18.2,
+                "site_first_recurrence": "Node"
+            }
+        },
+        "treatment": {
+            "received": null,
+            "details": []
+        }
+    },
+    {
+        "patient_id": "P-34",
+        "survival": {
+            "overall": {
+                "months": 103.6,
+                "status": {
+                    "code": 0,
+                    "label": "LIVING"
+                }
+            },
+            "disease_free": {
+                "months": 93.9,
+                "status": {
+                    "code": 0,
+                    "label": "DiseaseFree"
+                }
+            }
+        },
+        "clinical": {
+            "demographics": {
+                "age_at_diagnosis": 52,
+                "sex": "Female",
+                "race": "Caucasian"
+            },
+            "tumor": {
+                "ulceration": "Yes",
+                "lymph_node_examined": 0.0
+            }
+        },
+        "recurrence": {
+            "metastasis": "Yes",
+            "details": {
+                "time_to_recurrence_months": 93.9,
+                "site_first_recurrence": "in transit"
+            }
+        },
+        "treatment": {
+            "received": "NY eso vaccine",
+            "details": []
+        }
+    }
+]

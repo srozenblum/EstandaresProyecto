@@ -1,0 +1,1142 @@
+[
+    {
+        "sample_id": "VU1",
+        "patient": {
+            "id": "P-1"
+        },
+        "metadata": {
+            "presentation": {
+                "stage": "IIIB",
+                "primary_site": "Plantar Foot"
+            },
+            "sample_info": {
+                "type": "Metastasis",
+                "metastatic_site": null
+            }
+        },
+        "tumor": {
+            "primary_depth_mm": 0.5
+        },
+        "cancer": {
+            "type": {
+                "main": "Melanoma",
+                "detailed": "Acral Melanoma"
+            }
+        },
+        "genomics": {
+            "tmb": {
+                "nonsynonymous": 4.2
+            }
+        }
+    },
+    {
+        "sample_id": "VU2",
+        "patient": {
+            "id": "P-2"
+        },
+        "metadata": {
+            "presentation": {
+                "stage": "IIIA",
+                "primary_site": "Plantar Foot"
+            },
+            "sample_info": {
+                "type": "Primary",
+                "metastatic_site": null
+            }
+        },
+        "tumor": {
+            "primary_depth_mm": 5.5
+        },
+        "cancer": {
+            "type": {
+                "main": "Melanoma",
+                "detailed": "Acral Melanoma"
+            }
+        },
+        "genomics": {
+            "tmb": {
+                "nonsynonymous": 2.633333333
+            }
+        }
+    },
+    {
+        "sample_id": "VU3",
+        "patient": {
+            "id": "P-3"
+        },
+        "metadata": {
+            "presentation": {
+                "stage": "IIIB",
+                "primary_site": "Plantar Foot"
+            },
+            "sample_info": {
+                "type": "Metastasis",
+                "metastatic_site": null
+            }
+        },
+        "tumor": {
+            "primary_depth_mm": 4.0
+        },
+        "cancer": {
+            "type": {
+                "main": "Melanoma",
+                "detailed": "Acral Melanoma"
+            }
+        },
+        "genomics": {
+            "tmb": {
+                "nonsynonymous": 0.0
+            }
+        }
+    },
+    {
+        "sample_id": "VU4",
+        "patient": {
+            "id": "P-4"
+        },
+        "metadata": {
+            "presentation": {
+                "stage": "M1c",
+                "primary_site": "Plantar Foot"
+            },
+            "sample_info": {
+                "type": "Metastasis",
+                "metastatic_site": null
+            }
+        },
+        "tumor": {
+            "primary_depth_mm": 1.0
+        },
+        "cancer": {
+            "type": {
+                "main": "Melanoma",
+                "detailed": "Acral Melanoma"
+            }
+        },
+        "genomics": {
+            "tmb": {
+                "nonsynonymous": 8.233333333
+            }
+        }
+    },
+    {
+        "sample_id": "VU5",
+        "patient": {
+            "id": "P-5"
+        },
+        "metadata": {
+            "presentation": {
+                "stage": "M1a",
+                "primary_site": "Thumb"
+            },
+            "sample_info": {
+                "type": "Metastasis",
+                "metastatic_site": null
+            }
+        },
+        "tumor": {
+            "primary_depth_mm": 5.5
+        },
+        "cancer": {
+            "type": {
+                "main": "Melanoma",
+                "detailed": "Acral Melanoma"
+            }
+        },
+        "genomics": {
+            "tmb": {
+                "nonsynonymous": 6.766666667
+            }
+        }
+    },
+    {
+        "sample_id": "VU6",
+        "patient": {
+            "id": "P-6"
+        },
+        "metadata": {
+            "presentation": {
+                "stage": "IIIC",
+                "primary_site": "Plantar Foot"
+            },
+            "sample_info": {
+                "type": "Metastasis",
+                "metastatic_site": null
+            }
+        },
+        "tumor": {
+            "primary_depth_mm": 2.6
+        },
+        "cancer": {
+            "type": {
+                "main": "Melanoma",
+                "detailed": "Acral Melanoma"
+            }
+        },
+        "genomics": {
+            "tmb": {
+                "nonsynonymous": 1.3
+            }
+        }
+    },
+    {
+        "sample_id": "VU7",
+        "patient": {
+            "id": "P-7"
+        },
+        "metadata": {
+            "presentation": {
+                "stage": "IIIB",
+                "primary_site": "Subungual Toe"
+            },
+            "sample_info": {
+                "type": "Metastasis",
+                "metastatic_site": null
+            }
+        },
+        "tumor": {
+            "primary_depth_mm": 5.5
+        },
+        "cancer": {
+            "type": {
+                "main": "Melanoma",
+                "detailed": "Acral Melanoma"
+            }
+        },
+        "genomics": {
+            "tmb": {
+                "nonsynonymous": 38.83333333
+            }
+        }
+    },
+    {
+        "sample_id": "VU8",
+        "patient": {
+            "id": "P-8"
+        },
+        "metadata": {
+            "presentation": {
+                "stage": "IIIB",
+                "primary_site": "Subungual Thumb"
+            },
+            "sample_info": {
+                "type": "Primary",
+                "metastatic_site": null
+            }
+        },
+        "tumor": {
+            "primary_depth_mm": 6.0
+        },
+        "cancer": {
+            "type": {
+                "main": "Melanoma",
+                "detailed": "Acral Melanoma"
+            }
+        },
+        "genomics": {
+            "tmb": {
+                "nonsynonymous": 2.766666667
+            }
+        }
+    },
+    {
+        "sample_id": "VU9",
+        "patient": {
+            "id": "P-9"
+        },
+        "metadata": {
+            "presentation": {
+                "stage": "IIC",
+                "primary_site": "Subungual Thumb"
+            },
+            "sample_info": {
+                "type": "Primary",
+                "metastatic_site": null
+            }
+        },
+        "tumor": {
+            "primary_depth_mm": 8.0
+        },
+        "cancer": {
+            "type": {
+                "main": "Melanoma",
+                "detailed": "Acral Melanoma"
+            }
+        },
+        "genomics": {
+            "tmb": {
+                "nonsynonymous": 2.666666667
+            }
+        }
+    },
+    {
+        "sample_id": "VU10",
+        "patient": {
+            "id": "P-10"
+        },
+        "metadata": {
+            "presentation": {
+                "stage": "IIC",
+                "primary_site": "Plantar Foot"
+            },
+            "sample_info": {
+                "type": "Primary",
+                "metastatic_site": null
+            }
+        },
+        "tumor": {
+            "primary_depth_mm": 7.0
+        },
+        "cancer": {
+            "type": {
+                "main": "Melanoma",
+                "detailed": "Acral Melanoma"
+            }
+        },
+        "genomics": {
+            "tmb": {
+                "nonsynonymous": 2.833333333
+            }
+        }
+    },
+    {
+        "sample_id": "VU11",
+        "patient": {
+            "id": "P-11"
+        },
+        "metadata": {
+            "presentation": {
+                "stage": "IIIC",
+                "primary_site": "Plantar Toe"
+            },
+            "sample_info": {
+                "type": "Metastasis",
+                "metastatic_site": null
+            }
+        },
+        "tumor": {
+            "primary_depth_mm": 2.6
+        },
+        "cancer": {
+            "type": {
+                "main": "Melanoma",
+                "detailed": "Acral Melanoma"
+            }
+        },
+        "genomics": {
+            "tmb": {
+                "nonsynonymous": 2.633333333
+            }
+        }
+    },
+    {
+        "sample_id": "VU12",
+        "patient": {
+            "id": "P-12"
+        },
+        "metadata": {
+            "presentation": {
+                "stage": "IIIC",
+                "primary_site": "Plantar Foot"
+            },
+            "sample_info": {
+                "type": "Primary",
+                "metastatic_site": null
+            }
+        },
+        "tumor": {
+            "primary_depth_mm": 4.0
+        },
+        "cancer": {
+            "type": {
+                "main": "Melanoma",
+                "detailed": "Acral Melanoma"
+            }
+        },
+        "genomics": {
+            "tmb": {
+                "nonsynonymous": 1.533333333
+            }
+        }
+    },
+    {
+        "sample_id": "VU13",
+        "patient": {
+            "id": "P-13"
+        },
+        "metadata": {
+            "presentation": {
+                "stage": "IIIB",
+                "primary_site": "Subungual Toe"
+            },
+            "sample_info": {
+                "type": "Primary",
+                "metastatic_site": null
+            }
+        },
+        "tumor": {
+            "primary_depth_mm": 8.0
+        },
+        "cancer": {
+            "type": {
+                "main": "Melanoma",
+                "detailed": "Acral Melanoma"
+            }
+        },
+        "genomics": {
+            "tmb": {
+                "nonsynonymous": 1.966666667
+            }
+        }
+    },
+    {
+        "sample_id": "VU14",
+        "patient": {
+            "id": "P-14"
+        },
+        "metadata": {
+            "presentation": {
+                "stage": "M1a",
+                "primary_site": "Subungual Toe"
+            },
+            "sample_info": {
+                "type": "Metastasis",
+                "metastatic_site": null
+            }
+        },
+        "tumor": {
+            "primary_depth_mm": 25.0
+        },
+        "cancer": {
+            "type": {
+                "main": "Melanoma",
+                "detailed": "Acral Melanoma"
+            }
+        },
+        "genomics": {
+            "tmb": {
+                "nonsynonymous": 1.933333333
+            }
+        }
+    },
+    {
+        "sample_id": "VU15",
+        "patient": {
+            "id": "P-15"
+        },
+        "metadata": {
+            "presentation": {
+                "stage": "IIIc",
+                "primary_site": "Plantar Foot"
+            },
+            "sample_info": {
+                "type": "Primary",
+                "metastatic_site": null
+            }
+        },
+        "tumor": {
+            "primary_depth_mm": 3.0
+        },
+        "cancer": {
+            "type": {
+                "main": "Melanoma",
+                "detailed": "Acral Melanoma"
+            }
+        },
+        "genomics": {
+            "tmb": {
+                "nonsynonymous": 8.133333333
+            }
+        }
+    },
+    {
+        "sample_id": "VU16",
+        "patient": {
+            "id": "P-16"
+        },
+        "metadata": {
+            "presentation": {
+                "stage": "IIC",
+                "primary_site": "Plantar Foot"
+            },
+            "sample_info": {
+                "type": "Metastasis",
+                "metastatic_site": null
+            }
+        },
+        "tumor": {
+            "primary_depth_mm": 4.2
+        },
+        "cancer": {
+            "type": {
+                "main": "Melanoma",
+                "detailed": "Acral Melanoma"
+            }
+        },
+        "genomics": {
+            "tmb": {
+                "nonsynonymous": 0.533333333
+            }
+        }
+    },
+    {
+        "sample_id": "101984-1T-17",
+        "patient": {
+            "id": "P-17"
+        },
+        "metadata": {
+            "presentation": {
+                "stage": "IIA",
+                "primary_site": "Plantar Foot"
+            },
+            "sample_info": {
+                "type": "Primary",
+                "metastatic_site": null
+            }
+        },
+        "tumor": {
+            "primary_depth_mm": 2.5
+        },
+        "cancer": {
+            "type": {
+                "main": "Melanoma",
+                "detailed": "Acral Melanoma"
+            }
+        },
+        "genomics": {
+            "tmb": {
+                "nonsynonymous": 1.333333333
+            }
+        }
+    },
+    {
+        "sample_id": "103340-1T-18",
+        "patient": {
+            "id": "P-18"
+        },
+        "metadata": {
+            "presentation": {
+                "stage": "IIB",
+                "primary_site": "Subungual"
+            },
+            "sample_info": {
+                "type": "Primary",
+                "metastatic_site": null
+            }
+        },
+        "tumor": {
+            "primary_depth_mm": 2.1
+        },
+        "cancer": {
+            "type": {
+                "main": "Melanoma",
+                "detailed": "Acral Melanoma"
+            }
+        },
+        "genomics": {
+            "tmb": {
+                "nonsynonymous": 0.733333333
+            }
+        }
+    },
+    {
+        "sample_id": "121441-2T-19",
+        "patient": {
+            "id": "P-19"
+        },
+        "metadata": {
+            "presentation": {
+                "stage": "IIIB",
+                "primary_site": "Foot"
+            },
+            "sample_info": {
+                "type": "Primary",
+                "metastatic_site": null
+            }
+        },
+        "tumor": {
+            "primary_depth_mm": 4.3
+        },
+        "cancer": {
+            "type": {
+                "main": "Melanoma",
+                "detailed": "Acral Melanoma"
+            }
+        },
+        "genomics": {
+            "tmb": {
+                "nonsynonymous": 3.366666667
+            }
+        }
+    },
+    {
+        "sample_id": "129988T-20",
+        "patient": {
+            "id": "P-20"
+        },
+        "metadata": {
+            "presentation": {
+                "stage": "IIIB",
+                "primary_site": "Plantar Foot"
+            },
+            "sample_info": {
+                "type": "Metastasis",
+                "metastatic_site": "Lymph Node"
+            }
+        },
+        "tumor": {
+            "primary_depth_mm": 3.2
+        },
+        "cancer": {
+            "type": {
+                "main": "Melanoma",
+                "detailed": "Acral Melanoma"
+            }
+        },
+        "genomics": {
+            "tmb": {
+                "nonsynonymous": 2.266666667
+            }
+        }
+    },
+    {
+        "sample_id": "136374-1T-21",
+        "patient": {
+            "id": "P-21"
+        },
+        "metadata": {
+            "presentation": {
+                "stage": "IIIC",
+                "primary_site": "Plantar Foot"
+            },
+            "sample_info": {
+                "type": "Primary",
+                "metastatic_site": null
+            }
+        },
+        "tumor": {
+            "primary_depth_mm": 12.0
+        },
+        "cancer": {
+            "type": {
+                "main": "Melanoma",
+                "detailed": "Acral Melanoma"
+            }
+        },
+        "genomics": {
+            "tmb": {
+                "nonsynonymous": 1.566666667
+            }
+        }
+    },
+    {
+        "sample_id": "140122-1T-22",
+        "patient": {
+            "id": "P-22"
+        },
+        "metadata": {
+            "presentation": {
+                "stage": "IIIA",
+                "primary_site": "Platar Foot"
+            },
+            "sample_info": {
+                "type": "Metastasis",
+                "metastatic_site": "Lymph Node"
+            }
+        },
+        "tumor": {
+            "primary_depth_mm": 1.9
+        },
+        "cancer": {
+            "type": {
+                "main": "Melanoma",
+                "detailed": "Acral Melanoma"
+            }
+        },
+        "genomics": {
+            "tmb": {
+                "nonsynonymous": 0.6
+            }
+        }
+    },
+    {
+        "sample_id": "142883-1T-23",
+        "patient": {
+            "id": "P-23"
+        },
+        "metadata": {
+            "presentation": {
+                "stage": "IIIB",
+                "primary_site": "Plantar Foot"
+            },
+            "sample_info": {
+                "type": "Primary",
+                "metastatic_site": null
+            }
+        },
+        "tumor": {
+            "primary_depth_mm": 4.2
+        },
+        "cancer": {
+            "type": {
+                "main": "Melanoma",
+                "detailed": "Acral Melanoma"
+            }
+        },
+        "genomics": {
+            "tmb": {
+                "nonsynonymous": 1.333333333
+            }
+        }
+    },
+    {
+        "sample_id": "143455-1T-24",
+        "patient": {
+            "id": "P-24"
+        },
+        "metadata": {
+            "presentation": {
+                "stage": "IIA",
+                "primary_site": "Plantar Foot"
+            },
+            "sample_info": {
+                "type": "Metastasis",
+                "metastatic_site": "Skin-Distant"
+            }
+        },
+        "tumor": {
+            "primary_depth_mm": 1.5
+        },
+        "cancer": {
+            "type": {
+                "main": "Melanoma",
+                "detailed": "Acral Melanoma"
+            }
+        },
+        "genomics": {
+            "tmb": {
+                "nonsynonymous": 8.4
+            }
+        }
+    },
+    {
+        "sample_id": "145041-1T-25a",
+        "patient": {
+            "id": "P-25"
+        },
+        "metadata": {
+            "presentation": {
+                "stage": "IIIB",
+                "primary_site": "Plantar Foot"
+            },
+            "sample_info": {
+                "type": "Metastasis",
+                "metastatic_site": "Superficial Groin"
+            }
+        },
+        "tumor": {
+            "primary_depth_mm": 0.9
+        },
+        "cancer": {
+            "type": {
+                "main": "Melanoma",
+                "detailed": "Acral Melanoma"
+            }
+        },
+        "genomics": {
+            "tmb": {
+                "nonsynonymous": 14.63333333
+            }
+        }
+    },
+    {
+        "sample_id": "148336T-25b",
+        "patient": {
+            "id": "P-25"
+        },
+        "metadata": {
+            "presentation": {
+                "stage": "IIIB",
+                "primary_site": "Plantar Foot"
+            },
+            "sample_info": {
+                "type": "Metastasis",
+                "metastatic_site": null
+            }
+        },
+        "tumor": {
+            "primary_depth_mm": null
+        },
+        "cancer": {
+            "type": {
+                "main": "Melanoma",
+                "detailed": "Acral Melanoma"
+            }
+        },
+        "genomics": {
+            "tmb": {
+                "nonsynonymous": 12.0
+            }
+        }
+    },
+    {
+        "sample_id": "145604-1T-26",
+        "patient": {
+            "id": "P-26"
+        },
+        "metadata": {
+            "presentation": {
+                "stage": "IIC",
+                "primary_site": "Plantar Foot"
+            },
+            "sample_info": {
+                "type": "Primary",
+                "metastatic_site": null
+            }
+        },
+        "tumor": {
+            "primary_depth_mm": 5.5
+        },
+        "cancer": {
+            "type": {
+                "main": "Melanoma",
+                "detailed": "Acral Melanoma"
+            }
+        },
+        "genomics": {
+            "tmb": {
+                "nonsynonymous": 3.3
+            }
+        }
+    },
+    {
+        "sample_id": "150199-1T-27",
+        "patient": {
+            "id": "P-27"
+        },
+        "metadata": {
+            "presentation": {
+                "stage": "IB",
+                "primary_site": "Plantar Foot"
+            },
+            "sample_info": {
+                "type": "Primary",
+                "metastatic_site": null
+            }
+        },
+        "tumor": {
+            "primary_depth_mm": 1.8
+        },
+        "cancer": {
+            "type": {
+                "main": "Melanoma",
+                "detailed": "Acral Melanoma"
+            }
+        },
+        "genomics": {
+            "tmb": {
+                "nonsynonymous": 1.633333333
+            }
+        }
+    },
+    {
+        "sample_id": "148034-1T-28",
+        "patient": {
+            "id": "P-28"
+        },
+        "metadata": {
+            "presentation": {
+                "stage": "IIIB",
+                "primary_site": "Subungual Toe"
+            },
+            "sample_info": {
+                "type": "Metastasis",
+                "metastatic_site": "Small Bowel"
+            }
+        },
+        "tumor": {
+            "primary_depth_mm": 4.0
+        },
+        "cancer": {
+            "type": {
+                "main": "Melanoma",
+                "detailed": "Acral Melanoma"
+            }
+        },
+        "genomics": {
+            "tmb": {
+                "nonsynonymous": 2.233333333
+            }
+        }
+    },
+    {
+        "sample_id": "150449-2T-29a",
+        "patient": {
+            "id": "P-29"
+        },
+        "metadata": {
+            "presentation": {
+                "stage": "IIIC",
+                "primary_site": "Subungual Toe"
+            },
+            "sample_info": {
+                "type": "Metastasis",
+                "metastatic_site": "Lymph Node"
+            }
+        },
+        "tumor": {
+            "primary_depth_mm": 3.5
+        },
+        "cancer": {
+            "type": {
+                "main": "Melanoma",
+                "detailed": "Acral Melanoma"
+            }
+        },
+        "genomics": {
+            "tmb": {
+                "nonsynonymous": 2.966666667
+            }
+        }
+    },
+    {
+        "sample_id": "150449-14T-29b",
+        "patient": {
+            "id": "P-29"
+        },
+        "metadata": {
+            "presentation": {
+                "stage": "IIIC",
+                "primary_site": "Subungual Toe"
+            },
+            "sample_info": {
+                "type": "Primary",
+                "metastatic_site": null
+            }
+        },
+        "tumor": {
+            "primary_depth_mm": null
+        },
+        "cancer": {
+            "type": {
+                "main": "Melanoma",
+                "detailed": "Acral Melanoma"
+            }
+        },
+        "genomics": {
+            "tmb": {
+                "nonsynonymous": 1.5
+            }
+        }
+    },
+    {
+        "sample_id": "152063-10T-29c",
+        "patient": {
+            "id": "P-29"
+        },
+        "metadata": {
+            "presentation": {
+                "stage": "IIIC",
+                "primary_site": "Subungual Toe"
+            },
+            "sample_info": {
+                "type": "Metastasis",
+                "metastatic_site": "Lymph Node"
+            }
+        },
+        "tumor": {
+            "primary_depth_mm": null
+        },
+        "cancer": {
+            "type": {
+                "main": "Melanoma",
+                "detailed": "Acral Melanoma"
+            }
+        },
+        "genomics": {
+            "tmb": {
+                "nonsynonymous": 2.9
+            }
+        }
+    },
+    {
+        "sample_id": "150756-1T-30",
+        "patient": {
+            "id": "P-30"
+        },
+        "metadata": {
+            "presentation": {
+                "stage": "IIIa",
+                "primary_site": "Plantar Foot"
+            },
+            "sample_info": {
+                "type": "Metastasis",
+                "metastatic_site": "Skin"
+            }
+        },
+        "tumor": {
+            "primary_depth_mm": 2.5
+        },
+        "cancer": {
+            "type": {
+                "main": "Melanoma",
+                "detailed": "Acral Melanoma"
+            }
+        },
+        "genomics": {
+            "tmb": {
+                "nonsynonymous": 1.0
+            }
+        }
+    },
+    {
+        "sample_id": "157471-1T-31",
+        "patient": {
+            "id": "P-31"
+        },
+        "metadata": {
+            "presentation": {
+                "stage": "IIIC",
+                "primary_site": "Toe"
+            },
+            "sample_info": {
+                "type": "Primary",
+                "metastatic_site": null
+            }
+        },
+        "tumor": {
+            "primary_depth_mm": 8.0
+        },
+        "cancer": {
+            "type": {
+                "main": "Melanoma",
+                "detailed": "Acral Melanoma"
+            }
+        },
+        "genomics": {
+            "tmb": {
+                "nonsynonymous": 1.733333333
+            }
+        }
+    },
+    {
+        "sample_id": "142162-1T-32",
+        "patient": {
+            "id": "P-32"
+        },
+        "metadata": {
+            "presentation": {
+                "stage": "IIC",
+                "primary_site": "Subungual Thumb"
+            },
+            "sample_info": {
+                "type": "Metastasis",
+                "metastatic_site": "Lung"
+            }
+        },
+        "tumor": {
+            "primary_depth_mm": 4.5
+        },
+        "cancer": {
+            "type": {
+                "main": "Melanoma",
+                "detailed": "Acral Melanoma"
+            }
+        },
+        "genomics": {
+            "tmb": {
+                "nonsynonymous": 14.83333333
+            }
+        }
+    },
+    {
+        "sample_id": "143739-33",
+        "patient": {
+            "id": "P-33"
+        },
+        "metadata": {
+            "presentation": {
+                "stage": "IV",
+                "primary_site": null
+            },
+            "sample_info": {
+                "type": "Metastasis",
+                "metastatic_site": "Lymph Node"
+            }
+        },
+        "tumor": {
+            "primary_depth_mm": 15.0
+        },
+        "cancer": {
+            "type": {
+                "main": "Melanoma",
+                "detailed": "Acral Melanoma"
+            }
+        },
+        "genomics": {
+            "tmb": {
+                "nonsynonymous": 85.13333333
+            }
+        }
+    },
+    {
+        "sample_id": "169894a-34a",
+        "patient": {
+            "id": "P-34"
+        },
+        "metadata": {
+            "presentation": {
+                "stage": "IIC",
+                "primary_site": "Plantar Foot"
+            },
+            "sample_info": {
+                "type": "Metastasis",
+                "metastatic_site": "In Transit"
+            }
+        },
+        "tumor": {
+            "primary_depth_mm": 4.0
+        },
+        "cancer": {
+            "type": {
+                "main": "Melanoma",
+                "detailed": "Acral Melanoma"
+            }
+        },
+        "genomics": {
+            "tmb": {
+                "nonsynonymous": 1.8
+            }
+        }
+    },
+    {
+        "sample_id": "169894b-34b",
+        "patient": {
+            "id": "P-34"
+        },
+        "metadata": {
+            "presentation": {
+                "stage": null,
+                "primary_site": null
+            },
+            "sample_info": {
+                "type": "Primary",
+                "metastatic_site": null
+            }
+        },
+        "tumor": {
+            "primary_depth_mm": null
+        },
+        "cancer": {
+            "type": {
+                "main": "Melanoma",
+                "detailed": "Acral Melanoma"
+            }
+        },
+        "genomics": {
+            "tmb": {
+                "nonsynonymous": 16.76666667
+            }
+        }
+    }
+]
