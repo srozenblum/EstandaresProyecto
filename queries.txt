@@ -1,0 +1,45 @@
+[patients_with_samples]
+db.Pacientes.aggregate([
+  {
+    "$lookup": {
+      "from": "muestras",
+      "localField": "PATIENT_ID",
+      "foreignField": "PATIENT_ID",
+      "as": "samples"
+    }
+  }
+])
+
+[samples_with_variants]
+db.muestras.aggregate([
+  {
+    "$lookup": {
+      "from": "variantes",
+      "localField": "SAMPLE_ID",
+      "foreignField": "Tumor_Sample_Barcode",
+      "as": "variants"
+    }
+  }
+])
+
+[variants_full_info]
+db.variantes.aggregate([
+  {
+    "$lookup": {
+      "from": "muestras",
+      "localField": "Tumor_Sample_Barcode",
+      "foreignField": "SAMPLE_ID",
+      "as": "sample"
+    }
+  },
+  { "$unwind": "$sample" },
+  {
+    "$lookup": {
+      "from": "Pacientes",
+      "localField": "sample.PATIENT_ID",
+      "foreignField": "PATIENT_ID",
+      "as": "patient"
+    }
+  },
+  { "$unwind": "$patient" }
+])
