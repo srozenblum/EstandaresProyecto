@@ -1,43 +1,110 @@
-[patients_with_samples]
-db.Pacientes.aggregate([
+[patients_samples_variants]
+db.patients.aggregate([
   {
     "$lookup": {
-      "from": "muestras",
-      "localField": "PATIENT_ID",
-      "foreignField": "PATIENT_ID",
+      "from": "samples",
+      "localField": "patient_id",
+      "foreignField": "patient.id",
       "as": "samples"
     }
-  }
-])
-
-[samples_with_variants]
-db.muestras.aggregate([
+  },
   {
     "$lookup": {
-      "from": "variantes",
-      "localField": "SAMPLE_ID",
-      "foreignField": "Tumor_Sample_Barcode",
+      "from": "variants",
+      "let": { "sample_ids": "$samples.sample_id" },
+      "pipeline": [
+        {
+          "$match": {
+            "$expr": { "$in": ["$samples.tumor_sample", "$$sample_ids"] }
+          }
+        },
+        {
+          "$project": {
+            "_id": 0,
+            "variant_id": 1,
+            "gene": "$gene.symbol",
+            "classification": "$classification.variant_class",
+            "consequence": "$classification.consequence",
+            "samples": 1
+          }
+        }
+      ],
       "as": "variants"
+    }
+  },
+  {
+    "$project": {
+      "_id": 0,
+      "patient_id": 1,
+      "clinical": 1,
+      "survival": 1,
+      "recurrence": 1,
+      "samples": 1,
+      "variants": 1
     }
   }
 ])
 
-[variants_full_info]
-db.variantes.aggregate([
+
+[variants_with_oncokb]
+db.variants.aggregate([
   {
     "$lookup": {
-      "from": "muestras",
-      "localField": "Tumor_Sample_Barcode",
-      "foreignField": "SAMPLE_ID",
+      "from": "oncokb_genes",
+      "localField": "gene.symbol",
+      "foreignField": "HugoSymbol",
+      "as": "oncokb"
+    }
+  },
+  {
+    "$lookup": {
+      "from": "samples",
+      "localField": "samples.tumor_sample",
+      "foreignField": "sample_id",
+      "as": "sample_info"
+    }
+  },
+  {
+    "$lookup": {
+      "from": "patients",
+      "localField": "sample_info.patient.id",
+      "foreignField": "patient_id",
+      "as": "patient"
+    }
+  },
+  { "$unwind": "$patient" },
+  {
+    "$project": {
+      "_id": 0,
+      "variant_id": 1,
+      "gene": "$gene.symbol",
+      "classification": "$classification.variant_class",
+      "consequence": "$classification.consequence",
+      "sample": "$samples.tumor_sample",
+      "patient_id": "$patient.patient_id",
+      "oncogenic": { "$arrayElemAt": ["$oncokb.oncogenic", 0] },
+      "cancer_gene_type": { "$arrayElemAt": ["$oncokb.geneType", 0] }
+    }
+  }
+])
+
+
+[variants_full_info]
+db.variants.aggregate([
+  {
+    "$lookup": {
+      "from": "samples",
+      "localField": "samples.tumor_sample",
+      "foreignField": "sample_id",
       "as": "sample"
     }
   },
   { "$unwind": "$sample" },
   {
     "$lookup": {
-      "from": "Pacientes",
-      "localField": "sample.PATIENT_ID",
-      "foreignField": "PATIENT_ID",
+      "from": "patients",
+      "localField": "sample.patient.id",
+      "foreignField": "patient_id",
       "as": "patient"
     }
   },
