@@ -1,47 +1,130 @@
-<?xml version="1.0"?>
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-  <xsl:template match="/">
+<xsl:output method="html" indent="yes" encoding="utf-8"/>
+
+<!-- Plantilla principal -->
+<xsl:template match="/">
     <html>
-      <head>
-        <title>Resultado Consulta</title>
+    <head>
+        <title>MongoDB Query Output</title>
         <style>
-          body { font-family: Arial; background:#f5f5f5; padding:30px; }
-          .card {
-            background:white;
-            margin-bottom:20px;
-            padding:20px;
-            border-radius:10px;
-            border:1px solid #d9d9d9;
-            box-shadow:0 2px 4px rgba(0,0,0,0.1);
-            width:60%;
-          }
-          .field { margin-bottom:6px; }
-          .key { font-weight:bold; color:#01579b; }
-          .value { color:#222; }
-          h1 { margin-bottom:20px; }
+            body { font-family: Arial; margin: 20px; }
+            h1 { margin-bottom: 20px; }
+            table { border-collapse: collapse; width: 100%; margin-bottom: 20px; }
+            th, td { border: 1px solid #ccc; padding: 6px; vertical-align: top; }
+            th { background-color: #f0f0f0; }
+            .nested-table { margin: 5px; }
         </style>
-      </head>
-      <body>
-        <h1>Resultado de la consulta</h1>
-        <xsl:apply-templates select="root/item"/>
-      </body>
-    </html>
-  </xsl:template>
+    </head>
 
-  <xsl:template match="item">
-    <div class="card">
-      <xsl:for-each select="*">
-        <div class="field">
-          <span class="key">
-            <xsl:value-of select="name()"/>:
-          </span>
-          <span class="value">
-            <xsl:value-of select="."/>
-          </span>
-        </div>
-      </xsl:for-each>
-    </div>
-  </xsl:template>
+    <body>
+        <h1>Resultados de la consulta</h1>
+
+        <table>
+            <!-- cabecera: lee las claves del primer registro -->
+            <tr>
+                <xsl:for-each select="root/element[1]/*">
+                    <th><xsl:value-of select="name()"/></th>
+                </xsl:for-each>
+            </tr>
+
+            <!-- filas -->
+            <xsl:for-each select="root/element">
+                <tr>
+                    <xsl:for-each select="*">
+                        <td>
+                            <xsl:choose>
+
+                                <!-- Si es otro objeto -->
+                                <xsl:when test="@type='object'">
+                                    <table class="nested-table">
+                                        <xsl:for-each select="*">
+                                            <tr>
+                                                <th><xsl:value-of select="name()"/></th>
+                                                <td>
+                                                    <xsl:choose>
+                                                        <!-- objeto dentro de objeto -->
+                                                        <xsl:when test="@type='object' or @type='list'">
+                                                            <xsl:call-template name="renderObject">
+                                                                <xsl:with-param name="node" select="."/>
+                                                            </xsl:call-template>
+                                                        </xsl:when>
+
+                                                        <!-- valor simple -->
+                                                        <xsl:otherwise>
+                                                            <xsl:value-of select="." />
+                                                        </xsl:otherwise>
+                                                    </xsl:choose>
+                                                </td>
+                                            </tr>
+                                        </xsl:for-each>
+                                    </table>
+                                </xsl:when>
+
+                                <!-- Si es una lista -->
+                                <xsl:when test="@type='list'">
+                                    <xsl:call-template name="renderList">
+                                        <xsl:with-param name="node" select="."/>
+                                    </xsl:call-template>
+                                </xsl:when>
+
+                                <!-- Si es un valor simple -->
+                                <xsl:otherwise>
+                                    <xsl:value-of select="." />
+                                </xsl:otherwise>
+
+                            </xsl:choose>
+                        </td>
+                    </xsl:for-each>
+                </tr>
+            </xsl:for-each>
+
+        </table>
+
+    </body>
+    </html>
+</xsl:template>
+
+
+<!-- PLANTILLA PARA OBJETOS -->
+<xsl:template name="renderObject">
+    <xsl:param name="node"/>
+    <table class="nested-table">
+        <xsl:for-each select="$node/*">
+            <tr>
+                <th><xsl:value-of select="name()"/></th>
+                <td>
+                    <xsl:choose>
+                        <xsl:when test="@type='object' or @type='list'">
+                            <xsl:call-template name="renderObject">
+                                <xsl:with-param name="node" select="."/>
+                            </xsl:call-template>
+                        </xsl:when>
+                        <xsl:otherwise><xsl:value-of select="."/></xsl:otherwise>
+                    </xsl:choose>
+                </td>
+            </tr>
+        </xsl:for-each>
+    </table>
+</xsl:template>
+
+
+<!-- PLANTILLA PARA LISTAS -->
+<xsl:template name="renderList">
+    <xsl:param name="node"/>
+    <table class="nested-table">
+        <xsl:for-each select="$node/element">
+            <tr>
+                <td>
+                    <xsl:call-template name="renderObject">
+                        <xsl:with-param name="node" select="."/>
+                    </xsl:call-template>
+                </td>
+            </tr>
+        </xsl:for-each>
+    </table>
+</xsl:template>
 
 </xsl:stylesheet>
