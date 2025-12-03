@@ -1,0 +1,162 @@
+<root type="list">
+  <element type="object">
+    <variant_id>ACAP3_1229939_SNP</variant_id>
+    <gene>ACAP3</gene>
+    <classification>Missense_Mutation</classification>
+    <consequence>missense_variant</consequence>
+    <sample>VU10</sample>
+    <patient_id>P-10</patient_id>
+  </element>
+  <element type="object">
+    <variant_id>SPEN_16200729_INS</variant_id>
+    <gene>SPEN</gene>
+    <classification>Intron</classification>
+    <consequence>intron_variant</consequence>
+    <sample>VU10</sample>
+    <patient_id>P-10</patient_id>
+  </element>
+  <element type="object">
+    <variant_id>MUL1_20834605_INS</variant_id>
+    <gene>MUL1</gene>
+    <classification>5'UTR</classification>
+    <consequence>5_prime_UTR_variant</consequence>
+    <sample>VU10</sample>
+    <patient_id>P-10</patient_id>
+  </element>
+  <element type="object">
+    <variant_id>AGO3_36475027_DEL</variant_id>
+    <gene>AGO3</gene>
+    <classification>RNA</classification>
+    <consequence>non_coding_transcript_exon_variant</consequence>
+    <sample>VU10</sample>
+    <patient_id>P-10</patient_id>
+  </element>
+  <element type="object">
+    <variant_id>HPCAL4_40144972_SNP</variant_id>
+    <gene>HPCAL4</gene>
+    <classification>3'UTR</classification>
+    <consequence>3_prime_UTR_variant</consequence>
+    <sample>VU10</sample>
+    <patient_id>P-10</patient_id>
+  </element>
+  <element type="object">
+    <variant_id>KCNQ4_41284372_SNP</variant_id>
+    <gene>KCNQ4</gene>
+    <classification>Intron</classification>
+    <consequence>intron_variant</consequence>
+    <sample>VU10</sample>
+    <patient_id>P-10</patient_id>
+  </element>
+  <element type="object">
+    <variant_id>UROD_45477826_SNP</variant_id>
+    <gene>UROD</gene>
+    <classification>5'UTR</classification>
+    <consequence>5_prime_UTR_variant</consequence>
+    <sample>VU10</sample>
+    <patient_id>P-10</patient_id>
+  </element>
+  <element type="object">
+    <variant_id>DHCR24_55317624_SNP</variant_id>
+    <gene>DHCR24</gene>
+    <classification>3'UTR</classification>
+    <consequence>3_prime_UTR_variant</consequence>
+    <sample>VU10</sample>
+    <patient_id>P-10</patient_id>
+  </element>
+  <element type="object">
+    <variant_id>PRKAA2_57179199_INS</variant_id>
+    <gene>PRKAA2</gene>
+    <classification>3'UTR</classification>
+    <consequence>3_prime_UTR_variant</consequence>
+    <sample>VU10</sample>
+    <patient_id>P-10</patient_id>
+  </element>
+  <element type="object">
+    <variant_id>AK4_65692499_SNP</variant_id>
+    <gene>AK4</gene>
+    <classification>3'UTR</classification>
+    <consequence>3_prime_UTR_variant</consequence>
+    <sample>VU10</sample>
+    <patient_id>P-10</patient_id>
+  </element>
+  <element type="object">
+    <variant_id>ATP1A1_116942111_SNP</variant_id>
+    <gene>ATP1A1</gene>
+    <classification>Missense_Mutation</classification>
+    <consequence>missense_variant</consequence>
+    <sample>VU10</sample>
+    <patient_id>P-10</patient_id>
+  </element>
+  <element type="object">
+    <variant_id>POLR3C_145601616_DEL</variant_id>
+    <gene>POLR3C</gene>
+    <classification>Frame_Shift_Del</classification>
+    <consequence>frameshift_variant</consequence>
+    <sample>VU10</sample>
+    <patient_id>P-10</patient_id>
+  </element>
+  <element type="object">
+    <variant_id>PIP5K1A_151196712_SNP</variant_id>
+    <gene>PIP5K1A</gene>
+    <classification>Intron</classification>
+    <consequence>intron_variant</consequence>
+    <sample>VU10</sample>
+    <patient_id>P-10</patient_id>
+  </element>
+  <element type="object">
+    <variant_id>RFX5_151315113_SNP</variant_id>
+    <gene>RFX5</gene>
+    <classification>Missense_Mutation</classification>
+    <consequence>missense_variant</consequence>
+    <sample>VU10</sample>
+    <patient_id>P-10</patient_id>
+  </element>
+  <element type="object">
+    <variant_id>FLG_152275224_SNP</variant_id>
+    <gene>FLG</gene>
+    <classification>Silent</classification>
+    <consequence>synonymous_variant</consequence>
+    <sample>VU10</sample>
+    <patient_id>P-10</patient_id>
+  </element>
+  <element type="object">
+    <variant_id>FLG_152276867_SNP</variant_id>
+    <gene>FLG</gene>
+    <classification>Missense_Mutation</classification>
+    <consequence>missense_variant</consequence>
+    <sample>VU10</sample>
+    <patient_id>P-10</patient_id>
+  </element>
+  <element type="object">
+    <variant_id>IFI16_158990109_SNP</variant_id>
+    <gene>IFI16</gene>
+    <classification>Intron</classification>
+    <consequence>intron_variant</consequence>
+    <sample>VU10</sample>
+    <patient_id>P-10</patient_id>
+  </element>
+  <element type="object">
+    <variant_id>PRDX6_173455459_SNP</variant_id>
+    <gene>PRDX6</gene>
+    <classification>Missense_Mutation</classification>
+    <consequence>missense_variant</consequence>
+    <sample>VU10</sample>
+    <patient_id>P-10</patient_id>
+  </element>
+  <element type="object">
+    <variant_id>TSEN15_184039826_SNP</variant_id>
+    <gene>TSEN15</gene>
+    <classification>Intron</classification>
+    <consequence>intron_variant</consequence>
+    <sample>VU10</sample>
+    <patient_id>P-10</patient_id>
+  </element>
+  <element type="object">
+    <variant_id>ASPM_197091183_SNP</variant_id>
+    <gene>ASPM</gene>
+    <classification>Intron</classification>
+    <consequence>intron_variant</consequence>
+    <sample>VU10</sample>
+    <patient_id>P-10</patient_id>
+  </element>
+</root>

@@ -1,0 +1,2442 @@
+<root type="list">
+  <element type="object">
+    <id>69300358ed9d10cb6013a1dd</id>
+    <variant_id>ACAP3_1229939_SNP</variant_id>
+    <gene type="object">
+      <symbol>ACAP3</symbol>
+    </gene>
+    <location type="object">
+      <chromosome>1</chromosome>
+      <coordinates type="object">
+        <start>1229939</start>
+        <end>1229939</end>
+        <strand>+</strand>
+      </coordinates>
+    </location>
+    <classification type="object">
+      <consequence>missense_variant</consequence>
+      <variant_class>Missense_Mutation</variant_class>
+      <variant_type>SNP</variant_type>
+    </classification>
+    <alleles type="object">
+      <reference>G</reference>
+      <tumor type="object">
+        <allele1>G</allele1>
+      </tumor>
+    </alleles>
+    <samples type="object">
+      <tumor_sample>VU10</tumor_sample>
+      <normal_sample>NORMAL</normal_sample>
+    </samples>
+    <sequencing type="object">
+      <depth type="object">
+        <tumor type="object">
+          <ref_count></ref_count>
+          <alt_count></alt_count>
+          <total_depth></total_depth>
+        </tumor>
+      </depth>
+    </sequencing>
+    <annotations type="object">
+      <HGVSc>ENST00000354700.5:c.1982C&gt;T</HGVSc>
+      <HGVSp>p.Ala661Val</HGVSp>
+      <HGVSp_short>p.A661V</HGVSp_short>
+    </annotations>
+    <validation type="object">
+      <mutation_status></mutation_status>
+      <verification_status></verification_status>
+      <validation_status></validation_status>
+    </validation>
+    <sample type="object">
+      <id>693002e8ed9d10cb601320ba</id>
+      <sample_id>VU10</sample_id>
+      <patient type="object">
+        <id>P-10</id>
+      </patient>
+      <metadata type="object">
+        <presentation type="object">
+          <stage>IIC</stage>
+          <primary_site>Plantar Foot</primary_site>
+        </presentation>
+        <sample_info type="object">
+          <type>Primary</type>
+          <metastatic_site></metastatic_site>
+        </sample_info>
+      </metadata>
+      <tumor type="object">
+        <primary_depth_mm>7</primary_depth_mm>
+      </tumor>
+      <cancer type="object">
+        <type type="object">
+          <main>Melanoma</main>
+          <detailed>Acral Melanoma</detailed>
+        </type>
+      </cancer>
+      <genomics type="object">
+        <tmb type="object">
+          <nonsynonymous>2.833333333</nonsynonymous>
+        </tmb>
+      </genomics>
+    </sample>
+    <patient type="object">
+      <id>693002d0ed9d10cb60132097</id>
+      <patient_id>P-10</patient_id>
+      <survival type="object">
+        <overall type="object">
+          <months>19.2</months>
+          <status type="object">
+            <code>1</code>
+            <label>DECEASED</label>
+          </status>
+        </overall>
+        <disease_free type="object">
+          <months>9.6</months>
+          <status type="object">
+            <code>1</code>
+            <label>Recurred/Progressed</label>
+          </status>
+        </disease_free>
+      </survival>
+      <clinical type="object">
+        <demographics type="object">
+          <age_at_diagnosis>78</age_at_diagnosis>
+          <sex>Male</sex>
+          <race>Caucasian</race>
+        </demographics>
+        <tumor type="object">
+          <ulceration>Yes</ulceration>
+          <lymph_node_examined>0</lymph_node_examined>
+        </tumor>
+      </clinical>
+      <recurrence type="object">
+        <metastasis>Yes</metastasis>
+        <details type="object">
+          <time_to_recurrence_months>9.6</time_to_recurrence_months>
+          <site_first_recurrence>Inguinal LN</site_first_recurrence>
+        </details>
+      </recurrence>
+      <treatment type="object">
+        <received>No</received>
+        <details type="list"/>
+      </treatment>
+    </patient>
+  </element>
+  <element type="object">
+    <id>69300358ed9d10cb6013a1de</id>
+    <variant_id>SPEN_16200729_INS</variant_id>
+    <gene type="object">
+      <symbol>SPEN</symbol>
+    </gene>
+    <location type="object">
+      <chromosome>1</chromosome>
+      <coordinates type="object">
+        <start>16200729</start>
+        <end>16200730</end>
+        <strand>+</strand>
+      </coordinates>
+    </location>
+    <classification type="object">
+      <consequence>intron_variant</consequence>
+      <variant_class>Intron</variant_class>
+      <variant_type>INS</variant_type>
+    </classification>
+    <alleles type="object">
+      <reference>-</reference>
+      <tumor type="object">
+        <allele1>-</allele1>
+      </tumor>
+    </alleles>
+    <samples type="object">
+      <tumor_sample>VU10</tumor_sample>
+      <normal_sample>NORMAL</normal_sample>
+    </samples>
+    <sequencing type="object">
+      <depth type="object">
+        <tumor type="object">
+          <ref_count></ref_count>
+          <alt_count></alt_count>
+          <total_depth></total_depth>
+        </tumor>
+      </depth>
+    </sequencing>
+    <annotations type="object">
+      <HGVSc>ENST00000375759.3:c.404+1108dup</HGVSc>
+      <HGVSp></HGVSp>
+      <HGVSp_short>*135*</HGVSp_short>
+    </annotations>
+    <validation type="object">
+      <mutation_status></mutation_status>
+      <verification_status></verification_status>
+      <validation_status></validation_status>
+    </validation>
+    <sample type="object">
+      <id>693002e8ed9d10cb601320ba</id>
+      <sample_id>VU10</sample_id>
+      <patient type="object">
+        <id>P-10</id>
+      </patient>
+      <metadata type="object">
+        <presentation type="object">
+          <stage>IIC</stage>
+          <primary_site>Plantar Foot</primary_site>
+        </presentation>
+        <sample_info type="object">
+          <type>Primary</type>
+          <metastatic_site></metastatic_site>
+        </sample_info>
+      </metadata>
+      <tumor type="object">
+        <primary_depth_mm>7</primary_depth_mm>
+      </tumor>
+      <cancer type="object">
+        <type type="object">
+          <main>Melanoma</main>
+          <detailed>Acral Melanoma</detailed>
+        </type>
+      </cancer>
+      <genomics type="object">
+        <tmb type="object">
+          <nonsynonymous>2.833333333</nonsynonymous>
+        </tmb>
+      </genomics>
+    </sample>
+    <patient type="object">
+      <id>693002d0ed9d10cb60132097</id>
+      <patient_id>P-10</patient_id>
+      <survival type="object">
+        <overall type="object">
+          <months>19.2</months>
+          <status type="object">
+            <code>1</code>
+            <label>DECEASED</label>
+          </status>
+        </overall>
+        <disease_free type="object">
+          <months>9.6</months>
+          <status type="object">
+            <code>1</code>
+            <label>Recurred/Progressed</label>
+          </status>
+        </disease_free>
+      </survival>
+      <clinical type="object">
+        <demographics type="object">
+          <age_at_diagnosis>78</age_at_diagnosis>
+          <sex>Male</sex>
+          <race>Caucasian</race>
+        </demographics>
+        <tumor type="object">
+          <ulceration>Yes</ulceration>
+          <lymph_node_examined>0</lymph_node_examined>
+        </tumor>
+      </clinical>
+      <recurrence type="object">
+        <metastasis>Yes</metastasis>
+        <details type="object">
+          <time_to_recurrence_months>9.6</time_to_recurrence_months>
+          <site_first_recurrence>Inguinal LN</site_first_recurrence>
+        </details>
+      </recurrence>
+      <treatment type="object">
+        <received>No</received>
+        <details type="list"/>
+      </treatment>
+    </patient>
+  </element>
+  <element type="object">
+    <id>69300358ed9d10cb6013a1df</id>
+    <variant_id>MUL1_20834605_INS</variant_id>
+    <gene type="object">
+      <symbol>MUL1</symbol>
+    </gene>
+    <location type="object">
+      <chromosome>1</chromosome>
+      <coordinates type="object">
+        <start>20834605</start>
+        <end>20834606</end>
+        <strand>+</strand>
+      </coordinates>
+    </location>
+    <classification type="object">
+      <consequence>5_prime_UTR_variant</consequence>
+      <variant_class>5'UTR</variant_class>
+      <variant_type>INS</variant_type>
+    </classification>
+    <alleles type="object">
+      <reference>-</reference>
+      <tumor type="object">
+        <allele1>-</allele1>
+      </tumor>
+    </alleles>
+    <samples type="object">
+      <tumor_sample>VU10</tumor_sample>
+      <normal_sample>NORMAL</normal_sample>
+    </samples>
+    <sequencing type="object">
+      <depth type="object">
+        <tumor type="object">
+          <ref_count></ref_count>
+          <alt_count></alt_count>
+          <total_depth></total_depth>
+        </tumor>
+      </depth>
+    </sequencing>
+    <annotations type="object">
+      <HGVSc>ENST00000264198.3:c.-89dup</HGVSc>
+      <HGVSp></HGVSp>
+      <HGVSp_short>*30*</HGVSp_short>
+    </annotations>
+    <validation type="object">
+      <mutation_status></mutation_status>
+      <verification_status></verification_status>
+      <validation_status></validation_status>
+    </validation>
+    <sample type="object">
+      <id>693002e8ed9d10cb601320ba</id>
+      <sample_id>VU10</sample_id>
+      <patient type="object">
+        <id>P-10</id>
+      </patient>
+      <metadata type="object">
+        <presentation type="object">
+          <stage>IIC</stage>
+          <primary_site>Plantar Foot</primary_site>
+        </presentation>
+        <sample_info type="object">
+          <type>Primary</type>
+          <metastatic_site></metastatic_site>
+        </sample_info>
+      </metadata>
+      <tumor type="object">
+        <primary_depth_mm>7</primary_depth_mm>
+      </tumor>
+      <cancer type="object">
+        <type type="object">
+          <main>Melanoma</main>
+          <detailed>Acral Melanoma</detailed>
+        </type>
+      </cancer>
+      <genomics type="object">
+        <tmb type="object">
+          <nonsynonymous>2.833333333</nonsynonymous>
+        </tmb>
+      </genomics>
+    </sample>
+    <patient type="object">
+      <id>693002d0ed9d10cb60132097</id>
+      <patient_id>P-10</patient_id>
+      <survival type="object">
+        <overall type="object">
+          <months>19.2</months>
+          <status type="object">
+            <code>1</code>
+            <label>DECEASED</label>
+          </status>
+        </overall>
+        <disease_free type="object">
+          <months>9.6</months>
+          <status type="object">
+            <code>1</code>
+            <label>Recurred/Progressed</label>
+          </status>
+        </disease_free>
+      </survival>
+      <clinical type="object">
+        <demographics type="object">
+          <age_at_diagnosis>78</age_at_diagnosis>
+          <sex>Male</sex>
+          <race>Caucasian</race>
+        </demographics>
+        <tumor type="object">
+          <ulceration>Yes</ulceration>
+          <lymph_node_examined>0</lymph_node_examined>
+        </tumor>
+      </clinical>
+      <recurrence type="object">
+        <metastasis>Yes</metastasis>
+        <details type="object">
+          <time_to_recurrence_months>9.6</time_to_recurrence_months>
+          <site_first_recurrence>Inguinal LN</site_first_recurrence>
+        </details>
+      </recurrence>
+      <treatment type="object">
+        <received>No</received>
+        <details type="list"/>
+      </treatment>
+    </patient>
+  </element>
+  <element type="object">
+    <id>69300358ed9d10cb6013a1e0</id>
+    <variant_id>AGO3_36475027_DEL</variant_id>
+    <gene type="object">
+      <symbol>AGO3</symbol>
+    </gene>
+    <location type="object">
+      <chromosome>1</chromosome>
+      <coordinates type="object">
+        <start>36475027</start>
+        <end>36475027</end>
+        <strand>+</strand>
+      </coordinates>
+    </location>
+    <classification type="object">
+      <consequence>non_coding_transcript_exon_variant</consequence>
+      <variant_class>RNA</variant_class>
+      <variant_type>DEL</variant_type>
+    </classification>
+    <alleles type="object">
+      <reference>A</reference>
+      <tumor type="object">
+        <allele1>A</allele1>
+      </tumor>
+    </alleles>
+    <samples type="object">
+      <tumor_sample>VU10</tumor_sample>
+      <normal_sample>NORMAL</normal_sample>
+    </samples>
+    <sequencing type="object">
+      <depth type="object">
+        <tumor type="object">
+          <ref_count></ref_count>
+          <alt_count></alt_count>
+          <total_depth></total_depth>
+        </tumor>
+      </depth>
+    </sequencing>
+    <annotations type="object">
+      <HGVSc>ENST00000479395.2:n.340delT</HGVSc>
+      <HGVSp></HGVSp>
+      <HGVSp_short>*114*</HGVSp_short>
+    </annotations>
+    <validation type="object">
+      <mutation_status></mutation_status>
+      <verification_status></verification_status>
+      <validation_status></validation_status>
+    </validation>
+    <sample type="object">
+      <id>693002e8ed9d10cb601320ba</id>
+      <sample_id>VU10</sample_id>
+      <patient type="object">
+        <id>P-10</id>
+      </patient>
+      <metadata type="object">
+        <presentation type="object">
+          <stage>IIC</stage>
+          <primary_site>Plantar Foot</primary_site>
+        </presentation>
+        <sample_info type="object">
+          <type>Primary</type>
+          <metastatic_site></metastatic_site>
+        </sample_info>
+      </metadata>
+      <tumor type="object">
+        <primary_depth_mm>7</primary_depth_mm>
+      </tumor>
+      <cancer type="object">
+        <type type="object">
+          <main>Melanoma</main>
+          <detailed>Acral Melanoma</detailed>
+        </type>
+      </cancer>
+      <genomics type="object">
+        <tmb type="object">
+          <nonsynonymous>2.833333333</nonsynonymous>
+        </tmb>
+      </genomics>
+    </sample>
+    <patient type="object">
+      <id>693002d0ed9d10cb60132097</id>
+      <patient_id>P-10</patient_id>
+      <survival type="object">
+        <overall type="object">
+          <months>19.2</months>
+          <status type="object">
+            <code>1</code>
+            <label>DECEASED</label>
+          </status>
+        </overall>
+        <disease_free type="object">
+          <months>9.6</months>
+          <status type="object">
+            <code>1</code>
+            <label>Recurred/Progressed</label>
+          </status>
+        </disease_free>
+      </survival>
+      <clinical type="object">
+        <demographics type="object">
+          <age_at_diagnosis>78</age_at_diagnosis>
+          <sex>Male</sex>
+          <race>Caucasian</race>
+        </demographics>
+        <tumor type="object">
+          <ulceration>Yes</ulceration>
+          <lymph_node_examined>0</lymph_node_examined>
+        </tumor>
+      </clinical>
+      <recurrence type="object">
+        <metastasis>Yes</metastasis>
+        <details type="object">
+          <time_to_recurrence_months>9.6</time_to_recurrence_months>
+          <site_first_recurrence>Inguinal LN</site_first_recurrence>
+        </details>
+      </recurrence>
+      <treatment type="object">
+        <received>No</received>
+        <details type="list"/>
+      </treatment>
+    </patient>
+  </element>
+  <element type="object">
+    <id>69300358ed9d10cb6013a1e1</id>
+    <variant_id>HPCAL4_40144972_SNP</variant_id>
+    <gene type="object">
+      <symbol>HPCAL4</symbol>
+    </gene>
+    <location type="object">
+      <chromosome>1</chromosome>
+      <coordinates type="object">
+        <start>40144972</start>
+        <end>40144972</end>
+        <strand>+</strand>
+      </coordinates>
+    </location>
+    <classification type="object">
+      <consequence>3_prime_UTR_variant</consequence>
+      <variant_class>3'UTR</variant_class>
+      <variant_type>SNP</variant_type>
+    </classification>
+    <alleles type="object">
+      <reference>A</reference>
+      <tumor type="object">
+        <allele1>A</allele1>
+      </tumor>
+    </alleles>
+    <samples type="object">
+      <tumor_sample>VU10</tumor_sample>
+      <normal_sample>NORMAL</normal_sample>
+    </samples>
+    <sequencing type="object">
+      <depth type="object">
+        <tumor type="object">
+          <ref_count></ref_count>
+          <alt_count></alt_count>
+          <total_depth></total_depth>
+        </tumor>
+      </depth>
+    </sequencing>
+    <annotations type="object">
+      <HGVSc>ENST00000372844.3:c.*3236T&gt;A</HGVSc>
+      <HGVSp></HGVSp>
+      <HGVSp_short>*1079*</HGVSp_short>
+    </annotations>
+    <validation type="object">
+      <mutation_status></mutation_status>
+      <verification_status></verification_status>
+      <validation_status></validation_status>
+    </validation>
+    <sample type="object">
+      <id>693002e8ed9d10cb601320ba</id>
+      <sample_id>VU10</sample_id>
+      <patient type="object">
+        <id>P-10</id>
+      </patient>
+      <metadata type="object">
+        <presentation type="object">
+          <stage>IIC</stage>
+          <primary_site>Plantar Foot</primary_site>
+        </presentation>
+        <sample_info type="object">
+          <type>Primary</type>
+          <metastatic_site></metastatic_site>
+        </sample_info>
+      </metadata>
+      <tumor type="object">
+        <primary_depth_mm>7</primary_depth_mm>
+      </tumor>
+      <cancer type="object">
+        <type type="object">
+          <main>Melanoma</main>
+          <detailed>Acral Melanoma</detailed>
+        </type>
+      </cancer>
+      <genomics type="object">
+        <tmb type="object">
+          <nonsynonymous>2.833333333</nonsynonymous>
+        </tmb>
+      </genomics>
+    </sample>
+    <patient type="object">
+      <id>693002d0ed9d10cb60132097</id>
+      <patient_id>P-10</patient_id>
+      <survival type="object">
+        <overall type="object">
+          <months>19.2</months>
+          <status type="object">
+            <code>1</code>
+            <label>DECEASED</label>
+          </status>
+        </overall>
+        <disease_free type="object">
+          <months>9.6</months>
+          <status type="object">
+            <code>1</code>
+            <label>Recurred/Progressed</label>
+          </status>
+        </disease_free>
+      </survival>
+      <clinical type="object">
+        <demographics type="object">
+          <age_at_diagnosis>78</age_at_diagnosis>
+          <sex>Male</sex>
+          <race>Caucasian</race>
+        </demographics>
+        <tumor type="object">
+          <ulceration>Yes</ulceration>
+          <lymph_node_examined>0</lymph_node_examined>
+        </tumor>
+      </clinical>
+      <recurrence type="object">
+        <metastasis>Yes</metastasis>
+        <details type="object">
+          <time_to_recurrence_months>9.6</time_to_recurrence_months>
+          <site_first_recurrence>Inguinal LN</site_first_recurrence>
+        </details>
+      </recurrence>
+      <treatment type="object">
+        <received>No</received>
+        <details type="list"/>
+      </treatment>
+    </patient>
+  </element>
+  <element type="object">
+    <id>69300358ed9d10cb6013a1e2</id>
+    <variant_id>KCNQ4_41284372_SNP</variant_id>
+    <gene type="object">
+      <symbol>KCNQ4</symbol>
+    </gene>
+    <location type="object">
+      <chromosome>1</chromosome>
+      <coordinates type="object">
+        <start>41284372</start>
+        <end>41284372</end>
+        <strand>+</strand>
+      </coordinates>
+    </location>
+    <classification type="object">
+      <consequence>intron_variant</consequence>
+      <variant_class>Intron</variant_class>
+      <variant_type>SNP</variant_type>
+    </classification>
+    <alleles type="object">
+      <reference>C</reference>
+      <tumor type="object">
+        <allele1>C</allele1>
+      </tumor>
+    </alleles>
+    <samples type="object">
+      <tumor_sample>VU10</tumor_sample>
+      <normal_sample>NORMAL</normal_sample>
+    </samples>
+    <sequencing type="object">
+      <depth type="object">
+        <tumor type="object">
+          <ref_count></ref_count>
+          <alt_count></alt_count>
+          <total_depth></total_depth>
+        </tumor>
+      </depth>
+    </sequencing>
+    <annotations type="object">
+      <HGVSc>ENST00000347132.5:c.708+20C&gt;T</HGVSc>
+      <HGVSp></HGVSp>
+      <HGVSp_short>*236*</HGVSp_short>
+    </annotations>
+    <validation type="object">
+      <mutation_status></mutation_status>
+      <verification_status></verification_status>
+      <validation_status></validation_status>
+    </validation>
+    <sample type="object">
+      <id>693002e8ed9d10cb601320ba</id>
+      <sample_id>VU10</sample_id>
+      <patient type="object">
+        <id>P-10</id>
+      </patient>
+      <metadata type="object">
+        <presentation type="object">
+          <stage>IIC</stage>
+          <primary_site>Plantar Foot</primary_site>
+        </presentation>
+        <sample_info type="object">
+          <type>Primary</type>
+          <metastatic_site></metastatic_site>
+        </sample_info>
+      </metadata>
+      <tumor type="object">
+        <primary_depth_mm>7</primary_depth_mm>
+      </tumor>
+      <cancer type="object">
+        <type type="object">
+          <main>Melanoma</main>
+          <detailed>Acral Melanoma</detailed>
+        </type>
+      </cancer>
+      <genomics type="object">
+        <tmb type="object">
+          <nonsynonymous>2.833333333</nonsynonymous>
+        </tmb>
+      </genomics>
+    </sample>
+    <patient type="object">
+      <id>693002d0ed9d10cb60132097</id>
+      <patient_id>P-10</patient_id>
+      <survival type="object">
+        <overall type="object">
+          <months>19.2</months>
+          <status type="object">
+            <code>1</code>
+            <label>DECEASED</label>
+          </status>
+        </overall>
+        <disease_free type="object">
+          <months>9.6</months>
+          <status type="object">
+            <code>1</code>
+            <label>Recurred/Progressed</label>
+          </status>
+        </disease_free>
+      </survival>
+      <clinical type="object">
+        <demographics type="object">
+          <age_at_diagnosis>78</age_at_diagnosis>
+          <sex>Male</sex>
+          <race>Caucasian</race>
+        </demographics>
+        <tumor type="object">
+          <ulceration>Yes</ulceration>
+          <lymph_node_examined>0</lymph_node_examined>
+        </tumor>
+      </clinical>
+      <recurrence type="object">
+        <metastasis>Yes</metastasis>
+        <details type="object">
+          <time_to_recurrence_months>9.6</time_to_recurrence_months>
+          <site_first_recurrence>Inguinal LN</site_first_recurrence>
+        </details>
+      </recurrence>
+      <treatment type="object">
+        <received>No</received>
+        <details type="list"/>
+      </treatment>
+    </patient>
+  </element>
+  <element type="object">
+    <id>69300358ed9d10cb6013a1e3</id>
+    <variant_id>UROD_45477826_SNP</variant_id>
+    <gene type="object">
+      <symbol>UROD</symbol>
+    </gene>
+    <location type="object">
+      <chromosome>1</chromosome>
+      <coordinates type="object">
+        <start>45477826</start>
+        <end>45477826</end>
+        <strand>+</strand>
+      </coordinates>
+    </location>
+    <classification type="object">
+      <consequence>5_prime_UTR_variant</consequence>
+      <variant_class>5'UTR</variant_class>
+      <variant_type>SNP</variant_type>
+    </classification>
+    <alleles type="object">
+      <reference>C</reference>
+      <tumor type="object">
+        <allele1>C</allele1>
+      </tumor>
+    </alleles>
+    <samples type="object">
+      <tumor_sample>VU10</tumor_sample>
+      <normal_sample>NORMAL</normal_sample>
+    </samples>
+    <sequencing type="object">
+      <depth type="object">
+        <tumor type="object">
+          <ref_count></ref_count>
+          <alt_count></alt_count>
+          <total_depth></total_depth>
+        </tumor>
+      </depth>
+    </sequencing>
+    <annotations type="object">
+      <HGVSc>ENST00000246337.4:c.-112C&gt;T</HGVSc>
+      <HGVSp></HGVSp>
+      <HGVSp_short>*38*</HGVSp_short>
+    </annotations>
+    <validation type="object">
+      <mutation_status></mutation_status>
+      <verification_status></verification_status>
+      <validation_status></validation_status>
+    </validation>
+    <sample type="object">
+      <id>693002e8ed9d10cb601320ba</id>
+      <sample_id>VU10</sample_id>
+      <patient type="object">
+        <id>P-10</id>
+      </patient>
+      <metadata type="object">
+        <presentation type="object">
+          <stage>IIC</stage>
+          <primary_site>Plantar Foot</primary_site>
+        </presentation>
+        <sample_info type="object">
+          <type>Primary</type>
+          <metastatic_site></metastatic_site>
+        </sample_info>
+      </metadata>
+      <tumor type="object">
+        <primary_depth_mm>7</primary_depth_mm>
+      </tumor>
+      <cancer type="object">
+        <type type="object">
+          <main>Melanoma</main>
+          <detailed>Acral Melanoma</detailed>
+        </type>
+      </cancer>
+      <genomics type="object">
+        <tmb type="object">
+          <nonsynonymous>2.833333333</nonsynonymous>
+        </tmb>
+      </genomics>
+    </sample>
+    <patient type="object">
+      <id>693002d0ed9d10cb60132097</id>
+      <patient_id>P-10</patient_id>
+      <survival type="object">
+        <overall type="object">
+          <months>19.2</months>
+          <status type="object">
+            <code>1</code>
+            <label>DECEASED</label>
+          </status>
+        </overall>
+        <disease_free type="object">
+          <months>9.6</months>
+          <status type="object">
+            <code>1</code>
+            <label>Recurred/Progressed</label>
+          </status>
+        </disease_free>
+      </survival>
+      <clinical type="object">
+        <demographics type="object">
+          <age_at_diagnosis>78</age_at_diagnosis>
+          <sex>Male</sex>
+          <race>Caucasian</race>
+        </demographics>
+        <tumor type="object">
+          <ulceration>Yes</ulceration>
+          <lymph_node_examined>0</lymph_node_examined>
+        </tumor>
+      </clinical>
+      <recurrence type="object">
+        <metastasis>Yes</metastasis>
+        <details type="object">
+          <time_to_recurrence_months>9.6</time_to_recurrence_months>
+          <site_first_recurrence>Inguinal LN</site_first_recurrence>
+        </details>
+      </recurrence>
+      <treatment type="object">
+        <received>No</received>
+        <details type="list"/>
+      </treatment>
+    </patient>
+  </element>
+  <element type="object">
+    <id>69300358ed9d10cb6013a1e4</id>
+    <variant_id>DHCR24_55317624_SNP</variant_id>
+    <gene type="object">
+      <symbol>DHCR24</symbol>
+    </gene>
+    <location type="object">
+      <chromosome>1</chromosome>
+      <coordinates type="object">
+        <start>55317624</start>
+        <end>55317624</end>
+        <strand>+</strand>
+      </coordinates>
+    </location>
+    <classification type="object">
+      <consequence>3_prime_UTR_variant</consequence>
+      <variant_class>3'UTR</variant_class>
+      <variant_type>SNP</variant_type>
+    </classification>
+    <alleles type="object">
+      <reference>G</reference>
+      <tumor type="object">
+        <allele1>G</allele1>
+      </tumor>
+    </alleles>
+    <samples type="object">
+      <tumor_sample>VU10</tumor_sample>
+      <normal_sample>NORMAL</normal_sample>
+    </samples>
+    <sequencing type="object">
+      <depth type="object">
+        <tumor type="object">
+          <ref_count></ref_count>
+          <alt_count></alt_count>
+          <total_depth></total_depth>
+        </tumor>
+      </depth>
+    </sequencing>
+    <annotations type="object">
+      <HGVSc>ENST00000371269.3:c.*282C&gt;A</HGVSc>
+      <HGVSp></HGVSp>
+      <HGVSp_short>*94*</HGVSp_short>
+    </annotations>
+    <validation type="object">
+      <mutation_status></mutation_status>
+      <verification_status></verification_status>
+      <validation_status></validation_status>
+    </validation>
+    <sample type="object">
+      <id>693002e8ed9d10cb601320ba</id>
+      <sample_id>VU10</sample_id>
+      <patient type="object">
+        <id>P-10</id>
+      </patient>
+      <metadata type="object">
+        <presentation type="object">
+          <stage>IIC</stage>
+          <primary_site>Plantar Foot</primary_site>
+        </presentation>
+        <sample_info type="object">
+          <type>Primary</type>
+          <metastatic_site></metastatic_site>
+        </sample_info>
+      </metadata>
+      <tumor type="object">
+        <primary_depth_mm>7</primary_depth_mm>
+      </tumor>
+      <cancer type="object">
+        <type type="object">
+          <main>Melanoma</main>
+          <detailed>Acral Melanoma</detailed>
+        </type>
+      </cancer>
+      <genomics type="object">
+        <tmb type="object">
+          <nonsynonymous>2.833333333</nonsynonymous>
+        </tmb>
+      </genomics>
+    </sample>
+    <patient type="object">
+      <id>693002d0ed9d10cb60132097</id>
+      <patient_id>P-10</patient_id>
+      <survival type="object">
+        <overall type="object">
+          <months>19.2</months>
+          <status type="object">
+            <code>1</code>
+            <label>DECEASED</label>
+          </status>
+        </overall>
+        <disease_free type="object">
+          <months>9.6</months>
+          <status type="object">
+            <code>1</code>
+            <label>Recurred/Progressed</label>
+          </status>
+        </disease_free>
+      </survival>
+      <clinical type="object">
+        <demographics type="object">
+          <age_at_diagnosis>78</age_at_diagnosis>
+          <sex>Male</sex>
+          <race>Caucasian</race>
+        </demographics>
+        <tumor type="object">
+          <ulceration>Yes</ulceration>
+          <lymph_node_examined>0</lymph_node_examined>
+        </tumor>
+      </clinical>
+      <recurrence type="object">
+        <metastasis>Yes</metastasis>
+        <details type="object">
+          <time_to_recurrence_months>9.6</time_to_recurrence_months>
+          <site_first_recurrence>Inguinal LN</site_first_recurrence>
+        </details>
+      </recurrence>
+      <treatment type="object">
+        <received>No</received>
+        <details type="list"/>
+      </treatment>
+    </patient>
+  </element>
+  <element type="object">
+    <id>69300358ed9d10cb6013a1e5</id>
+    <variant_id>PRKAA2_57179199_INS</variant_id>
+    <gene type="object">
+      <symbol>PRKAA2</symbol>
+    </gene>
+    <location type="object">
+      <chromosome>1</chromosome>
+      <coordinates type="object">
+        <start>57179199</start>
+        <end>57179200</end>
+        <strand>+</strand>
+      </coordinates>
+    </location>
+    <classification type="object">
+      <consequence>3_prime_UTR_variant</consequence>
+      <variant_class>3'UTR</variant_class>
+      <variant_type>INS</variant_type>
+    </classification>
+    <alleles type="object">
+      <reference>-</reference>
+      <tumor type="object">
+        <allele1>-</allele1>
+      </tumor>
+    </alleles>
+    <samples type="object">
+      <tumor_sample>VU10</tumor_sample>
+      <normal_sample>NORMAL</normal_sample>
+    </samples>
+    <sequencing type="object">
+      <depth type="object">
+        <tumor type="object">
+          <ref_count></ref_count>
+          <alt_count></alt_count>
+          <total_depth></total_depth>
+        </tumor>
+      </depth>
+    </sequencing>
+    <annotations type="object">
+      <HGVSc>ENST00000371244.4:c.*5822dup</HGVSc>
+      <HGVSp></HGVSp>
+      <HGVSp_short>*1941*</HGVSp_short>
+    </annotations>
+    <validation type="object">
+      <mutation_status></mutation_status>
+      <verification_status></verification_status>
+      <validation_status></validation_status>
+    </validation>
+    <sample type="object">
+      <id>693002e8ed9d10cb601320ba</id>
+      <sample_id>VU10</sample_id>
+      <patient type="object">
+        <id>P-10</id>
+      </patient>
+      <metadata type="object">
+        <presentation type="object">
+          <stage>IIC</stage>
+          <primary_site>Plantar Foot</primary_site>
+        </presentation>
+        <sample_info type="object">
+          <type>Primary</type>
+          <metastatic_site></metastatic_site>
+        </sample_info>
+      </metadata>
+      <tumor type="object">
+        <primary_depth_mm>7</primary_depth_mm>
+      </tumor>
+      <cancer type="object">
+        <type type="object">
+          <main>Melanoma</main>
+          <detailed>Acral Melanoma</detailed>
+        </type>
+      </cancer>
+      <genomics type="object">
+        <tmb type="object">
+          <nonsynonymous>2.833333333</nonsynonymous>
+        </tmb>
+      </genomics>
+    </sample>
+    <patient type="object">
+      <id>693002d0ed9d10cb60132097</id>
+      <patient_id>P-10</patient_id>
+      <survival type="object">
+        <overall type="object">
+          <months>19.2</months>
+          <status type="object">
+            <code>1</code>
+            <label>DECEASED</label>
+          </status>
+        </overall>
+        <disease_free type="object">
+          <months>9.6</months>
+          <status type="object">
+            <code>1</code>
+            <label>Recurred/Progressed</label>
+          </status>
+        </disease_free>
+      </survival>
+      <clinical type="object">
+        <demographics type="object">
+          <age_at_diagnosis>78</age_at_diagnosis>
+          <sex>Male</sex>
+          <race>Caucasian</race>
+        </demographics>
+        <tumor type="object">
+          <ulceration>Yes</ulceration>
+          <lymph_node_examined>0</lymph_node_examined>
+        </tumor>
+      </clinical>
+      <recurrence type="object">
+        <metastasis>Yes</metastasis>
+        <details type="object">
+          <time_to_recurrence_months>9.6</time_to_recurrence_months>
+          <site_first_recurrence>Inguinal LN</site_first_recurrence>
+        </details>
+      </recurrence>
+      <treatment type="object">
+        <received>No</received>
+        <details type="list"/>
+      </treatment>
+    </patient>
+  </element>
+  <element type="object">
+    <id>69300358ed9d10cb6013a1e6</id>
+    <variant_id>AK4_65692499_SNP</variant_id>
+    <gene type="object">
+      <symbol>AK4</symbol>
+    </gene>
+    <location type="object">
+      <chromosome>1</chromosome>
+      <coordinates type="object">
+        <start>65692499</start>
+        <end>65692499</end>
+        <strand>+</strand>
+      </coordinates>
+    </location>
+    <classification type="object">
+      <consequence>3_prime_UTR_variant</consequence>
+      <variant_class>3'UTR</variant_class>
+      <variant_type>SNP</variant_type>
+    </classification>
+    <alleles type="object">
+      <reference>C</reference>
+      <tumor type="object">
+        <allele1>C</allele1>
+      </tumor>
+    </alleles>
+    <samples type="object">
+      <tumor_sample>VU10</tumor_sample>
+      <normal_sample>NORMAL</normal_sample>
+    </samples>
+    <sequencing type="object">
+      <depth type="object">
+        <tumor type="object">
+          <ref_count></ref_count>
+          <alt_count></alt_count>
+          <total_depth></total_depth>
+        </tumor>
+      </depth>
+    </sequencing>
+    <annotations type="object">
+      <HGVSc>ENST00000395334.2:c.*639C&gt;T</HGVSc>
+      <HGVSp></HGVSp>
+      <HGVSp_short>*213*</HGVSp_short>
+    </annotations>
+    <validation type="object">
+      <mutation_status></mutation_status>
+      <verification_status></verification_status>
+      <validation_status></validation_status>
+    </validation>
+    <sample type="object">
+      <id>693002e8ed9d10cb601320ba</id>
+      <sample_id>VU10</sample_id>
+      <patient type="object">
+        <id>P-10</id>
+      </patient>
+      <metadata type="object">
+        <presentation type="object">
+          <stage>IIC</stage>
+          <primary_site>Plantar Foot</primary_site>
+        </presentation>
+        <sample_info type="object">
+          <type>Primary</type>
+          <metastatic_site></metastatic_site>
+        </sample_info>
+      </metadata>
+      <tumor type="object">
+        <primary_depth_mm>7</primary_depth_mm>
+      </tumor>
+      <cancer type="object">
+        <type type="object">
+          <main>Melanoma</main>
+          <detailed>Acral Melanoma</detailed>
+        </type>
+      </cancer>
+      <genomics type="object">
+        <tmb type="object">
+          <nonsynonymous>2.833333333</nonsynonymous>
+        </tmb>
+      </genomics>
+    </sample>
+    <patient type="object">
+      <id>693002d0ed9d10cb60132097</id>
+      <patient_id>P-10</patient_id>
+      <survival type="object">
+        <overall type="object">
+          <months>19.2</months>
+          <status type="object">
+            <code>1</code>
+            <label>DECEASED</label>
+          </status>
+        </overall>
+        <disease_free type="object">
+          <months>9.6</months>
+          <status type="object">
+            <code>1</code>
+            <label>Recurred/Progressed</label>
+          </status>
+        </disease_free>
+      </survival>
+      <clinical type="object">
+        <demographics type="object">
+          <age_at_diagnosis>78</age_at_diagnosis>
+          <sex>Male</sex>
+          <race>Caucasian</race>
+        </demographics>
+        <tumor type="object">
+          <ulceration>Yes</ulceration>
+          <lymph_node_examined>0</lymph_node_examined>
+        </tumor>
+      </clinical>
+      <recurrence type="object">
+        <metastasis>Yes</metastasis>
+        <details type="object">
+          <time_to_recurrence_months>9.6</time_to_recurrence_months>
+          <site_first_recurrence>Inguinal LN</site_first_recurrence>
+        </details>
+      </recurrence>
+      <treatment type="object">
+        <received>No</received>
+        <details type="list"/>
+      </treatment>
+    </patient>
+  </element>
+  <element type="object">
+    <id>69300358ed9d10cb6013a1e7</id>
+    <variant_id>ATP1A1_116942111_SNP</variant_id>
+    <gene type="object">
+      <symbol>ATP1A1</symbol>
+    </gene>
+    <location type="object">
+      <chromosome>1</chromosome>
+      <coordinates type="object">
+        <start>116942111</start>
+        <end>116942111</end>
+        <strand>+</strand>
+      </coordinates>
+    </location>
+    <classification type="object">
+      <consequence>missense_variant</consequence>
+      <variant_class>Missense_Mutation</variant_class>
+      <variant_type>SNP</variant_type>
+    </classification>
+    <alleles type="object">
+      <reference>A</reference>
+      <tumor type="object">
+        <allele1>A</allele1>
+      </tumor>
+    </alleles>
+    <samples type="object">
+      <tumor_sample>VU10</tumor_sample>
+      <normal_sample>NORMAL</normal_sample>
+    </samples>
+    <sequencing type="object">
+      <depth type="object">
+        <tumor type="object">
+          <ref_count></ref_count>
+          <alt_count></alt_count>
+          <total_depth></total_depth>
+        </tumor>
+      </depth>
+    </sequencing>
+    <annotations type="object">
+      <HGVSc>ENST00000537345.1:c.2518A&gt;C</HGVSc>
+      <HGVSp>p.Lys840Gln</HGVSp>
+      <HGVSp_short>p.K840Q</HGVSp_short>
+    </annotations>
+    <validation type="object">
+      <mutation_status></mutation_status>
+      <verification_status></verification_status>
+      <validation_status></validation_status>
+    </validation>
+    <sample type="object">
+      <id>693002e8ed9d10cb601320ba</id>
+      <sample_id>VU10</sample_id>
+      <patient type="object">
+        <id>P-10</id>
+      </patient>
+      <metadata type="object">
+        <presentation type="object">
+          <stage>IIC</stage>
+          <primary_site>Plantar Foot</primary_site>
+        </presentation>
+        <sample_info type="object">
+          <type>Primary</type>
+          <metastatic_site></metastatic_site>
+        </sample_info>
+      </metadata>
+      <tumor type="object">
+        <primary_depth_mm>7</primary_depth_mm>
+      </tumor>
+      <cancer type="object">
+        <type type="object">
+          <main>Melanoma</main>
+          <detailed>Acral Melanoma</detailed>
+        </type>
+      </cancer>
+      <genomics type="object">
+        <tmb type="object">
+          <nonsynonymous>2.833333333</nonsynonymous>
+        </tmb>
+      </genomics>
+    </sample>
+    <patient type="object">
+      <id>693002d0ed9d10cb60132097</id>
+      <patient_id>P-10</patient_id>
+      <survival type="object">
+        <overall type="object">
+          <months>19.2</months>
+          <status type="object">
+            <code>1</code>
+            <label>DECEASED</label>
+          </status>
+        </overall>
+        <disease_free type="object">
+          <months>9.6</months>
+          <status type="object">
+            <code>1</code>
+            <label>Recurred/Progressed</label>
+          </status>
+        </disease_free>
+      </survival>
+      <clinical type="object">
+        <demographics type="object">
+          <age_at_diagnosis>78</age_at_diagnosis>
+          <sex>Male</sex>
+          <race>Caucasian</race>
+        </demographics>
+        <tumor type="object">
+          <ulceration>Yes</ulceration>
+          <lymph_node_examined>0</lymph_node_examined>
+        </tumor>
+      </clinical>
+      <recurrence type="object">
+        <metastasis>Yes</metastasis>
+        <details type="object">
+          <time_to_recurrence_months>9.6</time_to_recurrence_months>
+          <site_first_recurrence>Inguinal LN</site_first_recurrence>
+        </details>
+      </recurrence>
+      <treatment type="object">
+        <received>No</received>
+        <details type="list"/>
+      </treatment>
+    </patient>
+  </element>
+  <element type="object">
+    <id>69300358ed9d10cb6013a1e8</id>
+    <variant_id>POLR3C_145601616_DEL</variant_id>
+    <gene type="object">
+      <symbol>POLR3C</symbol>
+    </gene>
+    <location type="object">
+      <chromosome>1</chromosome>
+      <coordinates type="object">
+        <start>145601616</start>
+        <end>145601616</end>
+        <strand>+</strand>
+      </coordinates>
+    </location>
+    <classification type="object">
+      <consequence>frameshift_variant</consequence>
+      <variant_class>Frame_Shift_Del</variant_class>
+      <variant_type>DEL</variant_type>
+    </classification>
+    <alleles type="object">
+      <reference>T</reference>
+      <tumor type="object">
+        <allele1>T</allele1>
+      </tumor>
+    </alleles>
+    <samples type="object">
+      <tumor_sample>VU10</tumor_sample>
+      <normal_sample>NORMAL</normal_sample>
+    </samples>
+    <sequencing type="object">
+      <depth type="object">
+        <tumor type="object">
+          <ref_count></ref_count>
+          <alt_count></alt_count>
+          <total_depth></total_depth>
+        </tumor>
+      </depth>
+    </sequencing>
+    <annotations type="object">
+      <HGVSc>ENST00000334163.3:c.790del</HGVSc>
+      <HGVSp>p.Ser264AlafsTer10</HGVSp>
+      <HGVSp_short>p.S264Afs*10</HGVSp_short>
+    </annotations>
+    <validation type="object">
+      <mutation_status></mutation_status>
+      <verification_status></verification_status>
+      <validation_status></validation_status>
+    </validation>
+    <sample type="object">
+      <id>693002e8ed9d10cb601320ba</id>
+      <sample_id>VU10</sample_id>
+      <patient type="object">
+        <id>P-10</id>
+      </patient>
+      <metadata type="object">
+        <presentation type="object">
+          <stage>IIC</stage>
+          <primary_site>Plantar Foot</primary_site>
+        </presentation>
+        <sample_info type="object">
+          <type>Primary</type>
+          <metastatic_site></metastatic_site>
+        </sample_info>
+      </metadata>
+      <tumor type="object">
+        <primary_depth_mm>7</primary_depth_mm>
+      </tumor>
+      <cancer type="object">
+        <type type="object">
+          <main>Melanoma</main>
+          <detailed>Acral Melanoma</detailed>
+        </type>
+      </cancer>
+      <genomics type="object">
+        <tmb type="object">
+          <nonsynonymous>2.833333333</nonsynonymous>
+        </tmb>
+      </genomics>
+    </sample>
+    <patient type="object">
+      <id>693002d0ed9d10cb60132097</id>
+      <patient_id>P-10</patient_id>
+      <survival type="object">
+        <overall type="object">
+          <months>19.2</months>
+          <status type="object">
+            <code>1</code>
+            <label>DECEASED</label>
+          </status>
+        </overall>
+        <disease_free type="object">
+          <months>9.6</months>
+          <status type="object">
+            <code>1</code>
+            <label>Recurred/Progressed</label>
+          </status>
+        </disease_free>
+      </survival>
+      <clinical type="object">
+        <demographics type="object">
+          <age_at_diagnosis>78</age_at_diagnosis>
+          <sex>Male</sex>
+          <race>Caucasian</race>
+        </demographics>
+        <tumor type="object">
+          <ulceration>Yes</ulceration>
+          <lymph_node_examined>0</lymph_node_examined>
+        </tumor>
+      </clinical>
+      <recurrence type="object">
+        <metastasis>Yes</metastasis>
+        <details type="object">
+          <time_to_recurrence_months>9.6</time_to_recurrence_months>
+          <site_first_recurrence>Inguinal LN</site_first_recurrence>
+        </details>
+      </recurrence>
+      <treatment type="object">
+        <received>No</received>
+        <details type="list"/>
+      </treatment>
+    </patient>
+  </element>
+  <element type="object">
+    <id>69300358ed9d10cb6013a1e9</id>
+    <variant_id>PIP5K1A_151196712_SNP</variant_id>
+    <gene type="object">
+      <symbol>PIP5K1A</symbol>
+    </gene>
+    <location type="object">
+      <chromosome>1</chromosome>
+      <coordinates type="object">
+        <start>151196712</start>
+        <end>151196712</end>
+        <strand>+</strand>
+      </coordinates>
+    </location>
+    <classification type="object">
+      <consequence>intron_variant</consequence>
+      <variant_class>Intron</variant_class>
+      <variant_type>SNP</variant_type>
+    </classification>
+    <alleles type="object">
+      <reference>C</reference>
+      <tumor type="object">
+        <allele1>C</allele1>
+      </tumor>
+    </alleles>
+    <samples type="object">
+      <tumor_sample>VU10</tumor_sample>
+      <normal_sample>NORMAL</normal_sample>
+    </samples>
+    <sequencing type="object">
+      <depth type="object">
+        <tumor type="object">
+          <ref_count></ref_count>
+          <alt_count></alt_count>
+          <total_depth></total_depth>
+        </tumor>
+      </depth>
+    </sequencing>
+    <annotations type="object">
+      <HGVSc>ENST00000368888.4:c.86-9C&gt;T</HGVSc>
+      <HGVSp></HGVSp>
+      <HGVSp_short>*29*</HGVSp_short>
+    </annotations>
+    <validation type="object">
+      <mutation_status></mutation_status>
+      <verification_status></verification_status>
+      <validation_status></validation_status>
+    </validation>
+    <sample type="object">
+      <id>693002e8ed9d10cb601320ba</id>
+      <sample_id>VU10</sample_id>
+      <patient type="object">
+        <id>P-10</id>
+      </patient>
+      <metadata type="object">
+        <presentation type="object">
+          <stage>IIC</stage>
+          <primary_site>Plantar Foot</primary_site>
+        </presentation>
+        <sample_info type="object">
+          <type>Primary</type>
+          <metastatic_site></metastatic_site>
+        </sample_info>
+      </metadata>
+      <tumor type="object">
+        <primary_depth_mm>7</primary_depth_mm>
+      </tumor>
+      <cancer type="object">
+        <type type="object">
+          <main>Melanoma</main>
+          <detailed>Acral Melanoma</detailed>
+        </type>
+      </cancer>
+      <genomics type="object">
+        <tmb type="object">
+          <nonsynonymous>2.833333333</nonsynonymous>
+        </tmb>
+      </genomics>
+    </sample>
+    <patient type="object">
+      <id>693002d0ed9d10cb60132097</id>
+      <patient_id>P-10</patient_id>
+      <survival type="object">
+        <overall type="object">
+          <months>19.2</months>
+          <status type="object">
+            <code>1</code>
+            <label>DECEASED</label>
+          </status>
+        </overall>
+        <disease_free type="object">
+          <months>9.6</months>
+          <status type="object">
+            <code>1</code>
+            <label>Recurred/Progressed</label>
+          </status>
+        </disease_free>
+      </survival>
+      <clinical type="object">
+        <demographics type="object">
+          <age_at_diagnosis>78</age_at_diagnosis>
+          <sex>Male</sex>
+          <race>Caucasian</race>
+        </demographics>
+        <tumor type="object">
+          <ulceration>Yes</ulceration>
+          <lymph_node_examined>0</lymph_node_examined>
+        </tumor>
+      </clinical>
+      <recurrence type="object">
+        <metastasis>Yes</metastasis>
+        <details type="object">
+          <time_to_recurrence_months>9.6</time_to_recurrence_months>
+          <site_first_recurrence>Inguinal LN</site_first_recurrence>
+        </details>
+      </recurrence>
+      <treatment type="object">
+        <received>No</received>
+        <details type="list"/>
+      </treatment>
+    </patient>
+  </element>
+  <element type="object">
+    <id>69300358ed9d10cb6013a1ea</id>
+    <variant_id>RFX5_151315113_SNP</variant_id>
+    <gene type="object">
+      <symbol>RFX5</symbol>
+    </gene>
+    <location type="object">
+      <chromosome>1</chromosome>
+      <coordinates type="object">
+        <start>151315113</start>
+        <end>151315113</end>
+        <strand>+</strand>
+      </coordinates>
+    </location>
+    <classification type="object">
+      <consequence>missense_variant</consequence>
+      <variant_class>Missense_Mutation</variant_class>
+      <variant_type>SNP</variant_type>
+    </classification>
+    <alleles type="object">
+      <reference>C</reference>
+      <tumor type="object">
+        <allele1>C</allele1>
+      </tumor>
+    </alleles>
+    <samples type="object">
+      <tumor_sample>VU10</tumor_sample>
+      <normal_sample>NORMAL</normal_sample>
+    </samples>
+    <sequencing type="object">
+      <depth type="object">
+        <tumor type="object">
+          <ref_count></ref_count>
+          <alt_count></alt_count>
+          <total_depth></total_depth>
+        </tumor>
+      </depth>
+    </sequencing>
+    <annotations type="object">
+      <HGVSc>ENST00000290524.4:c.1400G&gt;A</HGVSc>
+      <HGVSp>p.Gly467Glu</HGVSp>
+      <HGVSp_short>p.G467E</HGVSp_short>
+    </annotations>
+    <validation type="object">
+      <mutation_status></mutation_status>
+      <verification_status></verification_status>
+      <validation_status></validation_status>
+    </validation>
+    <sample type="object">
+      <id>693002e8ed9d10cb601320ba</id>
+      <sample_id>VU10</sample_id>
+      <patient type="object">
+        <id>P-10</id>
+      </patient>
+      <metadata type="object">
+        <presentation type="object">
+          <stage>IIC</stage>
+          <primary_site>Plantar Foot</primary_site>
+        </presentation>
+        <sample_info type="object">
+          <type>Primary</type>
+          <metastatic_site></metastatic_site>
+        </sample_info>
+      </metadata>
+      <tumor type="object">
+        <primary_depth_mm>7</primary_depth_mm>
+      </tumor>
+      <cancer type="object">
+        <type type="object">
+          <main>Melanoma</main>
+          <detailed>Acral Melanoma</detailed>
+        </type>
+      </cancer>
+      <genomics type="object">
+        <tmb type="object">
+          <nonsynonymous>2.833333333</nonsynonymous>
+        </tmb>
+      </genomics>
+    </sample>
+    <patient type="object">
+      <id>693002d0ed9d10cb60132097</id>
+      <patient_id>P-10</patient_id>
+      <survival type="object">
+        <overall type="object">
+          <months>19.2</months>
+          <status type="object">
+            <code>1</code>
+            <label>DECEASED</label>
+          </status>
+        </overall>
+        <disease_free type="object">
+          <months>9.6</months>
+          <status type="object">
+            <code>1</code>
+            <label>Recurred/Progressed</label>
+          </status>
+        </disease_free>
+      </survival>
+      <clinical type="object">
+        <demographics type="object">
+          <age_at_diagnosis>78</age_at_diagnosis>
+          <sex>Male</sex>
+          <race>Caucasian</race>
+        </demographics>
+        <tumor type="object">
+          <ulceration>Yes</ulceration>
+          <lymph_node_examined>0</lymph_node_examined>
+        </tumor>
+      </clinical>
+      <recurrence type="object">
+        <metastasis>Yes</metastasis>
+        <details type="object">
+          <time_to_recurrence_months>9.6</time_to_recurrence_months>
+          <site_first_recurrence>Inguinal LN</site_first_recurrence>
+        </details>
+      </recurrence>
+      <treatment type="object">
+        <received>No</received>
+        <details type="list"/>
+      </treatment>
+    </patient>
+  </element>
+  <element type="object">
+    <id>69300358ed9d10cb6013a1eb</id>
+    <variant_id>FLG_152275224_SNP</variant_id>
+    <gene type="object">
+      <symbol>FLG</symbol>
+    </gene>
+    <location type="object">
+      <chromosome>1</chromosome>
+      <coordinates type="object">
+        <start>152275224</start>
+        <end>152275224</end>
+        <strand>+</strand>
+      </coordinates>
+    </location>
+    <classification type="object">
+      <consequence>synonymous_variant</consequence>
+      <variant_class>Silent</variant_class>
+      <variant_type>SNP</variant_type>
+    </classification>
+    <alleles type="object">
+      <reference>C</reference>
+      <tumor type="object">
+        <allele1>C</allele1>
+      </tumor>
+    </alleles>
+    <samples type="object">
+      <tumor_sample>VU10</tumor_sample>
+      <normal_sample>NORMAL</normal_sample>
+    </samples>
+    <sequencing type="object">
+      <depth type="object">
+        <tumor type="object">
+          <ref_count></ref_count>
+          <alt_count></alt_count>
+          <total_depth></total_depth>
+        </tumor>
+      </depth>
+    </sequencing>
+    <annotations type="object">
+      <HGVSc>ENST00000368799.1:c.12138G&gt;A</HGVSc>
+      <HGVSp>p.Ser4046=</HGVSp>
+      <HGVSp_short>p.S4046=</HGVSp_short>
+    </annotations>
+    <validation type="object">
+      <mutation_status></mutation_status>
+      <verification_status></verification_status>
+      <validation_status></validation_status>
+    </validation>
+    <sample type="object">
+      <id>693002e8ed9d10cb601320ba</id>
+      <sample_id>VU10</sample_id>
+      <patient type="object">
+        <id>P-10</id>
+      </patient>
+      <metadata type="object">
+        <presentation type="object">
+          <stage>IIC</stage>
+          <primary_site>Plantar Foot</primary_site>
+        </presentation>
+        <sample_info type="object">
+          <type>Primary</type>
+          <metastatic_site></metastatic_site>
+        </sample_info>
+      </metadata>
+      <tumor type="object">
+        <primary_depth_mm>7</primary_depth_mm>
+      </tumor>
+      <cancer type="object">
+        <type type="object">
+          <main>Melanoma</main>
+          <detailed>Acral Melanoma</detailed>
+        </type>
+      </cancer>
+      <genomics type="object">
+        <tmb type="object">
+          <nonsynonymous>2.833333333</nonsynonymous>
+        </tmb>
+      </genomics>
+    </sample>
+    <patient type="object">
+      <id>693002d0ed9d10cb60132097</id>
+      <patient_id>P-10</patient_id>
+      <survival type="object">
+        <overall type="object">
+          <months>19.2</months>
+          <status type="object">
+            <code>1</code>
+            <label>DECEASED</label>
+          </status>
+        </overall>
+        <disease_free type="object">
+          <months>9.6</months>
+          <status type="object">
+            <code>1</code>
+            <label>Recurred/Progressed</label>
+          </status>
+        </disease_free>
+      </survival>
+      <clinical type="object">
+        <demographics type="object">
+          <age_at_diagnosis>78</age_at_diagnosis>
+          <sex>Male</sex>
+          <race>Caucasian</race>
+        </demographics>
+        <tumor type="object">
+          <ulceration>Yes</ulceration>
+          <lymph_node_examined>0</lymph_node_examined>
+        </tumor>
+      </clinical>
+      <recurrence type="object">
+        <metastasis>Yes</metastasis>
+        <details type="object">
+          <time_to_recurrence_months>9.6</time_to_recurrence_months>
+          <site_first_recurrence>Inguinal LN</site_first_recurrence>
+        </details>
+      </recurrence>
+      <treatment type="object">
+        <received>No</received>
+        <details type="list"/>
+      </treatment>
+    </patient>
+  </element>
+  <element type="object">
+    <id>69300358ed9d10cb6013a1ec</id>
+    <variant_id>FLG_152276867_SNP</variant_id>
+    <gene type="object">
+      <symbol>FLG</symbol>
+    </gene>
+    <location type="object">
+      <chromosome>1</chromosome>
+      <coordinates type="object">
+        <start>152276867</start>
+        <end>152276867</end>
+        <strand>+</strand>
+      </coordinates>
+    </location>
+    <classification type="object">
+      <consequence>missense_variant</consequence>
+      <variant_class>Missense_Mutation</variant_class>
+      <variant_type>SNP</variant_type>
+    </classification>
+    <alleles type="object">
+      <reference>A</reference>
+      <tumor type="object">
+        <allele1>A</allele1>
+      </tumor>
+    </alleles>
+    <samples type="object">
+      <tumor_sample>VU10</tumor_sample>
+      <normal_sample>NORMAL</normal_sample>
+    </samples>
+    <sequencing type="object">
+      <depth type="object">
+        <tumor type="object">
+          <ref_count></ref_count>
+          <alt_count></alt_count>
+          <total_depth></total_depth>
+        </tumor>
+      </depth>
+    </sequencing>
+    <annotations type="object">
+      <HGVSc>ENST00000368799.1:c.10495T&gt;C</HGVSc>
+      <HGVSp>p.Ser3499Pro</HGVSp>
+      <HGVSp_short>p.S3499P</HGVSp_short>
+    </annotations>
+    <validation type="object">
+      <mutation_status></mutation_status>
+      <verification_status></verification_status>
+      <validation_status></validation_status>
+    </validation>
+    <sample type="object">
+      <id>693002e8ed9d10cb601320ba</id>
+      <sample_id>VU10</sample_id>
+      <patient type="object">
+        <id>P-10</id>
+      </patient>
+      <metadata type="object">
+        <presentation type="object">
+          <stage>IIC</stage>
+          <primary_site>Plantar Foot</primary_site>
+        </presentation>
+        <sample_info type="object">
+          <type>Primary</type>
+          <metastatic_site></metastatic_site>
+        </sample_info>
+      </metadata>
+      <tumor type="object">
+        <primary_depth_mm>7</primary_depth_mm>
+      </tumor>
+      <cancer type="object">
+        <type type="object">
+          <main>Melanoma</main>
+          <detailed>Acral Melanoma</detailed>
+        </type>
+      </cancer>
+      <genomics type="object">
+        <tmb type="object">
+          <nonsynonymous>2.833333333</nonsynonymous>
+        </tmb>
+      </genomics>
+    </sample>
+    <patient type="object">
+      <id>693002d0ed9d10cb60132097</id>
+      <patient_id>P-10</patient_id>
+      <survival type="object">
+        <overall type="object">
+          <months>19.2</months>
+          <status type="object">
+            <code>1</code>
+            <label>DECEASED</label>
+          </status>
+        </overall>
+        <disease_free type="object">
+          <months>9.6</months>
+          <status type="object">
+            <code>1</code>
+            <label>Recurred/Progressed</label>
+          </status>
+        </disease_free>
+      </survival>
+      <clinical type="object">
+        <demographics type="object">
+          <age_at_diagnosis>78</age_at_diagnosis>
+          <sex>Male</sex>
+          <race>Caucasian</race>
+        </demographics>
+        <tumor type="object">
+          <ulceration>Yes</ulceration>
+          <lymph_node_examined>0</lymph_node_examined>
+        </tumor>
+      </clinical>
+      <recurrence type="object">
+        <metastasis>Yes</metastasis>
+        <details type="object">
+          <time_to_recurrence_months>9.6</time_to_recurrence_months>
+          <site_first_recurrence>Inguinal LN</site_first_recurrence>
+        </details>
+      </recurrence>
+      <treatment type="object">
+        <received>No</received>
+        <details type="list"/>
+      </treatment>
+    </patient>
+  </element>
+  <element type="object">
+    <id>69300358ed9d10cb6013a1ed</id>
+    <variant_id>IFI16_158990109_SNP</variant_id>
+    <gene type="object">
+      <symbol>IFI16</symbol>
+    </gene>
+    <location type="object">
+      <chromosome>1</chromosome>
+      <coordinates type="object">
+        <start>158990109</start>
+        <end>158990109</end>
+        <strand>+</strand>
+      </coordinates>
+    </location>
+    <classification type="object">
+      <consequence>intron_variant</consequence>
+      <variant_class>Intron</variant_class>
+      <variant_type>SNP</variant_type>
+    </classification>
+    <alleles type="object">
+      <reference>G</reference>
+      <tumor type="object">
+        <allele1>G</allele1>
+      </tumor>
+    </alleles>
+    <samples type="object">
+      <tumor_sample>VU10</tumor_sample>
+      <normal_sample>NORMAL</normal_sample>
+    </samples>
+    <sequencing type="object">
+      <depth type="object">
+        <tumor type="object">
+          <ref_count></ref_count>
+          <alt_count></alt_count>
+          <total_depth></total_depth>
+        </tumor>
+      </depth>
+    </sequencing>
+    <annotations type="object">
+      <HGVSc>ENST00000368131.4:c.973-22G&gt;A</HGVSc>
+      <HGVSp></HGVSp>
+      <HGVSp_short>*325*</HGVSp_short>
+    </annotations>
+    <validation type="object">
+      <mutation_status></mutation_status>
+      <verification_status></verification_status>
+      <validation_status></validation_status>
+    </validation>
+    <sample type="object">
+      <id>693002e8ed9d10cb601320ba</id>
+      <sample_id>VU10</sample_id>
+      <patient type="object">
+        <id>P-10</id>
+      </patient>
+      <metadata type="object">
+        <presentation type="object">
+          <stage>IIC</stage>
+          <primary_site>Plantar Foot</primary_site>
+        </presentation>
+        <sample_info type="object">
+          <type>Primary</type>
+          <metastatic_site></metastatic_site>
+        </sample_info>
+      </metadata>
+      <tumor type="object">
+        <primary_depth_mm>7</primary_depth_mm>
+      </tumor>
+      <cancer type="object">
+        <type type="object">
+          <main>Melanoma</main>
+          <detailed>Acral Melanoma</detailed>
+        </type>
+      </cancer>
+      <genomics type="object">
+        <tmb type="object">
+          <nonsynonymous>2.833333333</nonsynonymous>
+        </tmb>
+      </genomics>
+    </sample>
+    <patient type="object">
+      <id>693002d0ed9d10cb60132097</id>
+      <patient_id>P-10</patient_id>
+      <survival type="object">
+        <overall type="object">
+          <months>19.2</months>
+          <status type="object">
+            <code>1</code>
+            <label>DECEASED</label>
+          </status>
+        </overall>
+        <disease_free type="object">
+          <months>9.6</months>
+          <status type="object">
+            <code>1</code>
+            <label>Recurred/Progressed</label>
+          </status>
+        </disease_free>
+      </survival>
+      <clinical type="object">
+        <demographics type="object">
+          <age_at_diagnosis>78</age_at_diagnosis>
+          <sex>Male</sex>
+          <race>Caucasian</race>
+        </demographics>
+        <tumor type="object">
+          <ulceration>Yes</ulceration>
+          <lymph_node_examined>0</lymph_node_examined>
+        </tumor>
+      </clinical>
+      <recurrence type="object">
+        <metastasis>Yes</metastasis>
+        <details type="object">
+          <time_to_recurrence_months>9.6</time_to_recurrence_months>
+          <site_first_recurrence>Inguinal LN</site_first_recurrence>
+        </details>
+      </recurrence>
+      <treatment type="object">
+        <received>No</received>
+        <details type="list"/>
+      </treatment>
+    </patient>
+  </element>
+  <element type="object">
+    <id>69300358ed9d10cb6013a1ee</id>
+    <variant_id>PRDX6_173455459_SNP</variant_id>
+    <gene type="object">
+      <symbol>PRDX6</symbol>
+    </gene>
+    <location type="object">
+      <chromosome>1</chromosome>
+      <coordinates type="object">
+        <start>173455459</start>
+        <end>173455459</end>
+        <strand>+</strand>
+      </coordinates>
+    </location>
+    <classification type="object">
+      <consequence>missense_variant</consequence>
+      <variant_class>Missense_Mutation</variant_class>
+      <variant_type>SNP</variant_type>
+    </classification>
+    <alleles type="object">
+      <reference>G</reference>
+      <tumor type="object">
+        <allele1>G</allele1>
+      </tumor>
+    </alleles>
+    <samples type="object">
+      <tumor_sample>VU10</tumor_sample>
+      <normal_sample>NORMAL</normal_sample>
+    </samples>
+    <sequencing type="object">
+      <depth type="object">
+        <tumor type="object">
+          <ref_count></ref_count>
+          <alt_count></alt_count>
+          <total_depth></total_depth>
+        </tumor>
+      </depth>
+    </sequencing>
+    <annotations type="object">
+      <HGVSc>ENST00000340385.5:c.465G&gt;C</HGVSc>
+      <HGVSp>p.Arg155Ser</HGVSp>
+      <HGVSp_short>p.R155S</HGVSp_short>
+    </annotations>
+    <validation type="object">
+      <mutation_status></mutation_status>
+      <verification_status></verification_status>
+      <validation_status></validation_status>
+    </validation>
+    <sample type="object">
+      <id>693002e8ed9d10cb601320ba</id>
+      <sample_id>VU10</sample_id>
+      <patient type="object">
+        <id>P-10</id>
+      </patient>
+      <metadata type="object">
+        <presentation type="object">
+          <stage>IIC</stage>
+          <primary_site>Plantar Foot</primary_site>
+        </presentation>
+        <sample_info type="object">
+          <type>Primary</type>
+          <metastatic_site></metastatic_site>
+        </sample_info>
+      </metadata>
+      <tumor type="object">
+        <primary_depth_mm>7</primary_depth_mm>
+      </tumor>
+      <cancer type="object">
+        <type type="object">
+          <main>Melanoma</main>
+          <detailed>Acral Melanoma</detailed>
+        </type>
+      </cancer>
+      <genomics type="object">
+        <tmb type="object">
+          <nonsynonymous>2.833333333</nonsynonymous>
+        </tmb>
+      </genomics>
+    </sample>
+    <patient type="object">
+      <id>693002d0ed9d10cb60132097</id>
+      <patient_id>P-10</patient_id>
+      <survival type="object">
+        <overall type="object">
+          <months>19.2</months>
+          <status type="object">
+            <code>1</code>
+            <label>DECEASED</label>
+          </status>
+        </overall>
+        <disease_free type="object">
+          <months>9.6</months>
+          <status type="object">
+            <code>1</code>
+            <label>Recurred/Progressed</label>
+          </status>
+        </disease_free>
+      </survival>
+      <clinical type="object">
+        <demographics type="object">
+          <age_at_diagnosis>78</age_at_diagnosis>
+          <sex>Male</sex>
+          <race>Caucasian</race>
+        </demographics>
+        <tumor type="object">
+          <ulceration>Yes</ulceration>
+          <lymph_node_examined>0</lymph_node_examined>
+        </tumor>
+      </clinical>
+      <recurrence type="object">
+        <metastasis>Yes</metastasis>
+        <details type="object">
+          <time_to_recurrence_months>9.6</time_to_recurrence_months>
+          <site_first_recurrence>Inguinal LN</site_first_recurrence>
+        </details>
+      </recurrence>
+      <treatment type="object">
+        <received>No</received>
+        <details type="list"/>
+      </treatment>
+    </patient>
+  </element>
+  <element type="object">
+    <id>69300358ed9d10cb6013a1ef</id>
+    <variant_id>TSEN15_184039826_SNP</variant_id>
+    <gene type="object">
+      <symbol>TSEN15</symbol>
+    </gene>
+    <location type="object">
+      <chromosome>1</chromosome>
+      <coordinates type="object">
+        <start>184039826</start>
+        <end>184039826</end>
+        <strand>+</strand>
+      </coordinates>
+    </location>
+    <classification type="object">
+      <consequence>intron_variant</consequence>
+      <variant_class>Intron</variant_class>
+      <variant_type>SNP</variant_type>
+    </classification>
+    <alleles type="object">
+      <reference>A</reference>
+      <tumor type="object">
+        <allele1>A</allele1>
+      </tumor>
+    </alleles>
+    <samples type="object">
+      <tumor_sample>VU10</tumor_sample>
+      <normal_sample>NORMAL</normal_sample>
+    </samples>
+    <sequencing type="object">
+      <depth type="object">
+        <tumor type="object">
+          <ref_count></ref_count>
+          <alt_count></alt_count>
+          <total_depth></total_depth>
+        </tumor>
+      </depth>
+    </sequencing>
+    <annotations type="object">
+      <HGVSc>ENST00000361641.1:c.354-1465A&gt;G</HGVSc>
+      <HGVSp></HGVSp>
+      <HGVSp_short>*118*</HGVSp_short>
+    </annotations>
+    <validation type="object">
+      <mutation_status></mutation_status>
+      <verification_status></verification_status>
+      <validation_status></validation_status>
+    </validation>
+    <sample type="object">
+      <id>693002e8ed9d10cb601320ba</id>
+      <sample_id>VU10</sample_id>
+      <patient type="object">
+        <id>P-10</id>
+      </patient>
+      <metadata type="object">
+        <presentation type="object">
+          <stage>IIC</stage>
+          <primary_site>Plantar Foot</primary_site>
+        </presentation>
+        <sample_info type="object">
+          <type>Primary</type>
+          <metastatic_site></metastatic_site>
+        </sample_info>
+      </metadata>
+      <tumor type="object">
+        <primary_depth_mm>7</primary_depth_mm>
+      </tumor>
+      <cancer type="object">
+        <type type="object">
+          <main>Melanoma</main>
+          <detailed>Acral Melanoma</detailed>
+        </type>
+      </cancer>
+      <genomics type="object">
+        <tmb type="object">
+          <nonsynonymous>2.833333333</nonsynonymous>
+        </tmb>
+      </genomics>
+    </sample>
+    <patient type="object">
+      <id>693002d0ed9d10cb60132097</id>
+      <patient_id>P-10</patient_id>
+      <survival type="object">
+        <overall type="object">
+          <months>19.2</months>
+          <status type="object">
+            <code>1</code>
+            <label>DECEASED</label>
+          </status>
+        </overall>
+        <disease_free type="object">
+          <months>9.6</months>
+          <status type="object">
+            <code>1</code>
+            <label>Recurred/Progressed</label>
+          </status>
+        </disease_free>
+      </survival>
+      <clinical type="object">
+        <demographics type="object">
+          <age_at_diagnosis>78</age_at_diagnosis>
+          <sex>Male</sex>
+          <race>Caucasian</race>
+        </demographics>
+        <tumor type="object">
+          <ulceration>Yes</ulceration>
+          <lymph_node_examined>0</lymph_node_examined>
+        </tumor>
+      </clinical>
+      <recurrence type="object">
+        <metastasis>Yes</metastasis>
+        <details type="object">
+          <time_to_recurrence_months>9.6</time_to_recurrence_months>
+          <site_first_recurrence>Inguinal LN</site_first_recurrence>
+        </details>
+      </recurrence>
+      <treatment type="object">
+        <received>No</received>
+        <details type="list"/>
+      </treatment>
+    </patient>
+  </element>
+  <element type="object">
+    <id>69300358ed9d10cb6013a1f0</id>
+    <variant_id>ASPM_197091183_SNP</variant_id>
+    <gene type="object">
+      <symbol>ASPM</symbol>
+    </gene>
+    <location type="object">
+      <chromosome>1</chromosome>
+      <coordinates type="object">
+        <start>197091183</start>
+        <end>197091183</end>
+        <strand>+</strand>
+      </coordinates>
+    </location>
+    <classification type="object">
+      <consequence>intron_variant</consequence>
+      <variant_class>Intron</variant_class>
+      <variant_type>SNP</variant_type>
+    </classification>
+    <alleles type="object">
+      <reference>A</reference>
+      <tumor type="object">
+        <allele1>A</allele1>
+      </tumor>
+    </alleles>
+    <samples type="object">
+      <tumor_sample>VU10</tumor_sample>
+      <normal_sample>NORMAL</normal_sample>
+    </samples>
+    <sequencing type="object">
+      <depth type="object">
+        <tumor type="object">
+          <ref_count></ref_count>
+          <alt_count></alt_count>
+          <total_depth></total_depth>
+        </tumor>
+      </depth>
+    </sequencing>
+    <annotations type="object">
+      <HGVSc>ENST00000367409.4:c.3742-10T&gt;G</HGVSc>
+      <HGVSp></HGVSp>
+      <HGVSp_short>*1248*</HGVSp_short>
+    </annotations>
+    <validation type="object">
+      <mutation_status></mutation_status>
+      <verification_status></verification_status>
+      <validation_status></validation_status>
+    </validation>
+    <sample type="object">
+      <id>693002e8ed9d10cb601320ba</id>
+      <sample_id>VU10</sample_id>
+      <patient type="object">
+        <id>P-10</id>
+      </patient>
+      <metadata type="object">
+        <presentation type="object">
+          <stage>IIC</stage>
+          <primary_site>Plantar Foot</primary_site>
+        </presentation>
+        <sample_info type="object">
+          <type>Primary</type>
+          <metastatic_site></metastatic_site>
+        </sample_info>
+      </metadata>
+      <tumor type="object">
+        <primary_depth_mm>7</primary_depth_mm>
+      </tumor>
+      <cancer type="object">
+        <type type="object">
+          <main>Melanoma</main>
+          <detailed>Acral Melanoma</detailed>
+        </type>
+      </cancer>
+      <genomics type="object">
+        <tmb type="object">
+          <nonsynonymous>2.833333333</nonsynonymous>
+        </tmb>
+      </genomics>
+    </sample>
+    <patient type="object">
+      <id>693002d0ed9d10cb60132097</id>
+      <patient_id>P-10</patient_id>
+      <survival type="object">
+        <overall type="object">
+          <months>19.2</months>
+          <status type="object">
+            <code>1</code>
+            <label>DECEASED</label>
+          </status>
+        </overall>
+        <disease_free type="object">
+          <months>9.6</months>
+          <status type="object">
+            <code>1</code>
+            <label>Recurred/Progressed</label>
+          </status>
+        </disease_free>
+      </survival>
+      <clinical type="object">
+        <demographics type="object">
+          <age_at_diagnosis>78</age_at_diagnosis>
+          <sex>Male</sex>
+          <race>Caucasian</race>
+        </demographics>
+        <tumor type="object">
+          <ulceration>Yes</ulceration>
+          <lymph_node_examined>0</lymph_node_examined>
+        </tumor>
+      </clinical>
+      <recurrence type="object">
+        <metastasis>Yes</metastasis>
+        <details type="object">
+          <time_to_recurrence_months>9.6</time_to_recurrence_months>
+          <site_first_recurrence>Inguinal LN</site_first_recurrence>
+        </details>
+      </recurrence>
+      <treatment type="object">
+        <received>No</received>
+        <details type="list"/>
+      </treatment>
+    </patient>
+  </element>
+</root>
