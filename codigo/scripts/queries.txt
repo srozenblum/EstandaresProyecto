@@ -1,5 +1,6 @@
 [patients_samples_variants]
 db.patients.aggregate([
+  { "$limit": 20 },
   {
     "$lookup": {
       "from": "samples",
@@ -45,9 +46,9 @@ db.patients.aggregate([
   }
 ])
 
-
 [variants_with_oncokb]
 db.variants.aggregate([
+  { "$limit": 20 },
   {
     "$lookup": {
       "from": "oncokb_genes",
@@ -91,6 +92,7 @@ db.variants.aggregate([
 
 [variants_full_info]
 db.variants.aggregate([
+  { "$limit": 20 },
   {
     "$lookup": {
       "from": "samples",
