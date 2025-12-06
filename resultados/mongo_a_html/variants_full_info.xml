@@ -1,6 +1,6 @@
 <root type="list">
   <element type="object">
-    <id>69303328bf9da8b245c78246</id>
+    <id>69346f7e7b939847680d495b</id>
     <variant_id>ACAP3_1229939_SNP</variant_id>
     <gene type="object">
       <symbol>ACAP3</symbol>
@@ -48,7 +48,7 @@
       <validation_status></validation_status>
     </validation>
     <sample type="object">
-      <id>69303328bf9da8b245c78229</id>
+      <id>69346f797b939847680d493e</id>
       <sample_id>VU10</sample_id>
       <patient type="object">
         <id>P-10</id>
@@ -79,7 +79,7 @@
       </genomics>
     </sample>
     <patient type="object">
-      <id>69303327bf9da8b245c78207</id>
+      <id>69346f797b939847680d491c</id>
       <patient_id>P-10</patient_id>
       <survival type="object">
         <overall type="object">
@@ -122,7 +122,7 @@
     </patient>
   </element>
   <element type="object">
-    <id>69303328bf9da8b245c78247</id>
+    <id>69346f7e7b939847680d495c</id>
     <variant_id>SPEN_16200729_INS</variant_id>
     <gene type="object">
       <symbol>SPEN</symbol>
@@ -170,7 +170,7 @@
       <validation_status></validation_status>
     </validation>
     <sample type="object">
-      <id>69303328bf9da8b245c78229</id>
+      <id>69346f797b939847680d493e</id>
       <sample_id>VU10</sample_id>
       <patient type="object">
         <id>P-10</id>
@@ -201,7 +201,7 @@
       </genomics>
     </sample>
     <patient type="object">
-      <id>69303327bf9da8b245c78207</id>
+      <id>69346f797b939847680d491c</id>
       <patient_id>P-10</patient_id>
       <survival type="object">
         <overall type="object">
@@ -244,7 +244,7 @@
     </patient>
   </element>
   <element type="object">
-    <id>69303328bf9da8b245c78248</id>
+    <id>69346f7e7b939847680d495d</id>
     <variant_id>MUL1_20834605_INS</variant_id>
     <gene type="object">
       <symbol>MUL1</symbol>
@@ -292,7 +292,7 @@
       <validation_status></validation_status>
     </validation>
     <sample type="object">
-      <id>69303328bf9da8b245c78229</id>
+      <id>69346f797b939847680d493e</id>
       <sample_id>VU10</sample_id>
       <patient type="object">
         <id>P-10</id>
@@ -323,7 +323,7 @@
       </genomics>
     </sample>
     <patient type="object">
-      <id>69303327bf9da8b245c78207</id>
+      <id>69346f797b939847680d491c</id>
       <patient_id>P-10</patient_id>
       <survival type="object">
         <overall type="object">
@@ -366,7 +366,7 @@
     </patient>
   </element>
   <element type="object">
-    <id>69303328bf9da8b245c78249</id>
+    <id>69346f7e7b939847680d495e</id>
     <variant_id>AGO3_36475027_DEL</variant_id>
     <gene type="object">
       <symbol>AGO3</symbol>
@@ -414,7 +414,7 @@
       <validation_status></validation_status>
     </validation>
     <sample type="object">
-      <id>69303328bf9da8b245c78229</id>
+      <id>69346f797b939847680d493e</id>
       <sample_id>VU10</sample_id>
       <patient type="object">
         <id>P-10</id>
@@ -445,7 +445,7 @@
       </genomics>
     </sample>
     <patient type="object">
-      <id>69303327bf9da8b245c78207</id>
+      <id>69346f797b939847680d491c</id>
       <patient_id>P-10</patient_id>
       <survival type="object">
         <overall type="object">
@@ -488,7 +488,7 @@
     </patient>
   </element>
   <element type="object">
-    <id>69303328bf9da8b245c7824a</id>
+    <id>69346f7e7b939847680d495f</id>
     <variant_id>HPCAL4_40144972_SNP</variant_id>
     <gene type="object">
       <symbol>HPCAL4</symbol>
@@ -536,7 +536,7 @@
       <validation_status></validation_status>
     </validation>
     <sample type="object">
-      <id>69303328bf9da8b245c78229</id>
+      <id>69346f797b939847680d493e</id>
       <sample_id>VU10</sample_id>
       <patient type="object">
         <id>P-10</id>
@@ -567,7 +567,7 @@
       </genomics>
     </sample>
     <patient type="object">
-      <id>69303327bf9da8b245c78207</id>
+      <id>69346f797b939847680d491c</id>
       <patient_id>P-10</patient_id>
       <survival type="object">
         <overall type="object">
@@ -610,7 +610,7 @@
     </patient>
   </element>
   <element type="object">
-    <id>69303328bf9da8b245c7824b</id>
+    <id>69346f7e7b939847680d4960</id>
     <variant_id>KCNQ4_41284372_SNP</variant_id>
     <gene type="object">
       <symbol>KCNQ4</symbol>
@@ -658,7 +658,7 @@
       <validation_status></validation_status>
     </validation>
     <sample type="object">
-      <id>69303328bf9da8b245c78229</id>
+      <id>69346f797b939847680d493e</id>
       <sample_id>VU10</sample_id>
       <patient type="object">
         <id>P-10</id>
@@ -689,7 +689,7 @@
       </genomics>
     </sample>
     <patient type="object">
-      <id>69303327bf9da8b245c78207</id>
+      <id>69346f797b939847680d491c</id>
       <patient_id>P-10</patient_id>
       <survival type="object">
         <overall type="object">
@@ -732,7 +732,7 @@
     </patient>
   </element>
   <element type="object">
-    <id>69303328bf9da8b245c7824c</id>
+    <id>69346f7e7b939847680d4961</id>
     <variant_id>UROD_45477826_SNP</variant_id>
     <gene type="object">
       <symbol>UROD</symbol>
@@ -780,7 +780,7 @@
       <validation_status></validation_status>
     </validation>
     <sample type="object">
-      <id>69303328bf9da8b245c78229</id>
+      <id>69346f797b939847680d493e</id>
       <sample_id>VU10</sample_id>
       <patient type="object">
         <id>P-10</id>
@@ -811,7 +811,7 @@
       </genomics>
     </sample>
     <patient type="object">
-      <id>69303327bf9da8b245c78207</id>
+      <id>69346f797b939847680d491c</id>
       <patient_id>P-10</patient_id>
       <survival type="object">
         <overall type="object">
@@ -854,7 +854,7 @@
     </patient>
   </element>
   <element type="object">
-    <id>69303328bf9da8b245c7824d</id>
+    <id>69346f7e7b939847680d4962</id>
     <variant_id>DHCR24_55317624_SNP</variant_id>
     <gene type="object">
       <symbol>DHCR24</symbol>
@@ -902,7 +902,7 @@
       <validation_status></validation_status>
     </validation>
     <sample type="object">
-      <id>69303328bf9da8b245c78229</id>
+      <id>69346f797b939847680d493e</id>
       <sample_id>VU10</sample_id>
       <patient type="object">
         <id>P-10</id>
@@ -933,7 +933,7 @@
       </genomics>
     </sample>
     <patient type="object">
-      <id>69303327bf9da8b245c78207</id>
+      <id>69346f797b939847680d491c</id>
       <patient_id>P-10</patient_id>
       <survival type="object">
         <overall type="object">
@@ -976,7 +976,7 @@
     </patient>
   </element>
   <element type="object">
-    <id>69303328bf9da8b245c7824e</id>
+    <id>69346f7e7b939847680d4963</id>
     <variant_id>PRKAA2_57179199_INS</variant_id>
     <gene type="object">
       <symbol>PRKAA2</symbol>
@@ -1024,7 +1024,7 @@
       <validation_status></validation_status>
     </validation>
     <sample type="object">
-      <id>69303328bf9da8b245c78229</id>
+      <id>69346f797b939847680d493e</id>
       <sample_id>VU10</sample_id>
       <patient type="object">
         <id>P-10</id>
@@ -1055,7 +1055,7 @@
       </genomics>
     </sample>
     <patient type="object">
-      <id>69303327bf9da8b245c78207</id>
+      <id>69346f797b939847680d491c</id>
       <patient_id>P-10</patient_id>
       <survival type="object">
         <overall type="object">
@@ -1098,7 +1098,7 @@
     </patient>
   </element>
   <element type="object">
-    <id>69303328bf9da8b245c7824f</id>
+    <id>69346f7e7b939847680d4964</id>
     <variant_id>AK4_65692499_SNP</variant_id>
     <gene type="object">
       <symbol>AK4</symbol>
@@ -1146,7 +1146,7 @@
       <validation_status></validation_status>
     </validation>
     <sample type="object">
-      <id>69303328bf9da8b245c78229</id>
+      <id>69346f797b939847680d493e</id>
       <sample_id>VU10</sample_id>
       <patient type="object">
         <id>P-10</id>
@@ -1177,7 +1177,7 @@
       </genomics>
     </sample>
     <patient type="object">
-      <id>69303327bf9da8b245c78207</id>
+      <id>69346f797b939847680d491c</id>
       <patient_id>P-10</patient_id>
       <survival type="object">
         <overall type="object">
@@ -1220,7 +1220,7 @@
     </patient>
   </element>
   <element type="object">
-    <id>69303328bf9da8b245c78250</id>
+    <id>69346f7e7b939847680d4965</id>
     <variant_id>ATP1A1_116942111_SNP</variant_id>
     <gene type="object">
       <symbol>ATP1A1</symbol>
@@ -1268,7 +1268,7 @@
       <validation_status></validation_status>
     </validation>
     <sample type="object">
-      <id>69303328bf9da8b245c78229</id>
+      <id>69346f797b939847680d493e</id>
       <sample_id>VU10</sample_id>
       <patient type="object">
         <id>P-10</id>
@@ -1299,7 +1299,7 @@
       </genomics>
     </sample>
     <patient type="object">
-      <id>69303327bf9da8b245c78207</id>
+      <id>69346f797b939847680d491c</id>
       <patient_id>P-10</patient_id>
       <survival type="object">
         <overall type="object">
@@ -1342,7 +1342,7 @@
     </patient>
   </element>
   <element type="object">
-    <id>69303328bf9da8b245c78251</id>
+    <id>69346f7e7b939847680d4966</id>
     <variant_id>POLR3C_145601616_DEL</variant_id>
     <gene type="object">
       <symbol>POLR3C</symbol>
@@ -1390,7 +1390,7 @@
       <validation_status></validation_status>
     </validation>
     <sample type="object">
-      <id>69303328bf9da8b245c78229</id>
+      <id>69346f797b939847680d493e</id>
       <sample_id>VU10</sample_id>
       <patient type="object">
         <id>P-10</id>
@@ -1421,7 +1421,7 @@
       </genomics>
     </sample>
     <patient type="object">
-      <id>69303327bf9da8b245c78207</id>
+      <id>69346f797b939847680d491c</id>
       <patient_id>P-10</patient_id>
       <survival type="object">
         <overall type="object">
@@ -1464,7 +1464,7 @@
     </patient>
   </element>
   <element type="object">
-    <id>69303328bf9da8b245c78252</id>
+    <id>69346f7e7b939847680d4967</id>
     <variant_id>PIP5K1A_151196712_SNP</variant_id>
     <gene type="object">
       <symbol>PIP5K1A</symbol>
@@ -1512,7 +1512,7 @@
       <validation_status></validation_status>
     </validation>
     <sample type="object">
-      <id>69303328bf9da8b245c78229</id>
+      <id>69346f797b939847680d493e</id>
       <sample_id>VU10</sample_id>
       <patient type="object">
         <id>P-10</id>
@@ -1543,7 +1543,7 @@
       </genomics>
     </sample>
     <patient type="object">
-      <id>69303327bf9da8b245c78207</id>
+      <id>69346f797b939847680d491c</id>
       <patient_id>P-10</patient_id>
       <survival type="object">
         <overall type="object">
@@ -1586,7 +1586,7 @@
     </patient>
   </element>
   <element type="object">
-    <id>69303328bf9da8b245c78253</id>
+    <id>69346f7e7b939847680d4968</id>
     <variant_id>RFX5_151315113_SNP</variant_id>
     <gene type="object">
       <symbol>RFX5</symbol>
@@ -1634,7 +1634,7 @@
       <validation_status></validation_status>
     </validation>
     <sample type="object">
-      <id>69303328bf9da8b245c78229</id>
+      <id>69346f797b939847680d493e</id>
       <sample_id>VU10</sample_id>
       <patient type="object">
         <id>P-10</id>
@@ -1665,7 +1665,7 @@
       </genomics>
     </sample>
     <patient type="object">
-      <id>69303327bf9da8b245c78207</id>
+      <id>69346f797b939847680d491c</id>
       <patient_id>P-10</patient_id>
       <survival type="object">
         <overall type="object">
@@ -1708,7 +1708,7 @@
     </patient>
   </element>
   <element type="object">
-    <id>69303328bf9da8b245c78254</id>
+    <id>69346f7e7b939847680d4969</id>
     <variant_id>FLG_152275224_SNP</variant_id>
     <gene type="object">
       <symbol>FLG</symbol>
@@ -1756,7 +1756,7 @@
       <validation_status></validation_status>
     </validation>
     <sample type="object">
-      <id>69303328bf9da8b245c78229</id>
+      <id>69346f797b939847680d493e</id>
       <sample_id>VU10</sample_id>
       <patient type="object">
         <id>P-10</id>
@@ -1787,7 +1787,7 @@
       </genomics>
     </sample>
     <patient type="object">
-      <id>69303327bf9da8b245c78207</id>
+      <id>69346f797b939847680d491c</id>
       <patient_id>P-10</patient_id>
       <survival type="object">
         <overall type="object">
@@ -1830,7 +1830,7 @@
     </patient>
   </element>
   <element type="object">
-    <id>69303328bf9da8b245c78255</id>
+    <id>69346f7e7b939847680d496a</id>
     <variant_id>FLG_152276867_SNP</variant_id>
     <gene type="object">
       <symbol>FLG</symbol>
@@ -1878,7 +1878,7 @@
       <validation_status></validation_status>
     </validation>
     <sample type="object">
-      <id>69303328bf9da8b245c78229</id>
+      <id>69346f797b939847680d493e</id>
       <sample_id>VU10</sample_id>
       <patient type="object">
         <id>P-10</id>
@@ -1909,7 +1909,7 @@
       </genomics>
     </sample>
     <patient type="object">
-      <id>69303327bf9da8b245c78207</id>
+      <id>69346f797b939847680d491c</id>
       <patient_id>P-10</patient_id>
       <survival type="object">
         <overall type="object">
@@ -1952,7 +1952,7 @@
     </patient>
   </element>
   <element type="object">
-    <id>69303328bf9da8b245c78256</id>
+    <id>69346f7e7b939847680d496b</id>
     <variant_id>IFI16_158990109_SNP</variant_id>
     <gene type="object">
       <symbol>IFI16</symbol>
@@ -2000,7 +2000,7 @@
       <validation_status></validation_status>
     </validation>
     <sample type="object">
-      <id>69303328bf9da8b245c78229</id>
+      <id>69346f797b939847680d493e</id>
       <sample_id>VU10</sample_id>
       <patient type="object">
         <id>P-10</id>
@@ -2031,7 +2031,7 @@
       </genomics>
     </sample>
     <patient type="object">
-      <id>69303327bf9da8b245c78207</id>
+      <id>69346f797b939847680d491c</id>
       <patient_id>P-10</patient_id>
       <survival type="object">
         <overall type="object">
@@ -2074,7 +2074,7 @@
     </patient>
   </element>
   <element type="object">
-    <id>69303328bf9da8b245c78257</id>
+    <id>69346f7e7b939847680d496c</id>
     <variant_id>PRDX6_173455459_SNP</variant_id>
     <gene type="object">
       <symbol>PRDX6</symbol>
@@ -2122,7 +2122,7 @@
       <validation_status></validation_status>
     </validation>
     <sample type="object">
-      <id>69303328bf9da8b245c78229</id>
+      <id>69346f797b939847680d493e</id>
       <sample_id>VU10</sample_id>
       <patient type="object">
         <id>P-10</id>
@@ -2153,7 +2153,7 @@
       </genomics>
     </sample>
     <patient type="object">
-      <id>69303327bf9da8b245c78207</id>
+      <id>69346f797b939847680d491c</id>
       <patient_id>P-10</patient_id>
       <survival type="object">
         <overall type="object">
@@ -2196,7 +2196,7 @@
     </patient>
   </element>
   <element type="object">
-    <id>69303328bf9da8b245c78258</id>
+    <id>69346f7e7b939847680d496d</id>
     <variant_id>TSEN15_184039826_SNP</variant_id>
     <gene type="object">
       <symbol>TSEN15</symbol>
@@ -2244,7 +2244,7 @@
       <validation_status></validation_status>
     </validation>
     <sample type="object">
-      <id>69303328bf9da8b245c78229</id>
+      <id>69346f797b939847680d493e</id>
       <sample_id>VU10</sample_id>
       <patient type="object">
         <id>P-10</id>
@@ -2275,7 +2275,7 @@
       </genomics>
     </sample>
     <patient type="object">
-      <id>69303327bf9da8b245c78207</id>
+      <id>69346f797b939847680d491c</id>
       <patient_id>P-10</patient_id>
       <survival type="object">
         <overall type="object">
@@ -2318,7 +2318,7 @@
     </patient>
   </element>
   <element type="object">
-    <id>69303328bf9da8b245c78259</id>
+    <id>69346f7e7b939847680d496e</id>
     <variant_id>ASPM_197091183_SNP</variant_id>
     <gene type="object">
       <symbol>ASPM</symbol>
@@ -2366,7 +2366,7 @@
       <validation_status></validation_status>
     </validation>
     <sample type="object">
-      <id>69303328bf9da8b245c78229</id>
+      <id>69346f797b939847680d493e</id>
       <sample_id>VU10</sample_id>
       <patient type="object">
         <id>P-10</id>
@@ -2397,7 +2397,7 @@
       </genomics>
     </sample>
     <patient type="object">
-      <id>69303327bf9da8b245c78207</id>
+      <id>69346f797b939847680d491c</id>
       <patient_id>P-10</patient_id>
       <survival type="object">
         <overall type="object">
