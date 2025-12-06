@@ -2,13 +2,24 @@
 <head>
 <title>MongoDB Query Output</title>
 <style>
-            body { font-family: Arial; margin: 20px; }
-            h1 { margin-bottom: 20px; }
-            table { border-collapse: collapse; width: 100%; margin-bottom: 20px; }
-            th, td { border: 1px solid #ccc; padding: 6px; vertical-align: top; }
-            th { background-color: #f0f0f0; }
-            .nested-table { margin: 5px; }
-        </style>
+                body { font-family: Arial; margin: 20px; }
+                h1 { margin-bottom: 20px; }
+                table { border-collapse: collapse; width: 100%; margin-bottom: 20px; }
+                th, td { border: 1px solid #ccc; padding: 6px; vertical-align: top; }
+                th { background-color: #f0f0f0; }
+                .nested-table { margin: 5px; }
+            </style>
+<script type="text/javascript">
+            function toggleVisibility(id) {
+              var el = document.getElementById(id);
+              if (!el) return;
+              if (el.style.display === 'none' || el.style.display === '') {
+                el.style.display = 'block';
+              } else {
+                el.style.display = 'none';
+              }
+            }
+            </script>
 </head>
 <body>
 <h1>Resultados de la consulta</h1>
@@ -28,7 +39,7 @@
 <th>patient</th>
 </tr>
 <tr>
-<td>69300358ed9d10cb6013a1dd</td>
+<td>69303328bf9da8b245c78246</td>
 <td>ACAP3_1229939_SNP</td>
 <td><table class="nested-table"><tr>
 <th>symbol</th>
@@ -145,7 +156,7 @@
 <td><table class="nested-table">
 <tr>
 <th>id</th>
-<td>693002e8ed9d10cb601320ba</td>
+<td>69303328bf9da8b245c78229</td>
 </tr>
 <tr>
 <th>sample_id</th>
@@ -193,7 +204,7 @@
 <th>tumor</th>
 <td><table class="nested-table"><tr>
 <th>primary_depth_mm</th>
-<td>7</td>
+<td>7.0</td>
 </tr></table></td>
 </tr>
 <tr>
@@ -226,7 +237,7 @@
 <td><table class="nested-table">
 <tr>
 <th>id</th>
-<td>693002d0ed9d10cb60132097</td>
+<td>69303327bf9da8b245c78207</td>
 </tr>
 <tr>
 <th>patient_id</th>
@@ -310,7 +321,7 @@
 </tr>
 <tr>
 <th>lymph_node_examined</th>
-<td>0</td>
+<td>0.0</td>
 </tr>
 </table></td>
 </tr>
@@ -347,14 +358,14 @@
 </tr>
 <tr>
 <th>details</th>
-<td><table class="nested-table"></table></td>
+<td><ul></ul></td>
 </tr>
 </table></td>
 </tr>
 </table></td>
 </tr>
 <tr>
-<td>69300358ed9d10cb6013a1de</td>
+<td>69303328bf9da8b245c78247</td>
 <td>SPEN_16200729_INS</td>
 <td><table class="nested-table"><tr>
 <th>symbol</th>
@@ -471,7 +482,7 @@
 <td><table class="nested-table">
 <tr>
 <th>id</th>
-<td>693002e8ed9d10cb601320ba</td>
+<td>69303328bf9da8b245c78229</td>
 </tr>
 <tr>
 <th>sample_id</th>
@@ -519,7 +530,7 @@
 <th>tumor</th>
 <td><table class="nested-table"><tr>
 <th>primary_depth_mm</th>
-<td>7</td>
+<td>7.0</td>
 </tr></table></td>
 </tr>
 <tr>
@@ -552,7 +563,7 @@
 <td><table class="nested-table">
 <tr>
 <th>id</th>
-<td>693002d0ed9d10cb60132097</td>
+<td>69303327bf9da8b245c78207</td>
 </tr>
 <tr>
 <th>patient_id</th>
@@ -636,7 +647,7 @@
 </tr>
 <tr>
 <th>lymph_node_examined</th>
-<td>0</td>
+<td>0.0</td>
 </tr>
 </table></td>
 </tr>
@@ -673,14 +684,14 @@
 </tr>
 <tr>
 <th>details</th>
-<td><table class="nested-table"></table></td>
+<td><ul></ul></td>
 </tr>
 </table></td>
 </tr>
 </table></td>
 </tr>
 <tr>
-<td>69300358ed9d10cb6013a1df</td>
+<td>69303328bf9da8b245c78248</td>
 <td>MUL1_20834605_INS</td>
 <td><table class="nested-table"><tr>
 <th>symbol</th>
@@ -797,7 +808,7 @@
 <td><table class="nested-table">
 <tr>
 <th>id</th>
-<td>693002e8ed9d10cb601320ba</td>
+<td>69303328bf9da8b245c78229</td>
 </tr>
 <tr>
 <th>sample_id</th>
@@ -845,7 +856,7 @@
 <th>tumor</th>
 <td><table class="nested-table"><tr>
 <th>primary_depth_mm</th>
-<td>7</td>
+<td>7.0</td>
 </tr></table></td>
 </tr>
 <tr>
@@ -878,7 +889,7 @@
 <td><table class="nested-table">
 <tr>
 <th>id</th>
-<td>693002d0ed9d10cb60132097</td>
+<td>69303327bf9da8b245c78207</td>
 </tr>
 <tr>
 <th>patient_id</th>
@@ -962,7 +973,7 @@
 </tr>
 <tr>
 <th>lymph_node_examined</th>
-<td>0</td>
+<td>0.0</td>
 </tr>
 </table></td>
 </tr>
@@ -999,14 +1010,14 @@
 </tr>
 <tr>
 <th>details</th>
-<td><table class="nested-table"></table></td>
+<td><ul></ul></td>
 </tr>
 </table></td>
 </tr>
 </table></td>
 </tr>
 <tr>
-<td>69300358ed9d10cb6013a1e0</td>
+<td>69303328bf9da8b245c78249</td>
 <td>AGO3_36475027_DEL</td>
 <td><table class="nested-table"><tr>
 <th>symbol</th>
@@ -1123,7 +1134,7 @@
 <td><table class="nested-table">
 <tr>
 <th>id</th>
-<td>693002e8ed9d10cb601320ba</td>
+<td>69303328bf9da8b245c78229</td>
 </tr>
 <tr>
 <th>sample_id</th>
@@ -1171,7 +1182,7 @@
 <th>tumor</th>
 <td><table class="nested-table"><tr>
 <th>primary_depth_mm</th>
-<td>7</td>
+<td>7.0</td>
 </tr></table></td>
 </tr>
 <tr>
@@ -1204,7 +1215,7 @@
 <td><table class="nested-table">
 <tr>
 <th>id</th>
-<td>693002d0ed9d10cb60132097</td>
+<td>69303327bf9da8b245c78207</td>
 </tr>
 <tr>
 <th>patient_id</th>
@@ -1288,7 +1299,7 @@
 </tr>
 <tr>
 <th>lymph_node_examined</th>
-<td>0</td>
+<td>0.0</td>
 </tr>
 </table></td>
 </tr>
@@ -1325,14 +1336,14 @@
 </tr>
 <tr>
 <th>details</th>
-<td><table class="nested-table"></table></td>
+<td><ul></ul></td>
 </tr>
 </table></td>
 </tr>
 </table></td>
 </tr>
 <tr>
-<td>69300358ed9d10cb6013a1e1</td>
+<td>69303328bf9da8b245c7824a</td>
 <td>HPCAL4_40144972_SNP</td>
 <td><table class="nested-table"><tr>
 <th>symbol</th>
@@ -1449,7 +1460,7 @@
 <td><table class="nested-table">
 <tr>
 <th>id</th>
-<td>693002e8ed9d10cb601320ba</td>
+<td>69303328bf9da8b245c78229</td>
 </tr>
 <tr>
 <th>sample_id</th>
@@ -1497,7 +1508,7 @@
 <th>tumor</th>
 <td><table class="nested-table"><tr>
 <th>primary_depth_mm</th>
-<td>7</td>
+<td>7.0</td>
 </tr></table></td>
 </tr>
 <tr>
@@ -1530,7 +1541,7 @@
 <td><table class="nested-table">
 <tr>
 <th>id</th>
-<td>693002d0ed9d10cb60132097</td>
+<td>69303327bf9da8b245c78207</td>
 </tr>
 <tr>
 <th>patient_id</th>
@@ -1614,7 +1625,7 @@
 </tr>
 <tr>
 <th>lymph_node_examined</th>
-<td>0</td>
+<td>0.0</td>
 </tr>
 </table></td>
 </tr>
@@ -1651,14 +1662,14 @@
 </tr>
 <tr>
 <th>details</th>
-<td><table class="nested-table"></table></td>
+<td><ul></ul></td>
 </tr>
 </table></td>
 </tr>
 </table></td>
 </tr>
 <tr>
-<td>69300358ed9d10cb6013a1e2</td>
+<td>69303328bf9da8b245c7824b</td>
 <td>KCNQ4_41284372_SNP</td>
 <td><table class="nested-table"><tr>
 <th>symbol</th>
@@ -1775,7 +1786,7 @@
 <td><table class="nested-table">
 <tr>
 <th>id</th>
-<td>693002e8ed9d10cb601320ba</td>
+<td>69303328bf9da8b245c78229</td>
 </tr>
 <tr>
 <th>sample_id</th>
@@ -1823,7 +1834,7 @@
 <th>tumor</th>
 <td><table class="nested-table"><tr>
 <th>primary_depth_mm</th>
-<td>7</td>
+<td>7.0</td>
 </tr></table></td>
 </tr>
 <tr>
@@ -1856,7 +1867,7 @@
 <td><table class="nested-table">
 <tr>
 <th>id</th>
-<td>693002d0ed9d10cb60132097</td>
+<td>69303327bf9da8b245c78207</td>
 </tr>
 <tr>
 <th>patient_id</th>
@@ -1940,7 +1951,7 @@
 </tr>
 <tr>
 <th>lymph_node_examined</th>
-<td>0</td>
+<td>0.0</td>
 </tr>
 </table></td>
 </tr>
@@ -1977,14 +1988,14 @@
 </tr>
 <tr>
 <th>details</th>
-<td><table class="nested-table"></table></td>
+<td><ul></ul></td>
 </tr>
 </table></td>
 </tr>
 </table></td>
 </tr>
 <tr>
-<td>69300358ed9d10cb6013a1e3</td>
+<td>69303328bf9da8b245c7824c</td>
 <td>UROD_45477826_SNP</td>
 <td><table class="nested-table"><tr>
 <th>symbol</th>
@@ -2101,7 +2112,7 @@
 <td><table class="nested-table">
 <tr>
 <th>id</th>
-<td>693002e8ed9d10cb601320ba</td>
+<td>69303328bf9da8b245c78229</td>
 </tr>
 <tr>
 <th>sample_id</th>
@@ -2149,7 +2160,7 @@
 <th>tumor</th>
 <td><table class="nested-table"><tr>
 <th>primary_depth_mm</th>
-<td>7</td>
+<td>7.0</td>
 </tr></table></td>
 </tr>
 <tr>
@@ -2182,7 +2193,7 @@
 <td><table class="nested-table">
 <tr>
 <th>id</th>
-<td>693002d0ed9d10cb60132097</td>
+<td>69303327bf9da8b245c78207</td>
 </tr>
 <tr>
 <th>patient_id</th>
@@ -2266,7 +2277,7 @@
 </tr>
 <tr>
 <th>lymph_node_examined</th>
-<td>0</td>
+<td>0.0</td>
 </tr>
 </table></td>
 </tr>
@@ -2303,14 +2314,14 @@
 </tr>
 <tr>
 <th>details</th>
-<td><table class="nested-table"></table></td>
+<td><ul></ul></td>
 </tr>
 </table></td>
 </tr>
 </table></td>
 </tr>
 <tr>
-<td>69300358ed9d10cb6013a1e4</td>
+<td>69303328bf9da8b245c7824d</td>
 <td>DHCR24_55317624_SNP</td>
 <td><table class="nested-table"><tr>
 <th>symbol</th>
@@ -2427,7 +2438,7 @@
 <td><table class="nested-table">
 <tr>
 <th>id</th>
-<td>693002e8ed9d10cb601320ba</td>
+<td>69303328bf9da8b245c78229</td>
 </tr>
 <tr>
 <th>sample_id</th>
@@ -2475,7 +2486,7 @@
 <th>tumor</th>
 <td><table class="nested-table"><tr>
 <th>primary_depth_mm</th>
-<td>7</td>
+<td>7.0</td>
 </tr></table></td>
 </tr>
 <tr>
@@ -2508,7 +2519,7 @@
 <td><table class="nested-table">
 <tr>
 <th>id</th>
-<td>693002d0ed9d10cb60132097</td>
+<td>69303327bf9da8b245c78207</td>
 </tr>
 <tr>
 <th>patient_id</th>
@@ -2592,7 +2603,7 @@
 </tr>
 <tr>
 <th>lymph_node_examined</th>
-<td>0</td>
+<td>0.0</td>
 </tr>
 </table></td>
 </tr>
@@ -2629,14 +2640,14 @@
 </tr>
 <tr>
 <th>details</th>
-<td><table class="nested-table"></table></td>
+<td><ul></ul></td>
 </tr>
 </table></td>
 </tr>
 </table></td>
 </tr>
 <tr>
-<td>69300358ed9d10cb6013a1e5</td>
+<td>69303328bf9da8b245c7824e</td>
 <td>PRKAA2_57179199_INS</td>
 <td><table class="nested-table"><tr>
 <th>symbol</th>
@@ -2753,7 +2764,7 @@
 <td><table class="nested-table">
 <tr>
 <th>id</th>
-<td>693002e8ed9d10cb601320ba</td>
+<td>69303328bf9da8b245c78229</td>
 </tr>
 <tr>
 <th>sample_id</th>
@@ -2801,7 +2812,7 @@
 <th>tumor</th>
 <td><table class="nested-table"><tr>
 <th>primary_depth_mm</th>
-<td>7</td>
+<td>7.0</td>
 </tr></table></td>
 </tr>
 <tr>
@@ -2834,7 +2845,7 @@
 <td><table class="nested-table">
 <tr>
 <th>id</th>
-<td>693002d0ed9d10cb60132097</td>
+<td>69303327bf9da8b245c78207</td>
 </tr>
 <tr>
 <th>patient_id</th>
@@ -2918,7 +2929,7 @@
 </tr>
 <tr>
 <th>lymph_node_examined</th>
-<td>0</td>
+<td>0.0</td>
 </tr>
 </table></td>
 </tr>
@@ -2955,14 +2966,14 @@
 </tr>
 <tr>
 <th>details</th>
-<td><table class="nested-table"></table></td>
+<td><ul></ul></td>
 </tr>
 </table></td>
 </tr>
 </table></td>
 </tr>
 <tr>
-<td>69300358ed9d10cb6013a1e6</td>
+<td>69303328bf9da8b245c7824f</td>
 <td>AK4_65692499_SNP</td>
 <td><table class="nested-table"><tr>
 <th>symbol</th>
@@ -3079,7 +3090,7 @@
 <td><table class="nested-table">
 <tr>
 <th>id</th>
-<td>693002e8ed9d10cb601320ba</td>
+<td>69303328bf9da8b245c78229</td>
 </tr>
 <tr>
 <th>sample_id</th>
@@ -3127,7 +3138,7 @@
 <th>tumor</th>
 <td><table class="nested-table"><tr>
 <th>primary_depth_mm</th>
-<td>7</td>
+<td>7.0</td>
 </tr></table></td>
 </tr>
 <tr>
@@ -3160,7 +3171,7 @@
 <td><table class="nested-table">
 <tr>
 <th>id</th>
-<td>693002d0ed9d10cb60132097</td>
+<td>69303327bf9da8b245c78207</td>
 </tr>
 <tr>
 <th>patient_id</th>
@@ -3244,7 +3255,7 @@
 </tr>
 <tr>
 <th>lymph_node_examined</th>
-<td>0</td>
+<td>0.0</td>
 </tr>
 </table></td>
 </tr>
@@ -3281,14 +3292,14 @@
 </tr>
 <tr>
 <th>details</th>
-<td><table class="nested-table"></table></td>
+<td><ul></ul></td>
 </tr>
 </table></td>
 </tr>
 </table></td>
 </tr>
 <tr>
-<td>69300358ed9d10cb6013a1e7</td>
+<td>69303328bf9da8b245c78250</td>
 <td>ATP1A1_116942111_SNP</td>
 <td><table class="nested-table"><tr>
 <th>symbol</th>
@@ -3405,7 +3416,7 @@
 <td><table class="nested-table">
 <tr>
 <th>id</th>
-<td>693002e8ed9d10cb601320ba</td>
+<td>69303328bf9da8b245c78229</td>
 </tr>
 <tr>
 <th>sample_id</th>
@@ -3453,7 +3464,7 @@
 <th>tumor</th>
 <td><table class="nested-table"><tr>
 <th>primary_depth_mm</th>
-<td>7</td>
+<td>7.0</td>
 </tr></table></td>
 </tr>
 <tr>
@@ -3486,7 +3497,7 @@
 <td><table class="nested-table">
 <tr>
 <th>id</th>
-<td>693002d0ed9d10cb60132097</td>
+<td>69303327bf9da8b245c78207</td>
 </tr>
 <tr>
 <th>patient_id</th>
@@ -3570,7 +3581,7 @@
 </tr>
 <tr>
 <th>lymph_node_examined</th>
-<td>0</td>
+<td>0.0</td>
 </tr>
 </table></td>
 </tr>
@@ -3607,14 +3618,14 @@
 </tr>
 <tr>
 <th>details</th>
-<td><table class="nested-table"></table></td>
+<td><ul></ul></td>
 </tr>
 </table></td>
 </tr>
 </table></td>
 </tr>
 <tr>
-<td>69300358ed9d10cb6013a1e8</td>
+<td>69303328bf9da8b245c78251</td>
 <td>POLR3C_145601616_DEL</td>
 <td><table class="nested-table"><tr>
 <th>symbol</th>
@@ -3731,7 +3742,7 @@
 <td><table class="nested-table">
 <tr>
 <th>id</th>
-<td>693002e8ed9d10cb601320ba</td>
+<td>69303328bf9da8b245c78229</td>
 </tr>
 <tr>
 <th>sample_id</th>
@@ -3779,7 +3790,7 @@
 <th>tumor</th>
 <td><table class="nested-table"><tr>
 <th>primary_depth_mm</th>
-<td>7</td>
+<td>7.0</td>
 </tr></table></td>
 </tr>
 <tr>
@@ -3812,7 +3823,7 @@
 <td><table class="nested-table">
 <tr>
 <th>id</th>
-<td>693002d0ed9d10cb60132097</td>
+<td>69303327bf9da8b245c78207</td>
 </tr>
 <tr>
 <th>patient_id</th>
@@ -3896,7 +3907,7 @@
 </tr>
 <tr>
 <th>lymph_node_examined</th>
-<td>0</td>
+<td>0.0</td>
 </tr>
 </table></td>
 </tr>
@@ -3933,14 +3944,14 @@
 </tr>
 <tr>
 <th>details</th>
-<td><table class="nested-table"></table></td>
+<td><ul></ul></td>
 </tr>
 </table></td>
 </tr>
 </table></td>
 </tr>
 <tr>
-<td>69300358ed9d10cb6013a1e9</td>
+<td>69303328bf9da8b245c78252</td>
 <td>PIP5K1A_151196712_SNP</td>
 <td><table class="nested-table"><tr>
 <th>symbol</th>
@@ -4057,7 +4068,7 @@
 <td><table class="nested-table">
 <tr>
 <th>id</th>
-<td>693002e8ed9d10cb601320ba</td>
+<td>69303328bf9da8b245c78229</td>
 </tr>
 <tr>
 <th>sample_id</th>
@@ -4105,7 +4116,7 @@
 <th>tumor</th>
 <td><table class="nested-table"><tr>
 <th>primary_depth_mm</th>
-<td>7</td>
+<td>7.0</td>
 </tr></table></td>
 </tr>
 <tr>
@@ -4138,7 +4149,7 @@
 <td><table class="nested-table">
 <tr>
 <th>id</th>
-<td>693002d0ed9d10cb60132097</td>
+<td>69303327bf9da8b245c78207</td>
 </tr>
 <tr>
 <th>patient_id</th>
@@ -4222,7 +4233,7 @@
 </tr>
 <tr>
 <th>lymph_node_examined</th>
-<td>0</td>
+<td>0.0</td>
 </tr>
 </table></td>
 </tr>
@@ -4259,14 +4270,14 @@
 </tr>
 <tr>
 <th>details</th>
-<td><table class="nested-table"></table></td>
+<td><ul></ul></td>
 </tr>
 </table></td>
 </tr>
 </table></td>
 </tr>
 <tr>
-<td>69300358ed9d10cb6013a1ea</td>
+<td>69303328bf9da8b245c78253</td>
 <td>RFX5_151315113_SNP</td>
 <td><table class="nested-table"><tr>
 <th>symbol</th>
@@ -4383,7 +4394,7 @@
 <td><table class="nested-table">
 <tr>
 <th>id</th>
-<td>693002e8ed9d10cb601320ba</td>
+<td>69303328bf9da8b245c78229</td>
 </tr>
 <tr>
 <th>sample_id</th>
@@ -4431,7 +4442,7 @@
 <th>tumor</th>
 <td><table class="nested-table"><tr>
 <th>primary_depth_mm</th>
-<td>7</td>
+<td>7.0</td>
 </tr></table></td>
 </tr>
 <tr>
@@ -4464,7 +4475,7 @@
 <td><table class="nested-table">
 <tr>
 <th>id</th>
-<td>693002d0ed9d10cb60132097</td>
+<td>69303327bf9da8b245c78207</td>
 </tr>
 <tr>
 <th>patient_id</th>
@@ -4548,7 +4559,7 @@
 </tr>
 <tr>
 <th>lymph_node_examined</th>
-<td>0</td>
+<td>0.0</td>
 </tr>
 </table></td>
 </tr>
@@ -4585,14 +4596,14 @@
 </tr>
 <tr>
 <th>details</th>
-<td><table class="nested-table"></table></td>
+<td><ul></ul></td>
 </tr>
 </table></td>
 </tr>
 </table></td>
 </tr>
 <tr>
-<td>69300358ed9d10cb6013a1eb</td>
+<td>69303328bf9da8b245c78254</td>
 <td>FLG_152275224_SNP</td>
 <td><table class="nested-table"><tr>
 <th>symbol</th>
@@ -4709,7 +4720,7 @@
 <td><table class="nested-table">
 <tr>
 <th>id</th>
-<td>693002e8ed9d10cb601320ba</td>
+<td>69303328bf9da8b245c78229</td>
 </tr>
 <tr>
 <th>sample_id</th>
@@ -4757,7 +4768,7 @@
 <th>tumor</th>
 <td><table class="nested-table"><tr>
 <th>primary_depth_mm</th>
-<td>7</td>
+<td>7.0</td>
 </tr></table></td>
 </tr>
 <tr>
@@ -4790,7 +4801,7 @@
 <td><table class="nested-table">
 <tr>
 <th>id</th>
-<td>693002d0ed9d10cb60132097</td>
+<td>69303327bf9da8b245c78207</td>
 </tr>
 <tr>
 <th>patient_id</th>
@@ -4874,7 +4885,7 @@
 </tr>
 <tr>
 <th>lymph_node_examined</th>
-<td>0</td>
+<td>0.0</td>
 </tr>
 </table></td>
 </tr>
@@ -4911,14 +4922,14 @@
 </tr>
 <tr>
 <th>details</th>
-<td><table class="nested-table"></table></td>
+<td><ul></ul></td>
 </tr>
 </table></td>
 </tr>
 </table></td>
 </tr>
 <tr>
-<td>69300358ed9d10cb6013a1ec</td>
+<td>69303328bf9da8b245c78255</td>
 <td>FLG_152276867_SNP</td>
 <td><table class="nested-table"><tr>
 <th>symbol</th>
@@ -5035,7 +5046,7 @@
 <td><table class="nested-table">
 <tr>
 <th>id</th>
-<td>693002e8ed9d10cb601320ba</td>
+<td>69303328bf9da8b245c78229</td>
 </tr>
 <tr>
 <th>sample_id</th>
@@ -5083,7 +5094,7 @@
 <th>tumor</th>
 <td><table class="nested-table"><tr>
 <th>primary_depth_mm</th>
-<td>7</td>
+<td>7.0</td>
 </tr></table></td>
 </tr>
 <tr>
@@ -5116,7 +5127,7 @@
 <td><table class="nested-table">
 <tr>
 <th>id</th>
-<td>693002d0ed9d10cb60132097</td>
+<td>69303327bf9da8b245c78207</td>
 </tr>
 <tr>
 <th>patient_id</th>
@@ -5200,7 +5211,7 @@
 </tr>
 <tr>
 <th>lymph_node_examined</th>
-<td>0</td>
+<td>0.0</td>
 </tr>
 </table></td>
 </tr>
@@ -5237,14 +5248,14 @@
 </tr>
 <tr>
 <th>details</th>
-<td><table class="nested-table"></table></td>
+<td><ul></ul></td>
 </tr>
 </table></td>
 </tr>
 </table></td>
 </tr>
 <tr>
-<td>69300358ed9d10cb6013a1ed</td>
+<td>69303328bf9da8b245c78256</td>
 <td>IFI16_158990109_SNP</td>
 <td><table class="nested-table"><tr>
 <th>symbol</th>
@@ -5361,7 +5372,7 @@
 <td><table class="nested-table">
 <tr>
 <th>id</th>
-<td>693002e8ed9d10cb601320ba</td>
+<td>69303328bf9da8b245c78229</td>
 </tr>
 <tr>
 <th>sample_id</th>
@@ -5409,7 +5420,7 @@
 <th>tumor</th>
 <td><table class="nested-table"><tr>
 <th>primary_depth_mm</th>
-<td>7</td>
+<td>7.0</td>
 </tr></table></td>
 </tr>
 <tr>
@@ -5442,7 +5453,7 @@
 <td><table class="nested-table">
 <tr>
 <th>id</th>
-<td>693002d0ed9d10cb60132097</td>
+<td>69303327bf9da8b245c78207</td>
 </tr>
 <tr>
 <th>patient_id</th>
@@ -5526,7 +5537,7 @@
 </tr>
 <tr>
 <th>lymph_node_examined</th>
-<td>0</td>
+<td>0.0</td>
 </tr>
 </table></td>
 </tr>
@@ -5563,14 +5574,14 @@
 </tr>
 <tr>
 <th>details</th>
-<td><table class="nested-table"></table></td>
+<td><ul></ul></td>
 </tr>
 </table></td>
 </tr>
 </table></td>
 </tr>
 <tr>
-<td>69300358ed9d10cb6013a1ee</td>
+<td>69303328bf9da8b245c78257</td>
 <td>PRDX6_173455459_SNP</td>
 <td><table class="nested-table"><tr>
 <th>symbol</th>
@@ -5687,7 +5698,7 @@
 <td><table class="nested-table">
 <tr>
 <th>id</th>
-<td>693002e8ed9d10cb601320ba</td>
+<td>69303328bf9da8b245c78229</td>
 </tr>
 <tr>
 <th>sample_id</th>
@@ -5735,7 +5746,7 @@
 <th>tumor</th>
 <td><table class="nested-table"><tr>
 <th>primary_depth_mm</th>
-<td>7</td>
+<td>7.0</td>
 </tr></table></td>
 </tr>
 <tr>
@@ -5768,7 +5779,7 @@
 <td><table class="nested-table">
 <tr>
 <th>id</th>
-<td>693002d0ed9d10cb60132097</td>
+<td>69303327bf9da8b245c78207</td>
 </tr>
 <tr>
 <th>patient_id</th>
@@ -5852,7 +5863,7 @@
 </tr>
 <tr>
 <th>lymph_node_examined</th>
-<td>0</td>
+<td>0.0</td>
 </tr>
 </table></td>
 </tr>
@@ -5889,14 +5900,14 @@
 </tr>
 <tr>
 <th>details</th>
-<td><table class="nested-table"></table></td>
+<td><ul></ul></td>
 </tr>
 </table></td>
 </tr>
 </table></td>
 </tr>
 <tr>
-<td>69300358ed9d10cb6013a1ef</td>
+<td>69303328bf9da8b245c78258</td>
 <td>TSEN15_184039826_SNP</td>
 <td><table class="nested-table"><tr>
 <th>symbol</th>
@@ -6013,7 +6024,7 @@
 <td><table class="nested-table">
 <tr>
 <th>id</th>
-<td>693002e8ed9d10cb601320ba</td>
+<td>69303328bf9da8b245c78229</td>
 </tr>
 <tr>
 <th>sample_id</th>
@@ -6061,7 +6072,7 @@
 <th>tumor</th>
 <td><table class="nested-table"><tr>
 <th>primary_depth_mm</th>
-<td>7</td>
+<td>7.0</td>
 </tr></table></td>
 </tr>
 <tr>
@@ -6094,7 +6105,7 @@
 <td><table class="nested-table">
 <tr>
 <th>id</th>
-<td>693002d0ed9d10cb60132097</td>
+<td>69303327bf9da8b245c78207</td>
 </tr>
 <tr>
 <th>patient_id</th>
@@ -6178,7 +6189,7 @@
 </tr>
 <tr>
 <th>lymph_node_examined</th>
-<td>0</td>
+<td>0.0</td>
 </tr>
 </table></td>
 </tr>
@@ -6215,14 +6226,14 @@
 </tr>
 <tr>
 <th>details</th>
-<td><table class="nested-table"></table></td>
+<td><ul></ul></td>
 </tr>
 </table></td>
 </tr>
 </table></td>
 </tr>
 <tr>
-<td>69300358ed9d10cb6013a1f0</td>
+<td>69303328bf9da8b245c78259</td>
 <td>ASPM_197091183_SNP</td>
 <td><table class="nested-table"><tr>
 <th>symbol</th>
@@ -6339,7 +6350,7 @@
 <td><table class="nested-table">
 <tr>
 <th>id</th>
-<td>693002e8ed9d10cb601320ba</td>
+<td>69303328bf9da8b245c78229</td>
 </tr>
 <tr>
 <th>sample_id</th>
@@ -6387,7 +6398,7 @@
 <th>tumor</th>
 <td><table class="nested-table"><tr>
 <th>primary_depth_mm</th>
-<td>7</td>
+<td>7.0</td>
 </tr></table></td>
 </tr>
 <tr>
@@ -6420,7 +6431,7 @@
 <td><table class="nested-table">
 <tr>
 <th>id</th>
-<td>693002d0ed9d10cb60132097</td>
+<td>69303327bf9da8b245c78207</td>
 </tr>
 <tr>
 <th>patient_id</th>
@@ -6504,7 +6515,7 @@
 </tr>
 <tr>
 <th>lymph_node_examined</th>
-<td>0</td>
+<td>0.0</td>
 </tr>
 </table></td>
 </tr>
@@ -6541,7 +6552,7 @@
 </tr>
 <tr>
 <th>details</th>
-<td><table class="nested-table"></table></td>
+<td><ul></ul></td>
 </tr>
 </table></td>
 </tr>
