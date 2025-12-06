@@ -46,8 +46,7 @@ EstandaresProyecto/
 │       └── template.xslt           # Plantilla de estilo para el HTML
 │
 └── README.md
-
-
+```
 ---
 
 ## 🛠️ Requisitos e Instalación
