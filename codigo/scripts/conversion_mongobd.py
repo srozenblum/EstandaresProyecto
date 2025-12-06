@@ -418,61 +418,68 @@ def convert_to_json(input_file, output_file, columnas=None):
 
 
 # ============================================================
-# 🔵 MAIN
+# 🔵 MAIN (CORREGIDO)
+# ============================================================
+
+# ============================================================
+# 🔵 MAIN (CORREGIDO Y GENÉRICO)
 # ============================================================
 
 def main():
-    base = "codigo/datos/mel_tsam_liang_2017"
-    out_dir = "cleaned_data"
+    # (EstandaresProyecto/codigo/scripts)
+    script_dir = os.path.dirname(os.path.abspath(__file__))
 
+    codigo_dir = os.path.dirname(script_dir)
+
+    project_root = os.path.dirname(codigo_dir)
+
+    # Ruta: codigo/datos/mel_tsam_liang_2017
+    base_input = os.path.join(codigo_dir, "datos", "mel_tsam_liang_2017")
+    
+    # Ruta: EstandaresProyecto/cleaned_data
+    out_dir = os.path.join(project_root, "cleaned_data")
+
+    print(f"📍 Script ejecutándose en: {script_dir}")
+    print(f"🔎 Buscando datos en:     {base_input}")
+    print(f"💾 Guardando datos en:    {out_dir}")
+
+    # Comprobación de seguridad
+    if not os.path.exists(base_input):
+        print(f"\n❌ ERROR CRÍTICO: No se encuentra la carpeta de datos.")
+        print(f"   Se esperaba en: {base_input}")
+        return
+
+    # Ejecutar conversiones usando las rutas dinámicas
     # -------------------------------
-    # Pacientes
     convert_to_json(
-        os.path.join(base, "data_clinical_patient.txt"),
+        os.path.join(base_input, "data_clinical_patient.txt"),
         os.path.join(out_dir, "patients.json"),
         PATIENT_COLUMNS
     )
 
-    # -------------------------------
-    # Muestras
     convert_to_json(
-        os.path.join(base, "data_clinical_sample.txt"),
+        os.path.join(base_input, "data_clinical_sample.txt"),
         os.path.join(out_dir, "samples.json"),
         SAMPLE_COLUMNS
     )
 
-    # -------------------------------
-    # Variantes
     convert_to_json(
-        os.path.join(base, "data_mutations.txt"),
+        os.path.join(base_input, "data_mutations.txt"),
         os.path.join(out_dir, "variants.json"),
         MUTATION_COLUMNS
     )
 
-    # -------------------------------
-    # Colección externa: ONCOKB
     download_and_convert_oncokb(
         os.path.join(out_dir, "oncokb_genes.json")
     )
 
-    # -------------------------------
-    # Colección externa: UniProt
-    uniprot_accessions = [
-        "P15056",  # BRAF
-        "P04637",  # TP53
-        "P01111",  # NRAS
-        "Q16539",  # KIT
-        "P25963"   # NFKBIA
-    ]
-
+    uniprot_accessions = ["P15056", "P04637", "P01111", "Q16539", "P25963"]
     download_uniprot_entries(
         uniprot_accessions,
         os.path.join(out_dir, "uniprot.json")
     )
 
-    print("\nTODAS las colecciones se han generado correctamente.")
-    print("Directorio:", os.path.abspath(out_dir))
-
+    print("\n✅ Conversión completada exitosamente.")
 
 if __name__ == "__main__":
     main()
