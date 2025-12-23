@@ -1,0 +1,1891 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:mel="http://example.org/melanoma_es#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <owl:ObjectProperty rdf:about="http://example.org/melanoma_es#tieneTratamiento">
+    <rdfs:domain rdf:resource="http://example.org/melanoma_es#Paciente"/>
+    <rdfs:range rdf:resource="http://example.org/melanoma_es#Tratamiento"/>
+    <rdfs:label xml:lang="es">tieneTratamiento</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://example.org/melanoma_es#tieneTumor">
+    <rdfs:domain rdf:resource="http://example.org/melanoma_es#Clinica"/>
+    <rdfs:range rdf:resource="http://example.org/melanoma_es#Tumor"/>
+    <rdfs:label xml:lang="es">tieneTumor</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://example.org/melanoma_es#tieneAlelosTumor">
+    <rdfs:domain rdf:resource="http://example.org/melanoma_es#Alelos"/>
+    <rdfs:range rdf:resource="http://example.org/melanoma_es#AlelosTumor"/>
+    <rdfs:label xml:lang="es">tieneAlelosTumor</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://example.org/melanoma_es#edadDiagnostico">
+    <rdfs:domain rdf:resource="http://example.org/melanoma_es#Demografia"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label xml:lang="es">edadDiagnostico</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="http://example.org/melanoma_es#tieneAlelos">
+    <rdfs:domain rdf:resource="http://example.org/melanoma_es#Variante"/>
+    <rdfs:range rdf:resource="http://example.org/melanoma_es#Alelos"/>
+    <rdfs:label xml:lang="es">tieneAlelos</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://example.org/melanoma_es#tieneDemografia">
+    <rdfs:domain rdf:resource="http://example.org/melanoma_es#Clinica"/>
+    <rdfs:range rdf:resource="http://example.org/melanoma_es#Demografia"/>
+    <rdfs:label xml:lang="es">tieneDemografia</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://example.org/melanoma_es#tieneCoordenadas">
+    <rdfs:domain rdf:resource="http://example.org/melanoma_es#UbicacionVariante"/>
+    <rdfs:range rdf:resource="http://example.org/melanoma_es#Coordenadas"/>
+    <rdfs:label xml:lang="es">tieneCoordenadas</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://example.org/melanoma_es#organismo">
+    <rdfs:domain rdf:resource="http://example.org/melanoma_es#Proteina"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="es">organismo</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://example.org/melanoma_es#muestraNormal">
+    <rdfs:domain rdf:resource="http://example.org/melanoma_es#Variante"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="es">muestraNormal</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://example.org/melanoma_es#tmbNoSinonimas">
+    <rdfs:domain rdf:resource="http://example.org/melanoma_es#Muestra"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label xml:lang="es">tmbNoSinonimas</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="http://example.org/melanoma_es#tieneMuestra">
+    <rdfs:domain rdf:resource="http://example.org/melanoma_es#Paciente"/>
+    <rdfs:range rdf:resource="http://example.org/melanoma_es#Muestra"/>
+    <rdfs:label xml:lang="es">tieneMuestra</rdfs:label>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://example.org/melanoma_es#perteneceAPaciente">
+        <rdfs:domain rdf:resource="http://example.org/melanoma_es#Muestra"/>
+        <rdfs:range rdf:resource="http://example.org/melanoma_es#Paciente"/>
+        <rdfs:label xml:lang="es">perteneceAPaciente</rdfs:label>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://example.org/melanoma_es#simboloGen">
+    <rdfs:domain rdf:resource="http://example.org/melanoma_es#Gen"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="es">simboloGen</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://example.org/melanoma_es#idPaciente">
+    <rdfs:domain rdf:resource="http://example.org/melanoma_es#Paciente"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="es">idPaciente</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://example.org/melanoma_es#nombreUniProt">
+    <rdfs:domain rdf:resource="http://example.org/melanoma_es#Proteina"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="es">nombreUniProt</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://example.org/melanoma_es#fin">
+    <rdfs:domain rdf:resource="http://example.org/melanoma_es#Coordenadas"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label xml:lang="es">fin</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://example.org/melanoma_es#hebra">
+    <rdfs:domain rdf:resource="http://example.org/melanoma_es#Coordenadas"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="es">hebra</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://example.org/melanoma_es#gangliosExaminados">
+    <rdfs:domain rdf:resource="http://example.org/melanoma_es#Tumor"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label xml:lang="es">gangliosExaminados</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="http://example.org/melanoma_es#tienePresentacion">
+    <rdfs:domain rdf:resource="http://example.org/melanoma_es#Muestra"/>
+    <rdfs:range rdf:resource="http://example.org/melanoma_es#Muestreo"/>
+    <rdfs:label xml:lang="es">tienePresentacion</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://example.org/melanoma_es#profundidadTotalTumor">
+    <rdfs:domain rdf:resource="http://example.org/melanoma_es#ProfundidadTumor"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label xml:lang="es">profundidadTotalTumor</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://example.org/melanoma_es#mesesLibreEnfermedad">
+    <rdfs:domain rdf:resource="http://example.org/melanoma_es#Supervivencia"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label xml:lang="es">mesesLibreEnfermedad</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://example.org/melanoma_es#tratamientoRecibido">
+    <rdfs:domain rdf:resource="http://example.org/melanoma_es#Tratamiento"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="es">tratamientoRecibido</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://example.org/melanoma_es#cromosoma">
+    <rdfs:domain rdf:resource="http://example.org/melanoma_es#UbicacionVariante"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="es">cromosoma</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="http://example.org/melanoma_es#tieneClinica">
+    <rdfs:domain rdf:resource="http://example.org/melanoma_es#Paciente"/>
+    <rdfs:range rdf:resource="http://example.org/melanoma_es#Clinica"/>
+    <rdfs:label xml:lang="es">tieneClinica</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://example.org/melanoma_es#tieneProfundidadSecuenciacion">
+    <rdfs:domain rdf:resource="http://example.org/melanoma_es#Variante"/>
+    <rdfs:range rdf:resource="http://example.org/melanoma_es#ProfundidadSecuenciacion"/>
+    <rdfs:label xml:lang="es">tieneProfundidadSecuenciacion</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://example.org/melanoma_es#tieneSupervivencia">
+    <rdfs:domain rdf:resource="http://example.org/melanoma_es#Paciente"/>
+    <rdfs:range rdf:resource="http://example.org/melanoma_es#Supervivencia"/>
+    <rdfs:label xml:lang="es">tieneSupervivencia</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://example.org/melanoma_es#metastasis">
+    <rdfs:domain rdf:resource="http://example.org/melanoma_es#Recurrencia"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="es">metastasis</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://example.org/melanoma_es#idMuestra">
+    <rdfs:domain rdf:resource="http://example.org/melanoma_es#Muestra"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="es">idMuestra</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://example.org/melanoma_es#conteoAltTumor">
+    <rdfs:domain rdf:resource="http://example.org/melanoma_es#ProfundidadTumor"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label xml:lang="es">conteoAltTumor</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://example.org/melanoma_es#claseVariante">
+    <rdfs:domain rdf:resource="http://example.org/melanoma_es#ClasificacionVariante"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="es">claseVariante</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://example.org/melanoma_es#mesesHastaRecurrencia">
+    <rdfs:domain rdf:resource="http://example.org/melanoma_es#Recurrencia"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label xml:lang="es">mesesHastaRecurrencia</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="http://example.org/melanoma_es#tieneClasificacion">
+    <rdfs:domain rdf:resource="http://example.org/melanoma_es#Variante"/>
+    <rdfs:range rdf:resource="http://example.org/melanoma_es#ClasificacionVariante"/>
+    <rdfs:label xml:lang="es">tieneClasificacion</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://example.org/melanoma_es#tieneRecurrencia">
+    <rdfs:domain rdf:resource="http://example.org/melanoma_es#Paciente"/>
+    <rdfs:range rdf:resource="http://example.org/melanoma_es#Recurrencia"/>
+    <rdfs:label xml:lang="es">tieneRecurrencia</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://example.org/melanoma_es#aleloTumor1">
+    <rdfs:domain rdf:resource="http://example.org/melanoma_es#AlelosTumor"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="es">aleloTumor1</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://example.org/melanoma_es#hgvsp">
+    <rdfs:domain rdf:resource="http://example.org/melanoma_es#Variante"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="es">hgvsp</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="http://example.org/melanoma_es#tieneUbicacion">
+    <rdfs:domain rdf:resource="http://example.org/melanoma_es#Variante"/>
+    <rdfs:range rdf:resource="http://example.org/melanoma_es#UbicacionVariante"/>
+    <rdfs:label xml:lang="es">tieneUbicacion</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://example.org/melanoma_es#sitioPrimeraRecurrencia">
+    <rdfs:domain rdf:resource="http://example.org/melanoma_es#Recurrencia"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="es">sitioPrimeraRecurrencia</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="http://example.org/melanoma_es#tieneVariante">
+    <rdfs:domain rdf:resource="http://example.org/melanoma_es#Muestra"/>
+    <rdfs:range rdf:resource="http://example.org/melanoma_es#Variante"/>
+    <rdfs:label xml:lang="es">tieneVariante</rdfs:label>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://example.org/melanoma_es#observadaEnMuestra">
+        <rdfs:domain rdf:resource="http://example.org/melanoma_es#Variante"/>
+        <rdfs:range rdf:resource="http://example.org/melanoma_es#Muestra"/>
+        <rdfs:label xml:lang="es">observadaEnMuestra</rdfs:label>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://example.org/melanoma_es#tieneProfundidadTumor">
+    <rdfs:domain rdf:resource="http://example.org/melanoma_es#ProfundidadSecuenciacion"/>
+    <rdfs:range rdf:resource="http://example.org/melanoma_es#ProfundidadTumor"/>
+    <rdfs:label xml:lang="es">tieneProfundidadTumor</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://example.org/melanoma_es#idVariante">
+    <rdfs:domain rdf:resource="http://example.org/melanoma_es#Variante"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="es">idVariante</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://example.org/melanoma_es#taxonomiaId">
+    <rdfs:domain rdf:resource="http://example.org/melanoma_es#Proteina"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label xml:lang="es">taxonomiaId</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://example.org/melanoma_es#inicio">
+    <rdfs:domain rdf:resource="http://example.org/melanoma_es#Coordenadas"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label xml:lang="es">inicio</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://example.org/melanoma_es#consecuencia">
+    <rdfs:domain rdf:resource="http://example.org/melanoma_es#ClasificacionVariante"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="es">consecuencia</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://example.org/melanoma_es#raza">
+    <rdfs:domain rdf:resource="http://example.org/melanoma_es#Demografia"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="es">raza</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://example.org/melanoma_es#tipoVariante">
+    <rdfs:domain rdf:resource="http://example.org/melanoma_es#ClasificacionVariante"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="es">tipoVariante</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="http://example.org/melanoma_es#tieneProteina">
+    <rdfs:domain rdf:resource="http://example.org/melanoma_es#Gen"/>
+    <rdfs:range rdf:resource="http://example.org/melanoma_es#Proteina"/>
+    <rdfs:label xml:lang="es">tieneProteina</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://example.org/melanoma_es#estadioPresentacion">
+    <rdfs:domain rdf:resource="http://example.org/melanoma_es#Muestreo"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="es">estadioPresentacion</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://example.org/melanoma_es#conteoRefTumor">
+    <rdfs:domain rdf:resource="http://example.org/melanoma_es#ProfundidadTumor"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label xml:lang="es">conteoRefTumor</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://example.org/melanoma_es#accesoUniProt">
+    <rdfs:domain rdf:resource="http://example.org/melanoma_es#Proteina"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="es">accesoUniProt</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:Ontology rdf:about="http://example.org/ontologia_melanoma_es_ampliada_full">
+    <rdfs:label xml:lang="es">Ontología melanoma ES ampliada FULL (más individuos + estructura completa)</rdfs:label>
+  </owl:Ontology>
+  <owl:DatatypeProperty rdf:about="http://example.org/melanoma_es#mesesGlobal">
+    <rdfs:domain rdf:resource="http://example.org/melanoma_es#Supervivencia"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label xml:lang="es">mesesGlobal</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="http://example.org/melanoma_es#afectaAGen">
+    <rdfs:domain rdf:resource="http://example.org/melanoma_es#Variante"/>
+    <rdfs:range rdf:resource="http://example.org/melanoma_es#Gen"/>
+    <rdfs:label xml:lang="es">afectaAGen</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:Class rdf:about="http://example.org/melanoma_es#Estado">
+    <rdfs:label xml:lang="es">Estado</rdfs:label>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="http://example.org/melanoma_es#sitioPrimario">
+    <rdfs:domain rdf:resource="http://example.org/melanoma_es#Muestreo"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="es">sitioPrimario</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://example.org/melanoma_es#aleloReferencia">
+    <rdfs:domain rdf:resource="http://example.org/melanoma_es#Alelos"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="es">aleloReferencia</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://example.org/melanoma_es#hgvsc">
+    <rdfs:domain rdf:resource="http://example.org/melanoma_es#Variante"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="es">hgvsc</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://example.org/melanoma_es#ulceracion">
+    <rdfs:domain rdf:resource="http://example.org/melanoma_es#Tumor"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="es">ulceracion</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://example.org/melanoma_es#hgvspCorto">
+    <rdfs:domain rdf:resource="http://example.org/melanoma_es#Variante"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="es">hgvspCorto</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://example.org/melanoma_es#sexo">
+    <rdfs:domain rdf:resource="http://example.org/melanoma_es#Demografia"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="es">sexo</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://example.org/melanoma_es#muestraTumoral">
+    <rdfs:domain rdf:resource="http://example.org/melanoma_es#Variante"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="es">muestraTumoral</rdfs:label>
+  </owl:DatatypeProperty>
+  <mel:Variante rdf:about="http://example.org/melanoma_es#variante_NLRC5_VU31_1">
+    <mel:idVariante>NLRC5_VU31_1</mel:idVariante>
+    <mel:muestraTumoral>VU31</mel:muestraTumoral>
+    <mel:muestraNormal>NORMAL</mel:muestraNormal>
+    <mel:hgvsc>ENST00000354700.5:c.1982C&gt;T</mel:hgvsc>
+    <mel:hgvsp>p.Ala661Val</mel:hgvsp>
+    <mel:hgvspCorto>p.A661V</mel:hgvspCorto>
+    <mel:observadaEnMuestra>
+      <mel:Muestra rdf:about="http://example.org/melanoma_es#muestra_VU31">
+        <rdf:type rdf:resource="http://example.org/melanoma_es#MuestraMetastasis"/>
+        <mel:idMuestra>VU31</mel:idMuestra>
+        <mel:tipoMuestra>Metastasis</mel:tipoMuestra>
+        <mel:tmbNoSinonimas rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.2</mel:tmbNoSinonimas>
+        <mel:perteneceAPaciente rdf:resource="http://example.org/melanoma_es#paciente_P-3"/>
+        <mel:tienePresentacion rdf:resource="http://example.org/melanoma_es#presentacion_VU31"/>
+        <mel:tieneVariante rdf:resource="http://example.org/melanoma_es#variante_NLRC5_VU31_1"/>
+        <mel:tieneVariante rdf:resource="http://example.org/melanoma_es#variante_ACAP3_VU31_2"/>
+      </mel:Muestra>
+    </mel:observadaEnMuestra>
+    <mel:afectaAGen>
+      <mel:Gen rdf:about="http://example.org/melanoma_es#gen_NLRC5">
+        <mel:simboloGen>NLRC5</mel:simboloGen>
+      </mel:Gen>
+    </mel:afectaAGen>
+    <mel:tieneUbicacion>
+      <mel:UbicacionVariante rdf:about="http://example.org/melanoma_es#ubicacion_NLRC5_VU31_1">
+        <mel:cromosoma>1</mel:cromosoma>
+        <mel:tieneCoordenadas rdf:resource="http://example.org/melanoma_es#coordenadas_NLRC5_VU31_1"/>
+      </mel:UbicacionVariante>
+    </mel:tieneUbicacion>
+    <mel:tieneClasificacion>
+      <mel:ClasificacionVariante rdf:about="http://example.org/melanoma_es#clasificacion_NLRC5_VU31_1">
+        <mel:consecuencia>missense_variant</mel:consecuencia>
+        <mel:claseVariante>Missense_Mutation</mel:claseVariante>
+        <mel:tipoVariante>SNP</mel:tipoVariante>
+      </mel:ClasificacionVariante>
+    </mel:tieneClasificacion>
+    <mel:tieneAlelos>
+      <mel:Alelos rdf:about="http://example.org/melanoma_es#alelos_NLRC5_VU31_1">
+        <mel:aleloReferencia>G</mel:aleloReferencia>
+        <mel:tieneAlelosTumor rdf:resource="http://example.org/melanoma_es#alelosTumor_NLRC5_VU31_1"/>
+      </mel:Alelos>
+    </mel:tieneAlelos>
+    <mel:tieneProfundidadSecuenciacion>
+      <mel:ProfundidadSecuenciacion rdf:about="http://example.org/melanoma_es#profSec_NLRC5_VU31_1">
+        <mel:tieneProfundidadTumor rdf:resource="http://example.org/melanoma_es#profTumor_NLRC5_VU31_1"/>
+      </mel:ProfundidadSecuenciacion>
+    </mel:tieneProfundidadSecuenciacion>
+  </mel:Variante>
+  <mel:Muestra rdf:about="http://example.org/melanoma_es#muestra_VU42">
+    <mel:idMuestra>VU42</mel:idMuestra>
+    <mel:tipoMuestra>Primary</mel:tipoMuestra>
+    <mel:tmbNoSinonimas rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.1</mel:tmbNoSinonimas>
+    <mel:perteneceAPaciente>
+      <mel:Paciente rdf:about="http://example.org/melanoma_es#paciente_P-4">
+        <mel:idPaciente>P-4</mel:idPaciente>
+        <mel:estadoSupervivenciaGlobal>LIVING</mel:estadoSupervivenciaGlobal>
+        <mel:tieneSupervivencia rdf:resource="http://example.org/melanoma_es#supervivencia_P-4"/>
+        <mel:tieneClinica rdf:resource="http://example.org/melanoma_es#clinica_P-4"/>
+        <mel:tieneRecurrencia rdf:resource="http://example.org/melanoma_es#recurrencia_P-4"/>
+        <mel:tieneTratamiento rdf:resource="http://example.org/melanoma_es#tratamiento_P-4"/>
+        <mel:tieneMuestra rdf:resource="http://example.org/melanoma_es#muestra_VU41"/>
+        <mel:tieneMuestra rdf:resource="http://example.org/melanoma_es#muestra_VU42"/>
+        <mel:tieneMuestra rdf:resource="http://example.org/melanoma_es#muestra_VU43"/>
+      </mel:Paciente>
+    </mel:perteneceAPaciente>
+    <mel:tienePresentacion>
+      <mel:Muestreo rdf:about="http://example.org/melanoma_es#presentacion_VU42">
+        <mel:estadioPresentacion>IIA</mel:estadioPresentacion>
+        <mel:sitioPrimario>Leg</mel:sitioPrimario>
+      </mel:Muestreo>
+    </mel:tienePresentacion>
+    <mel:tieneVariante>
+      <mel:Variante rdf:about="http://example.org/melanoma_es#variante_BRAF_VU42_1">
+        <mel:idVariante>BRAF_VU42_1</mel:idVariante>
+        <mel:muestraTumoral>VU42</mel:muestraTumoral>
+        <mel:muestraNormal>NORMAL</mel:muestraNormal>
+        <mel:hgvsc>ENST00000354700.5:c.1982C&gt;T</mel:hgvsc>
+        <mel:hgvsp>p.Ala661Val</mel:hgvsp>
+        <mel:hgvspCorto>p.A661V</mel:hgvspCorto>
+        <mel:observadaEnMuestra rdf:resource="http://example.org/melanoma_es#muestra_VU42"/>
+        <mel:afectaAGen rdf:resource="http://example.org/melanoma_es#gen_BRAF"/>
+        <mel:tieneUbicacion rdf:resource="http://example.org/melanoma_es#ubicacion_BRAF_VU42_1"/>
+        <mel:tieneClasificacion rdf:resource="http://example.org/melanoma_es#clasificacion_BRAF_VU42_1"/>
+        <mel:tieneAlelos rdf:resource="http://example.org/melanoma_es#alelos_BRAF_VU42_1"/>
+        <mel:tieneProfundidadSecuenciacion rdf:resource="http://example.org/melanoma_es#profSec_BRAF_VU42_1"/>
+      </mel:Variante>
+    </mel:tieneVariante>
+    <mel:tieneVariante>
+      <mel:Variante rdf:about="http://example.org/melanoma_es#variante_NRAS_VU42_2">
+        <mel:idVariante>NRAS_VU42_2</mel:idVariante>
+        <mel:muestraTumoral>VU42</mel:muestraTumoral>
+        <mel:muestraNormal>NORMAL</mel:muestraNormal>
+        <mel:hgvsc>ENST00000X:c.123A&gt;T</mel:hgvsc>
+        <mel:hgvsp>p.Gly41*</mel:hgvsp>
+        <mel:hgvspCorto>p.G41*</mel:hgvspCorto>
+        <mel:observadaEnMuestra rdf:resource="http://example.org/melanoma_es#muestra_VU42"/>
+        <mel:afectaAGen rdf:resource="http://example.org/melanoma_es#gen_NRAS"/>
+        <mel:tieneUbicacion rdf:resource="http://example.org/melanoma_es#ubicacion_NRAS_VU42_2"/>
+        <mel:tieneClasificacion rdf:resource="http://example.org/melanoma_es#clasificacion_NRAS_VU42_2"/>
+        <mel:tieneAlelos rdf:resource="http://example.org/melanoma_es#alelos_NRAS_VU42_2"/>
+        <mel:tieneProfundidadSecuenciacion rdf:resource="http://example.org/melanoma_es#profSec_NRAS_VU42_2"/>
+      </mel:Variante>
+    </mel:tieneVariante>
+  </mel:Muestra>
+  <mel:Variante rdf:about="http://example.org/melanoma_es#variante_ACAP3_VU13_2">
+    <mel:idVariante>ACAP3_VU13_2</mel:idVariante>
+    <mel:muestraTumoral>VU13</mel:muestraTumoral>
+    <mel:muestraNormal>NORMAL</mel:muestraNormal>
+    <mel:hgvsc>ENST00000X:c.123A&gt;T</mel:hgvsc>
+    <mel:hgvsp>p.Gly41*</mel:hgvsp>
+    <mel:hgvspCorto>p.G41*</mel:hgvspCorto>
+    <mel:observadaEnMuestra>
+      <mel:Muestra rdf:about="http://example.org/melanoma_es#muestra_VU13">
+        <rdf:type rdf:resource="http://example.org/melanoma_es#MuestraMetastasis"/>
+        <mel:idMuestra>VU13</mel:idMuestra>
+        <mel:tipoMuestra>Metastasis</mel:tipoMuestra>
+        <mel:tmbNoSinonimas rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12.4</mel:tmbNoSinonimas>
+        <mel:perteneceAPaciente rdf:resource="http://example.org/melanoma_es#paciente_P-1"/>
+        <mel:tienePresentacion rdf:resource="http://example.org/melanoma_es#presentacion_VU13"/>
+        <mel:tieneVariante rdf:resource="http://example.org/melanoma_es#variante_NLRC5_VU13_1"/>
+        <mel:tieneVariante rdf:resource="http://example.org/melanoma_es#variante_ACAP3_VU13_2"/>
+      </mel:Muestra>
+    </mel:observadaEnMuestra>
+    <mel:afectaAGen>
+      <mel:Gen rdf:about="http://example.org/melanoma_es#gen_ACAP3">
+        <mel:simboloGen>ACAP3</mel:simboloGen>
+      </mel:Gen>
+    </mel:afectaAGen>
+    <mel:tieneUbicacion>
+      <mel:UbicacionVariante rdf:about="http://example.org/melanoma_es#ubicacion_ACAP3_VU13_2">
+        <mel:cromosoma>19</mel:cromosoma>
+        <mel:tieneCoordenadas rdf:resource="http://example.org/melanoma_es#coordenadas_ACAP3_VU13_2"/>
+      </mel:UbicacionVariante>
+    </mel:tieneUbicacion>
+    <mel:tieneClasificacion>
+      <mel:ClasificacionVariante rdf:about="http://example.org/melanoma_es#clasificacion_ACAP3_VU13_2">
+        <mel:consecuencia>stop_gained</mel:consecuencia>
+        <mel:claseVariante>Nonsense_Mutation</mel:claseVariante>
+        <mel:tipoVariante>SNP</mel:tipoVariante>
+      </mel:ClasificacionVariante>
+    </mel:tieneClasificacion>
+    <mel:tieneAlelos>
+      <mel:Alelos rdf:about="http://example.org/melanoma_es#alelos_ACAP3_VU13_2">
+        <mel:aleloReferencia>G</mel:aleloReferencia>
+        <mel:tieneAlelosTumor rdf:resource="http://example.org/melanoma_es#alelosTumor_ACAP3_VU13_2"/>
+      </mel:Alelos>
+    </mel:tieneAlelos>
+    <mel:tieneProfundidadSecuenciacion>
+      <mel:ProfundidadSecuenciacion rdf:about="http://example.org/melanoma_es#profSec_ACAP3_VU13_2">
+        <mel:tieneProfundidadTumor rdf:resource="http://example.org/melanoma_es#profTumor_ACAP3_VU13_2"/>
+      </mel:ProfundidadSecuenciacion>
+    </mel:tieneProfundidadSecuenciacion>
+  </mel:Variante>
+  <mel:Variante rdf:about="http://example.org/melanoma_es#variante_ACAP3_VU32_1">
+    <mel:idVariante>ACAP3_VU32_1</mel:idVariante>
+    <mel:muestraTumoral>VU32</mel:muestraTumoral>
+    <mel:muestraNormal>NORMAL</mel:muestraNormal>
+    <mel:hgvsc>ENST00000354700.5:c.1982C&gt;T</mel:hgvsc>
+    <mel:hgvsp>p.Ala661Val</mel:hgvsp>
+    <mel:hgvspCorto>p.A661V</mel:hgvspCorto>
+    <mel:observadaEnMuestra>
+      <mel:Muestra rdf:about="http://example.org/melanoma_es#muestra_VU32">
+        <mel:idMuestra>VU32</mel:idMuestra>
+        <mel:tipoMuestra>Primary</mel:tipoMuestra>
+        <mel:tmbNoSinonimas rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.1</mel:tmbNoSinonimas>
+        <mel:perteneceAPaciente rdf:resource="http://example.org/melanoma_es#paciente_P-3"/>
+        <mel:tienePresentacion rdf:resource="http://example.org/melanoma_es#presentacion_VU32"/>
+        <mel:tieneVariante rdf:resource="http://example.org/melanoma_es#variante_ACAP3_VU32_1"/>
+        <mel:tieneVariante rdf:resource="http://example.org/melanoma_es#variante_BRAF_VU32_2"/>
+      </mel:Muestra>
+    </mel:observadaEnMuestra>
+    <mel:afectaAGen rdf:resource="http://example.org/melanoma_es#gen_ACAP3"/>
+    <mel:tieneUbicacion>
+      <mel:UbicacionVariante rdf:about="http://example.org/melanoma_es#ubicacion_ACAP3_VU32_1">
+        <mel:cromosoma>1</mel:cromosoma>
+        <mel:tieneCoordenadas rdf:resource="http://example.org/melanoma_es#coordenadas_ACAP3_VU32_1"/>
+      </mel:UbicacionVariante>
+    </mel:tieneUbicacion>
+    <mel:tieneClasificacion>
+      <mel:ClasificacionVariante rdf:about="http://example.org/melanoma_es#clasificacion_ACAP3_VU32_1">
+        <mel:consecuencia>missense_variant</mel:consecuencia>
+        <mel:claseVariante>Missense_Mutation</mel:claseVariante>
+        <mel:tipoVariante>SNP</mel:tipoVariante>
+      </mel:ClasificacionVariante>
+    </mel:tieneClasificacion>
+    <mel:tieneAlelos>
+      <mel:Alelos rdf:about="http://example.org/melanoma_es#alelos_ACAP3_VU32_1">
+        <mel:aleloReferencia>G</mel:aleloReferencia>
+        <mel:tieneAlelosTumor rdf:resource="http://example.org/melanoma_es#alelosTumor_ACAP3_VU32_1"/>
+      </mel:Alelos>
+    </mel:tieneAlelos>
+    <mel:tieneProfundidadSecuenciacion>
+      <mel:ProfundidadSecuenciacion rdf:about="http://example.org/melanoma_es#profSec_ACAP3_VU32_1">
+        <mel:tieneProfundidadTumor rdf:resource="http://example.org/melanoma_es#profTumor_ACAP3_VU32_1"/>
+      </mel:ProfundidadSecuenciacion>
+    </mel:tieneProfundidadSecuenciacion>
+  </mel:Variante>
+  <mel:Variante rdf:about="http://example.org/melanoma_es#variante_MUTYH_VU11_2">
+    <mel:idVariante>MUTYH_VU11_2</mel:idVariante>
+    <mel:muestraTumoral>VU11</mel:muestraTumoral>
+    <mel:muestraNormal>NORMAL</mel:muestraNormal>
+    <mel:hgvsc>ENST00000X:c.123A&gt;T</mel:hgvsc>
+    <mel:hgvsp>p.Gly41*</mel:hgvsp>
+    <mel:hgvspCorto>p.G41*</mel:hgvspCorto>
+    <mel:observadaEnMuestra>
+      <mel:Muestra rdf:about="http://example.org/melanoma_es#muestra_VU11">
+        <rdf:type rdf:resource="http://example.org/melanoma_es#MuestraMetastasis"/>
+        <mel:idMuestra>VU11</mel:idMuestra>
+        <mel:tipoMuestra>Metastasis</mel:tipoMuestra>
+        <mel:tmbNoSinonimas rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.2</mel:tmbNoSinonimas>
+        <mel:perteneceAPaciente rdf:resource="http://example.org/melanoma_es#paciente_P-1"/>
+        <mel:tienePresentacion rdf:resource="http://example.org/melanoma_es#presentacion_VU11"/>
+        <mel:tieneVariante rdf:resource="http://example.org/melanoma_es#variante_MUC16_VU11_1"/>
+        <mel:tieneVariante rdf:resource="http://example.org/melanoma_es#variante_MUTYH_VU11_2"/>
+      </mel:Muestra>
+    </mel:observadaEnMuestra>
+    <mel:afectaAGen>
+      <mel:Gen rdf:about="http://example.org/melanoma_es#gen_MUTYH">
+        <mel:simboloGen>MUTYH</mel:simboloGen>
+      </mel:Gen>
+    </mel:afectaAGen>
+    <mel:tieneUbicacion>
+      <mel:UbicacionVariante rdf:about="http://example.org/melanoma_es#ubicacion_MUTYH_VU11_2">
+        <mel:cromosoma>19</mel:cromosoma>
+        <mel:tieneCoordenadas rdf:resource="http://example.org/melanoma_es#coordenadas_MUTYH_VU11_2"/>
+      </mel:UbicacionVariante>
+    </mel:tieneUbicacion>
+    <mel:tieneClasificacion>
+      <mel:ClasificacionVariante rdf:about="http://example.org/melanoma_es#clasificacion_MUTYH_VU11_2">
+        <mel:consecuencia>stop_gained</mel:consecuencia>
+        <mel:claseVariante>Nonsense_Mutation</mel:claseVariante>
+        <mel:tipoVariante>SNP</mel:tipoVariante>
+      </mel:ClasificacionVariante>
+    </mel:tieneClasificacion>
+    <mel:tieneAlelos>
+      <mel:Alelos rdf:about="http://example.org/melanoma_es#alelos_MUTYH_VU11_2">
+        <mel:aleloReferencia>G</mel:aleloReferencia>
+        <mel:tieneAlelosTumor rdf:resource="http://example.org/melanoma_es#alelosTumor_MUTYH_VU11_2"/>
+      </mel:Alelos>
+    </mel:tieneAlelos>
+    <mel:tieneProfundidadSecuenciacion>
+      <mel:ProfundidadSecuenciacion rdf:about="http://example.org/melanoma_es#profSec_MUTYH_VU11_2">
+        <mel:tieneProfundidadTumor rdf:resource="http://example.org/melanoma_es#profTumor_MUTYH_VU11_2"/>
+      </mel:ProfundidadSecuenciacion>
+    </mel:tieneProfundidadSecuenciacion>
+  </mel:Variante>
+  <mel:ProfundidadTumor rdf:about="http://example.org/melanoma_es#profTumor_ACAP3_VU32_1">
+    <mel:conteoRefTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</mel:conteoRefTumor>
+    <mel:conteoAltTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</mel:conteoAltTumor>
+    <mel:profundidadTotalTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</mel:profundidadTotalTumor>
+  </mel:ProfundidadTumor>
+  <mel:Coordenadas rdf:about="http://example.org/melanoma_es#coordenadas_MUTYH_VU21_1">
+    <mel:inicio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1229960</mel:inicio>
+    <mel:fin rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1229960</mel:fin>
+    <mel:hebra>+</mel:hebra>
+  </mel:Coordenadas>
+  <mel:Variante rdf:about="http://example.org/melanoma_es#variante_ACAP3_VU31_2">
+    <mel:idVariante>ACAP3_VU31_2</mel:idVariante>
+    <mel:muestraTumoral>VU31</mel:muestraTumoral>
+    <mel:muestraNormal>NORMAL</mel:muestraNormal>
+    <mel:hgvsc>ENST00000X:c.123A&gt;T</mel:hgvsc>
+    <mel:hgvsp>p.Gly41*</mel:hgvsp>
+    <mel:hgvspCorto>p.G41*</mel:hgvspCorto>
+    <mel:observadaEnMuestra rdf:resource="http://example.org/melanoma_es#muestra_VU31"/>
+    <mel:afectaAGen rdf:resource="http://example.org/melanoma_es#gen_ACAP3"/>
+    <mel:tieneUbicacion>
+      <mel:UbicacionVariante rdf:about="http://example.org/melanoma_es#ubicacion_ACAP3_VU31_2">
+        <mel:cromosoma>19</mel:cromosoma>
+        <mel:tieneCoordenadas rdf:resource="http://example.org/melanoma_es#coordenadas_ACAP3_VU31_2"/>
+      </mel:UbicacionVariante>
+    </mel:tieneUbicacion>
+    <mel:tieneClasificacion>
+      <mel:ClasificacionVariante rdf:about="http://example.org/melanoma_es#clasificacion_ACAP3_VU31_2">
+        <mel:consecuencia>stop_gained</mel:consecuencia>
+        <mel:claseVariante>Nonsense_Mutation</mel:claseVariante>
+        <mel:tipoVariante>SNP</mel:tipoVariante>
+      </mel:ClasificacionVariante>
+    </mel:tieneClasificacion>
+    <mel:tieneAlelos>
+      <mel:Alelos rdf:about="http://example.org/melanoma_es#alelos_ACAP3_VU31_2">
+        <mel:aleloReferencia>G</mel:aleloReferencia>
+        <mel:tieneAlelosTumor rdf:resource="http://example.org/melanoma_es#alelosTumor_ACAP3_VU31_2"/>
+      </mel:Alelos>
+    </mel:tieneAlelos>
+    <mel:tieneProfundidadSecuenciacion>
+      <mel:ProfundidadSecuenciacion rdf:about="http://example.org/melanoma_es#profSec_ACAP3_VU31_2">
+        <mel:tieneProfundidadTumor rdf:resource="http://example.org/melanoma_es#profTumor_ACAP3_VU31_2"/>
+      </mel:ProfundidadSecuenciacion>
+    </mel:tieneProfundidadSecuenciacion>
+  </mel:Variante>
+  <mel:AlelosTumor rdf:about="http://example.org/melanoma_es#alelosTumor_NLRC5_VU31_1">
+    <mel:aleloTumor1>G</mel:aleloTumor1>
+  </mel:AlelosTumor>
+  <mel:Alelos rdf:about="http://example.org/melanoma_es#alelos_NRAS_VU42_2">
+    <mel:aleloReferencia>G</mel:aleloReferencia>
+    <mel:tieneAlelosTumor>
+      <mel:AlelosTumor rdf:about="http://example.org/melanoma_es#alelosTumor_NRAS_VU42_2">
+        <mel:aleloTumor1>A</mel:aleloTumor1>
+      </mel:AlelosTumor>
+    </mel:tieneAlelosTumor>
+  </mel:Alelos>
+  <mel:Variante rdf:about="http://example.org/melanoma_es#variante_NLRC5_VU21_2">
+    <mel:idVariante>NLRC5_VU21_2</mel:idVariante>
+    <mel:muestraTumoral>VU21</mel:muestraTumoral>
+    <mel:muestraNormal>NORMAL</mel:muestraNormal>
+    <mel:hgvsc>ENST00000X:c.123A&gt;T</mel:hgvsc>
+    <mel:hgvsp>p.Gly41*</mel:hgvsp>
+    <mel:hgvspCorto>p.G41*</mel:hgvspCorto>
+    <mel:observadaEnMuestra>
+      <mel:Muestra rdf:about="http://example.org/melanoma_es#muestra_VU21">
+        <rdf:type rdf:resource="http://example.org/melanoma_es#MuestraMetastasis"/>
+        <mel:idMuestra>VU21</mel:idMuestra>
+        <mel:tipoMuestra>Metastasis</mel:tipoMuestra>
+        <mel:tmbNoSinonimas rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.2</mel:tmbNoSinonimas>
+        <mel:perteneceAPaciente rdf:resource="http://example.org/melanoma_es#paciente_P-2"/>
+        <mel:tienePresentacion rdf:resource="http://example.org/melanoma_es#presentacion_VU21"/>
+        <mel:tieneVariante rdf:resource="http://example.org/melanoma_es#variante_MUTYH_VU21_1"/>
+        <mel:tieneVariante rdf:resource="http://example.org/melanoma_es#variante_NLRC5_VU21_2"/>
+      </mel:Muestra>
+    </mel:observadaEnMuestra>
+    <mel:afectaAGen rdf:resource="http://example.org/melanoma_es#gen_NLRC5"/>
+    <mel:tieneUbicacion>
+      <mel:UbicacionVariante rdf:about="http://example.org/melanoma_es#ubicacion_NLRC5_VU21_2">
+        <mel:cromosoma>19</mel:cromosoma>
+        <mel:tieneCoordenadas rdf:resource="http://example.org/melanoma_es#coordenadas_NLRC5_VU21_2"/>
+      </mel:UbicacionVariante>
+    </mel:tieneUbicacion>
+    <mel:tieneClasificacion>
+      <mel:ClasificacionVariante rdf:about="http://example.org/melanoma_es#clasificacion_NLRC5_VU21_2">
+        <mel:consecuencia>stop_gained</mel:consecuencia>
+        <mel:claseVariante>Nonsense_Mutation</mel:claseVariante>
+        <mel:tipoVariante>SNP</mel:tipoVariante>
+      </mel:ClasificacionVariante>
+    </mel:tieneClasificacion>
+    <mel:tieneAlelos>
+      <mel:Alelos rdf:about="http://example.org/melanoma_es#alelos_NLRC5_VU21_2">
+        <mel:aleloReferencia>G</mel:aleloReferencia>
+        <mel:tieneAlelosTumor rdf:resource="http://example.org/melanoma_es#alelosTumor_NLRC5_VU21_2"/>
+      </mel:Alelos>
+    </mel:tieneAlelos>
+    <mel:tieneProfundidadSecuenciacion>
+      <mel:ProfundidadSecuenciacion rdf:about="http://example.org/melanoma_es#profSec_NLRC5_VU21_2">
+        <mel:tieneProfundidadTumor rdf:resource="http://example.org/melanoma_es#profTumor_NLRC5_VU21_2"/>
+      </mel:ProfundidadSecuenciacion>
+    </mel:tieneProfundidadSecuenciacion>
+  </mel:Variante>
+  <mel:ProfundidadTumor rdf:about="http://example.org/melanoma_es#profTumor_NLRC5_VU12_2">
+    <mel:conteoRefTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</mel:conteoRefTumor>
+    <mel:conteoAltTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</mel:conteoAltTumor>
+    <mel:profundidadTotalTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</mel:profundidadTotalTumor>
+  </mel:ProfundidadTumor>
+  <mel:Alelos rdf:about="http://example.org/melanoma_es#alelos_BRAF_VU41_2">
+    <mel:aleloReferencia>G</mel:aleloReferencia>
+    <mel:tieneAlelosTumor>
+      <mel:AlelosTumor rdf:about="http://example.org/melanoma_es#alelosTumor_BRAF_VU41_2">
+        <mel:aleloTumor1>A</mel:aleloTumor1>
+      </mel:AlelosTumor>
+    </mel:tieneAlelosTumor>
+  </mel:Alelos>
+  <mel:ProfundidadTumor rdf:about="http://example.org/melanoma_es#profTumor_NRAS_VU42_2">
+    <mel:conteoRefTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</mel:conteoRefTumor>
+    <mel:conteoAltTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</mel:conteoAltTumor>
+    <mel:profundidadTotalTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</mel:profundidadTotalTumor>
+  </mel:ProfundidadTumor>
+  <mel:ClasificacionVariante rdf:about="http://example.org/melanoma_es#clasificacion_NLRC5_VU13_1">
+    <mel:consecuencia>missense_variant</mel:consecuencia>
+    <mel:claseVariante>Missense_Mutation</mel:claseVariante>
+    <mel:tipoVariante>SNP</mel:tipoVariante>
+  </mel:ClasificacionVariante>
+  <mel:Variante rdf:about="http://example.org/melanoma_es#variante_MUTYH_VU21_1">
+    <mel:idVariante>MUTYH_VU21_1</mel:idVariante>
+    <mel:muestraTumoral>VU21</mel:muestraTumoral>
+    <mel:muestraNormal>NORMAL</mel:muestraNormal>
+    <mel:hgvsc>ENST00000354700.5:c.1982C&gt;T</mel:hgvsc>
+    <mel:hgvsp>p.Ala661Val</mel:hgvsp>
+    <mel:hgvspCorto>p.A661V</mel:hgvspCorto>
+    <mel:observadaEnMuestra rdf:resource="http://example.org/melanoma_es#muestra_VU21"/>
+    <mel:afectaAGen rdf:resource="http://example.org/melanoma_es#gen_MUTYH"/>
+    <mel:tieneUbicacion>
+      <mel:UbicacionVariante rdf:about="http://example.org/melanoma_es#ubicacion_MUTYH_VU21_1">
+        <mel:cromosoma>1</mel:cromosoma>
+        <mel:tieneCoordenadas rdf:resource="http://example.org/melanoma_es#coordenadas_MUTYH_VU21_1"/>
+      </mel:UbicacionVariante>
+    </mel:tieneUbicacion>
+    <mel:tieneClasificacion>
+      <mel:ClasificacionVariante rdf:about="http://example.org/melanoma_es#clasificacion_MUTYH_VU21_1">
+        <mel:consecuencia>missense_variant</mel:consecuencia>
+        <mel:claseVariante>Missense_Mutation</mel:claseVariante>
+        <mel:tipoVariante>SNP</mel:tipoVariante>
+      </mel:ClasificacionVariante>
+    </mel:tieneClasificacion>
+    <mel:tieneAlelos>
+      <mel:Alelos rdf:about="http://example.org/melanoma_es#alelos_MUTYH_VU21_1">
+        <mel:aleloReferencia>G</mel:aleloReferencia>
+        <mel:tieneAlelosTumor rdf:resource="http://example.org/melanoma_es#alelosTumor_MUTYH_VU21_1"/>
+      </mel:Alelos>
+    </mel:tieneAlelos>
+    <mel:tieneProfundidadSecuenciacion>
+      <mel:ProfundidadSecuenciacion rdf:about="http://example.org/melanoma_es#profSec_MUTYH_VU21_1">
+        <mel:tieneProfundidadTumor rdf:resource="http://example.org/melanoma_es#profTumor_MUTYH_VU21_1"/>
+      </mel:ProfundidadSecuenciacion>
+    </mel:tieneProfundidadSecuenciacion>
+  </mel:Variante>
+  <mel:AlelosTumor rdf:about="http://example.org/melanoma_es#alelosTumor_NRAS_VU43_1">
+    <mel:aleloTumor1>G</mel:aleloTumor1>
+  </mel:AlelosTumor>
+  <mel:Muestra rdf:about="http://example.org/melanoma_es#muestra_VU41">
+    <rdf:type rdf:resource="http://example.org/melanoma_es#MuestraMetastasis"/>
+    <mel:idMuestra>VU41</mel:idMuestra>
+    <mel:tipoMuestra>Metastasis</mel:tipoMuestra>
+    <mel:tmbNoSinonimas rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.2</mel:tmbNoSinonimas>
+    <mel:perteneceAPaciente rdf:resource="http://example.org/melanoma_es#paciente_P-4"/>
+    <mel:tienePresentacion>
+      <mel:Muestreo rdf:about="http://example.org/melanoma_es#presentacion_VU41">
+        <mel:estadioPresentacion>IIIB</mel:estadioPresentacion>
+        <mel:sitioPrimario>Plantar Foot</mel:sitioPrimario>
+      </mel:Muestreo>
+    </mel:tienePresentacion>
+    <mel:tieneVariante>
+      <mel:Variante rdf:about="http://example.org/melanoma_es#variante_ACAP3_VU41_1">
+        <mel:idVariante>ACAP3_VU41_1</mel:idVariante>
+        <mel:muestraTumoral>VU41</mel:muestraTumoral>
+        <mel:muestraNormal>NORMAL</mel:muestraNormal>
+        <mel:hgvsc>ENST00000354700.5:c.1982C&gt;T</mel:hgvsc>
+        <mel:hgvsp>p.Ala661Val</mel:hgvsp>
+        <mel:hgvspCorto>p.A661V</mel:hgvspCorto>
+        <mel:observadaEnMuestra rdf:resource="http://example.org/melanoma_es#muestra_VU41"/>
+        <mel:afectaAGen rdf:resource="http://example.org/melanoma_es#gen_ACAP3"/>
+        <mel:tieneUbicacion rdf:resource="http://example.org/melanoma_es#ubicacion_ACAP3_VU41_1"/>
+        <mel:tieneClasificacion rdf:resource="http://example.org/melanoma_es#clasificacion_ACAP3_VU41_1"/>
+        <mel:tieneAlelos rdf:resource="http://example.org/melanoma_es#alelos_ACAP3_VU41_1"/>
+        <mel:tieneProfundidadSecuenciacion rdf:resource="http://example.org/melanoma_es#profSec_ACAP3_VU41_1"/>
+      </mel:Variante>
+    </mel:tieneVariante>
+    <mel:tieneVariante>
+      <mel:Variante rdf:about="http://example.org/melanoma_es#variante_BRAF_VU41_2">
+        <mel:idVariante>BRAF_VU41_2</mel:idVariante>
+        <mel:muestraTumoral>VU41</mel:muestraTumoral>
+        <mel:muestraNormal>NORMAL</mel:muestraNormal>
+        <mel:hgvsc>ENST00000X:c.123A&gt;T</mel:hgvsc>
+        <mel:hgvsp>p.Gly41*</mel:hgvsp>
+        <mel:hgvspCorto>p.G41*</mel:hgvspCorto>
+        <mel:observadaEnMuestra rdf:resource="http://example.org/melanoma_es#muestra_VU41"/>
+        <mel:afectaAGen rdf:resource="http://example.org/melanoma_es#gen_BRAF"/>
+        <mel:tieneUbicacion rdf:resource="http://example.org/melanoma_es#ubicacion_BRAF_VU41_2"/>
+        <mel:tieneClasificacion rdf:resource="http://example.org/melanoma_es#clasificacion_BRAF_VU41_2"/>
+        <mel:tieneAlelos rdf:resource="http://example.org/melanoma_es#alelos_BRAF_VU41_2"/>
+        <mel:tieneProfundidadSecuenciacion rdf:resource="http://example.org/melanoma_es#profSec_BRAF_VU41_2"/>
+      </mel:Variante>
+    </mel:tieneVariante>
+  </mel:Muestra>
+  <mel:Coordenadas rdf:about="http://example.org/melanoma_es#coordenadas_BRAF_VU42_1">
+    <mel:inicio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1229981</mel:inicio>
+    <mel:fin rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1229981</mel:fin>
+    <mel:hebra>+</mel:hebra>
+  </mel:Coordenadas>
+  <mel:Coordenadas rdf:about="http://example.org/melanoma_es#coordenadas_BRAF_VU32_2">
+    <mel:inicio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9056821</mel:inicio>
+    <mel:fin rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9056821</mel:fin>
+    <mel:hebra>+</mel:hebra>
+  </mel:Coordenadas>
+  <mel:ClasificacionVariante rdf:about="http://example.org/melanoma_es#clasificacion_ACAP3_VU22_2">
+    <mel:consecuencia>stop_gained</mel:consecuencia>
+    <mel:claseVariante>Nonsense_Mutation</mel:claseVariante>
+    <mel:tipoVariante>SNP</mel:tipoVariante>
+  </mel:ClasificacionVariante>
+  <mel:ProfundidadSecuenciacion rdf:about="http://example.org/melanoma_es#profSec_NLRC5_VU22_1">
+    <mel:tieneProfundidadTumor>
+      <mel:ProfundidadTumor rdf:about="http://example.org/melanoma_es#profTumor_NLRC5_VU22_1">
+        <mel:conteoRefTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</mel:conteoRefTumor>
+        <mel:conteoAltTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</mel:conteoAltTumor>
+        <mel:profundidadTotalTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</mel:profundidadTotalTumor>
+      </mel:ProfundidadTumor>
+    </mel:tieneProfundidadTumor>
+  </mel:ProfundidadSecuenciacion>
+  <mel:Variante rdf:about="http://example.org/melanoma_es#variante_MUTYH_VU12_1">
+    <mel:idVariante>MUTYH_VU12_1</mel:idVariante>
+    <mel:muestraTumoral>VU12</mel:muestraTumoral>
+    <mel:muestraNormal>NORMAL</mel:muestraNormal>
+    <mel:hgvsc>ENST00000354700.5:c.1982C&gt;T</mel:hgvsc>
+    <mel:hgvsp>p.Ala661Val</mel:hgvsp>
+    <mel:hgvspCorto>p.A661V</mel:hgvspCorto>
+    <mel:observadaEnMuestra>
+      <mel:Muestra rdf:about="http://example.org/melanoma_es#muestra_VU12">
+        <mel:idMuestra>VU12</mel:idMuestra>
+        <mel:tipoMuestra>Primary</mel:tipoMuestra>
+        <mel:tmbNoSinonimas rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.1</mel:tmbNoSinonimas>
+        <mel:perteneceAPaciente rdf:resource="http://example.org/melanoma_es#paciente_P-1"/>
+        <mel:tienePresentacion rdf:resource="http://example.org/melanoma_es#presentacion_VU12"/>
+        <mel:tieneVariante rdf:resource="http://example.org/melanoma_es#variante_MUTYH_VU12_1"/>
+        <mel:tieneVariante rdf:resource="http://example.org/melanoma_es#variante_NLRC5_VU12_2"/>
+      </mel:Muestra>
+    </mel:observadaEnMuestra>
+    <mel:afectaAGen rdf:resource="http://example.org/melanoma_es#gen_MUTYH"/>
+    <mel:tieneUbicacion>
+      <mel:UbicacionVariante rdf:about="http://example.org/melanoma_es#ubicacion_MUTYH_VU12_1">
+        <mel:cromosoma>1</mel:cromosoma>
+        <mel:tieneCoordenadas rdf:resource="http://example.org/melanoma_es#coordenadas_MUTYH_VU12_1"/>
+      </mel:UbicacionVariante>
+    </mel:tieneUbicacion>
+    <mel:tieneClasificacion>
+      <mel:ClasificacionVariante rdf:about="http://example.org/melanoma_es#clasificacion_MUTYH_VU12_1">
+        <mel:consecuencia>missense_variant</mel:consecuencia>
+        <mel:claseVariante>Missense_Mutation</mel:claseVariante>
+        <mel:tipoVariante>SNP</mel:tipoVariante>
+      </mel:ClasificacionVariante>
+    </mel:tieneClasificacion>
+    <mel:tieneAlelos>
+      <mel:Alelos rdf:about="http://example.org/melanoma_es#alelos_MUTYH_VU12_1">
+        <mel:aleloReferencia>G</mel:aleloReferencia>
+        <mel:tieneAlelosTumor rdf:resource="http://example.org/melanoma_es#alelosTumor_MUTYH_VU12_1"/>
+      </mel:Alelos>
+    </mel:tieneAlelos>
+    <mel:tieneProfundidadSecuenciacion>
+      <mel:ProfundidadSecuenciacion rdf:about="http://example.org/melanoma_es#profSec_MUTYH_VU12_1">
+        <mel:tieneProfundidadTumor rdf:resource="http://example.org/melanoma_es#profTumor_MUTYH_VU12_1"/>
+      </mel:ProfundidadSecuenciacion>
+    </mel:tieneProfundidadSecuenciacion>
+  </mel:Variante>
+  <mel:AlelosTumor rdf:about="http://example.org/melanoma_es#alelosTumor_NLRC5_VU12_2">
+    <mel:aleloTumor1>A</mel:aleloTumor1>
+  </mel:AlelosTumor>
+  <mel:Coordenadas rdf:about="http://example.org/melanoma_es#coordenadas_MUTYH_VU12_1">
+    <mel:inicio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1229951</mel:inicio>
+    <mel:fin rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1229951</mel:fin>
+    <mel:hebra>+</mel:hebra>
+  </mel:Coordenadas>
+  <mel:Alelos rdf:about="http://example.org/melanoma_es#alelos_NLRC5_VU12_2">
+    <mel:aleloReferencia>G</mel:aleloReferencia>
+    <mel:tieneAlelosTumor rdf:resource="http://example.org/melanoma_es#alelosTumor_NLRC5_VU12_2"/>
+  </mel:Alelos>
+  <mel:Variante rdf:about="http://example.org/melanoma_es#variante_NLRC5_VU12_2">
+    <mel:idVariante>NLRC5_VU12_2</mel:idVariante>
+    <mel:muestraTumoral>VU12</mel:muestraTumoral>
+    <mel:muestraNormal>NORMAL</mel:muestraNormal>
+    <mel:hgvsc>ENST00000X:c.123A&gt;T</mel:hgvsc>
+    <mel:hgvsp>p.Gly41*</mel:hgvsp>
+    <mel:hgvspCorto>p.G41*</mel:hgvspCorto>
+    <mel:observadaEnMuestra rdf:resource="http://example.org/melanoma_es#muestra_VU12"/>
+    <mel:afectaAGen rdf:resource="http://example.org/melanoma_es#gen_NLRC5"/>
+    <mel:tieneUbicacion>
+      <mel:UbicacionVariante rdf:about="http://example.org/melanoma_es#ubicacion_NLRC5_VU12_2">
+        <mel:cromosoma>19</mel:cromosoma>
+        <mel:tieneCoordenadas rdf:resource="http://example.org/melanoma_es#coordenadas_NLRC5_VU12_2"/>
+      </mel:UbicacionVariante>
+    </mel:tieneUbicacion>
+    <mel:tieneClasificacion>
+      <mel:ClasificacionVariante rdf:about="http://example.org/melanoma_es#clasificacion_NLRC5_VU12_2">
+        <mel:consecuencia>stop_gained</mel:consecuencia>
+        <mel:claseVariante>Nonsense_Mutation</mel:claseVariante>
+        <mel:tipoVariante>SNP</mel:tipoVariante>
+      </mel:ClasificacionVariante>
+    </mel:tieneClasificacion>
+    <mel:tieneAlelos rdf:resource="http://example.org/melanoma_es#alelos_NLRC5_VU12_2"/>
+    <mel:tieneProfundidadSecuenciacion>
+      <mel:ProfundidadSecuenciacion rdf:about="http://example.org/melanoma_es#profSec_NLRC5_VU12_2">
+        <mel:tieneProfundidadTumor rdf:resource="http://example.org/melanoma_es#profTumor_NLRC5_VU12_2"/>
+      </mel:ProfundidadSecuenciacion>
+    </mel:tieneProfundidadSecuenciacion>
+  </mel:Variante>
+  <mel:Muestra rdf:about="http://example.org/melanoma_es#muestra_VU43">
+    <rdf:type rdf:resource="http://example.org/melanoma_es#MuestraMetastasis"/>
+    <mel:idMuestra>VU43</mel:idMuestra>
+    <mel:tipoMuestra>Metastasis</mel:tipoMuestra>
+    <mel:tmbNoSinonimas rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12.4</mel:tmbNoSinonimas>
+    <mel:perteneceAPaciente rdf:resource="http://example.org/melanoma_es#paciente_P-4"/>
+    <mel:tienePresentacion>
+      <mel:Muestreo rdf:about="http://example.org/melanoma_es#presentacion_VU43">
+        <mel:estadioPresentacion>M1a</mel:estadioPresentacion>
+        <mel:sitioPrimario>Thumb</mel:sitioPrimario>
+      </mel:Muestreo>
+    </mel:tienePresentacion>
+    <mel:tieneVariante>
+      <mel:Variante rdf:about="http://example.org/melanoma_es#variante_NRAS_VU43_1">
+        <mel:idVariante>NRAS_VU43_1</mel:idVariante>
+        <mel:muestraTumoral>VU43</mel:muestraTumoral>
+        <mel:muestraNormal>NORMAL</mel:muestraNormal>
+        <mel:hgvsc>ENST00000354700.5:c.1982C&gt;T</mel:hgvsc>
+        <mel:hgvsp>p.Ala661Val</mel:hgvsp>
+        <mel:hgvspCorto>p.A661V</mel:hgvspCorto>
+        <mel:observadaEnMuestra rdf:resource="http://example.org/melanoma_es#muestra_VU43"/>
+        <mel:afectaAGen rdf:resource="http://example.org/melanoma_es#gen_NRAS"/>
+        <mel:tieneUbicacion rdf:resource="http://example.org/melanoma_es#ubicacion_NRAS_VU43_1"/>
+        <mel:tieneClasificacion rdf:resource="http://example.org/melanoma_es#clasificacion_NRAS_VU43_1"/>
+        <mel:tieneAlelos rdf:resource="http://example.org/melanoma_es#alelos_NRAS_VU43_1"/>
+        <mel:tieneProfundidadSecuenciacion rdf:resource="http://example.org/melanoma_es#profSec_NRAS_VU43_1"/>
+      </mel:Variante>
+    </mel:tieneVariante>
+    <mel:tieneVariante>
+      <mel:Variante rdf:about="http://example.org/melanoma_es#variante_MUC16_VU43_2">
+        <mel:idVariante>MUC16_VU43_2</mel:idVariante>
+        <mel:muestraTumoral>VU43</mel:muestraTumoral>
+        <mel:muestraNormal>NORMAL</mel:muestraNormal>
+        <mel:hgvsc>ENST00000X:c.123A&gt;T</mel:hgvsc>
+        <mel:hgvsp>p.Gly41*</mel:hgvsp>
+        <mel:hgvspCorto>p.G41*</mel:hgvspCorto>
+        <mel:observadaEnMuestra rdf:resource="http://example.org/melanoma_es#muestra_VU43"/>
+        <mel:afectaAGen rdf:resource="http://example.org/melanoma_es#gen_MUC16"/>
+        <mel:tieneUbicacion rdf:resource="http://example.org/melanoma_es#ubicacion_MUC16_VU43_2"/>
+        <mel:tieneClasificacion rdf:resource="http://example.org/melanoma_es#clasificacion_MUC16_VU43_2"/>
+        <mel:tieneAlelos rdf:resource="http://example.org/melanoma_es#alelos_MUC16_VU43_2"/>
+        <mel:tieneProfundidadSecuenciacion rdf:resource="http://example.org/melanoma_es#profSec_MUC16_VU43_2"/>
+      </mel:Variante>
+    </mel:tieneVariante>
+  </mel:Muestra>
+  <mel:Muestreo rdf:about="http://example.org/melanoma_es#presentacion_VU33">
+    <mel:estadioPresentacion>M1a</mel:estadioPresentacion>
+    <mel:sitioPrimario>Thumb</mel:sitioPrimario>
+  </mel:Muestreo>
+  <mel:Coordenadas rdf:about="http://example.org/melanoma_es#coordenadas_BRAF_VU41_2">
+    <mel:inicio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9056830</mel:inicio>
+    <mel:fin rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9056830</mel:fin>
+    <mel:hebra>+</mel:hebra>
+  </mel:Coordenadas>
+  <mel:ProfundidadSecuenciacion rdf:about="http://example.org/melanoma_es#profSec_ACAP3_VU23_1">
+    <mel:tieneProfundidadTumor>
+      <mel:ProfundidadTumor rdf:about="http://example.org/melanoma_es#profTumor_ACAP3_VU23_1">
+        <mel:conteoRefTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</mel:conteoRefTumor>
+        <mel:conteoAltTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</mel:conteoAltTumor>
+        <mel:profundidadTotalTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</mel:profundidadTotalTumor>
+      </mel:ProfundidadTumor>
+    </mel:tieneProfundidadTumor>
+  </mel:ProfundidadSecuenciacion>
+  <mel:UbicacionVariante rdf:about="http://example.org/melanoma_es#ubicacion_ACAP3_VU23_1">
+    <mel:cromosoma>1</mel:cromosoma>
+    <mel:tieneCoordenadas>
+      <mel:Coordenadas rdf:about="http://example.org/melanoma_es#coordenadas_ACAP3_VU23_1">
+        <mel:inicio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1229962</mel:inicio>
+        <mel:fin rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1229962</mel:fin>
+        <mel:hebra>+</mel:hebra>
+      </mel:Coordenadas>
+    </mel:tieneCoordenadas>
+  </mel:UbicacionVariante>
+  <mel:ProfundidadSecuenciacion rdf:about="http://example.org/melanoma_es#profSec_NLRC5_VU13_1">
+    <mel:tieneProfundidadTumor>
+      <mel:ProfundidadTumor rdf:about="http://example.org/melanoma_es#profTumor_NLRC5_VU13_1">
+        <mel:conteoRefTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</mel:conteoRefTumor>
+        <mel:conteoAltTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</mel:conteoAltTumor>
+        <mel:profundidadTotalTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</mel:profundidadTotalTumor>
+      </mel:ProfundidadTumor>
+    </mel:tieneProfundidadTumor>
+  </mel:ProfundidadSecuenciacion>
+  <mel:Variante rdf:about="http://example.org/melanoma_es#variante_BRAF_VU23_2">
+    <mel:idVariante>BRAF_VU23_2</mel:idVariante>
+    <mel:muestraTumoral>VU23</mel:muestraTumoral>
+    <mel:muestraNormal>NORMAL</mel:muestraNormal>
+    <mel:hgvsc>ENST00000X:c.123A&gt;T</mel:hgvsc>
+    <mel:hgvsp>p.Gly41*</mel:hgvsp>
+    <mel:hgvspCorto>p.G41*</mel:hgvspCorto>
+    <mel:observadaEnMuestra>
+      <mel:Muestra rdf:about="http://example.org/melanoma_es#muestra_VU23">
+        <rdf:type rdf:resource="http://example.org/melanoma_es#MuestraMetastasis"/>
+        <mel:idMuestra>VU23</mel:idMuestra>
+        <mel:tipoMuestra>Metastasis</mel:tipoMuestra>
+        <mel:tmbNoSinonimas rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12.4</mel:tmbNoSinonimas>
+        <mel:perteneceAPaciente rdf:resource="http://example.org/melanoma_es#paciente_P-2"/>
+        <mel:tienePresentacion rdf:resource="http://example.org/melanoma_es#presentacion_VU23"/>
+        <mel:tieneVariante rdf:resource="http://example.org/melanoma_es#variante_ACAP3_VU23_1"/>
+        <mel:tieneVariante rdf:resource="http://example.org/melanoma_es#variante_BRAF_VU23_2"/>
+      </mel:Muestra>
+    </mel:observadaEnMuestra>
+    <mel:afectaAGen>
+      <mel:Gen rdf:about="http://example.org/melanoma_es#gen_BRAF">
+        <mel:simboloGen>BRAF</mel:simboloGen>
+        <mel:tieneProteina rdf:resource="http://example.org/melanoma_es#proteina_P15056"/>
+      </mel:Gen>
+    </mel:afectaAGen>
+    <mel:tieneUbicacion>
+      <mel:UbicacionVariante rdf:about="http://example.org/melanoma_es#ubicacion_BRAF_VU23_2">
+        <mel:cromosoma>19</mel:cromosoma>
+        <mel:tieneCoordenadas rdf:resource="http://example.org/melanoma_es#coordenadas_BRAF_VU23_2"/>
+      </mel:UbicacionVariante>
+    </mel:tieneUbicacion>
+    <mel:tieneClasificacion>
+      <mel:ClasificacionVariante rdf:about="http://example.org/melanoma_es#clasificacion_BRAF_VU23_2">
+        <mel:consecuencia>stop_gained</mel:consecuencia>
+        <mel:claseVariante>Nonsense_Mutation</mel:claseVariante>
+        <mel:tipoVariante>SNP</mel:tipoVariante>
+      </mel:ClasificacionVariante>
+    </mel:tieneClasificacion>
+    <mel:tieneAlelos>
+      <mel:Alelos rdf:about="http://example.org/melanoma_es#alelos_BRAF_VU23_2">
+        <mel:aleloReferencia>G</mel:aleloReferencia>
+        <mel:tieneAlelosTumor rdf:resource="http://example.org/melanoma_es#alelosTumor_BRAF_VU23_2"/>
+      </mel:Alelos>
+    </mel:tieneAlelos>
+    <mel:tieneProfundidadSecuenciacion>
+      <mel:ProfundidadSecuenciacion rdf:about="http://example.org/melanoma_es#profSec_BRAF_VU23_2">
+        <mel:tieneProfundidadTumor rdf:resource="http://example.org/melanoma_es#profTumor_BRAF_VU23_2"/>
+      </mel:ProfundidadSecuenciacion>
+    </mel:tieneProfundidadSecuenciacion>
+  </mel:Variante>
+  <mel:ProfundidadTumor rdf:about="http://example.org/melanoma_es#profTumor_BRAF_VU23_2">
+    <mel:conteoRefTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</mel:conteoRefTumor>
+    <mel:conteoAltTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</mel:conteoAltTumor>
+    <mel:profundidadTotalTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</mel:profundidadTotalTumor>
+  </mel:ProfundidadTumor>
+  <mel:ProfundidadSecuenciacion rdf:about="http://example.org/melanoma_es#profSec_BRAF_VU41_2">
+    <mel:tieneProfundidadTumor>
+      <mel:ProfundidadTumor rdf:about="http://example.org/melanoma_es#profTumor_BRAF_VU41_2">
+        <mel:conteoRefTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</mel:conteoRefTumor>
+        <mel:conteoAltTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</mel:conteoAltTumor>
+        <mel:profundidadTotalTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</mel:profundidadTotalTumor>
+      </mel:ProfundidadTumor>
+    </mel:tieneProfundidadTumor>
+  </mel:ProfundidadSecuenciacion>
+  <mel:ProfundidadSecuenciacion rdf:about="http://example.org/melanoma_es#profSec_ACAP3_VU41_1">
+    <mel:tieneProfundidadTumor>
+      <mel:ProfundidadTumor rdf:about="http://example.org/melanoma_es#profTumor_ACAP3_VU41_1">
+        <mel:conteoRefTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</mel:conteoRefTumor>
+        <mel:conteoAltTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</mel:conteoAltTumor>
+        <mel:profundidadTotalTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</mel:profundidadTotalTumor>
+      </mel:ProfundidadTumor>
+    </mel:tieneProfundidadTumor>
+  </mel:ProfundidadSecuenciacion>
+  <mel:Paciente rdf:about="http://example.org/melanoma_es#paciente_P-3">
+    <rdf:type rdf:resource="http://example.org/melanoma_es#PacienteFallecido"/>
+    <mel:idPaciente>P-3</mel:idPaciente>
+    <mel:estadoSupervivenciaGlobal>DECEASED</mel:estadoSupervivenciaGlobal>
+    <mel:tieneSupervivencia>
+      <mel:Supervivencia rdf:about="http://example.org/melanoma_es#supervivencia_P-3">
+        <mel:mesesGlobal rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">34.1</mel:mesesGlobal>
+        <mel:mesesLibreEnfermedad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.5</mel:mesesLibreEnfermedad>
+      </mel:Supervivencia>
+    </mel:tieneSupervivencia>
+    <mel:tieneClinica>
+      <mel:Clinica rdf:about="http://example.org/melanoma_es#clinica_P-3">
+        <mel:tieneDemografia rdf:resource="http://example.org/melanoma_es#demografia_P-3"/>
+        <mel:tieneTumor rdf:resource="http://example.org/melanoma_es#tumor_P-3"/>
+      </mel:Clinica>
+    </mel:tieneClinica>
+    <mel:tieneRecurrencia>
+      <mel:Recurrencia rdf:about="http://example.org/melanoma_es#recurrencia_P-3">
+        <mel:metastasis>Yes</mel:metastasis>
+        <mel:mesesHastaRecurrencia rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.5</mel:mesesHastaRecurrencia>
+        <mel:sitioPrimeraRecurrencia>Lung</mel:sitioPrimeraRecurrencia>
+      </mel:Recurrencia>
+    </mel:tieneRecurrencia>
+    <mel:tieneTratamiento>
+      <mel:Tratamiento rdf:about="http://example.org/melanoma_es#tratamiento_P-3">
+        <mel:tratamientoRecibido>IL-2, ipi</mel:tratamientoRecibido>
+      </mel:Tratamiento>
+    </mel:tieneTratamiento>
+    <mel:tieneMuestra rdf:resource="http://example.org/melanoma_es#muestra_VU31"/>
+    <mel:tieneMuestra rdf:resource="http://example.org/melanoma_es#muestra_VU32"/>
+    <mel:tieneMuestra>
+      <mel:Muestra rdf:about="http://example.org/melanoma_es#muestra_VU33">
+        <rdf:type rdf:resource="http://example.org/melanoma_es#MuestraMetastasis"/>
+        <mel:idMuestra>VU33</mel:idMuestra>
+        <mel:tipoMuestra>Metastasis</mel:tipoMuestra>
+        <mel:tmbNoSinonimas rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12.4</mel:tmbNoSinonimas>
+        <mel:perteneceAPaciente rdf:resource="http://example.org/melanoma_es#paciente_P-3"/>
+        <mel:tienePresentacion rdf:resource="http://example.org/melanoma_es#presentacion_VU33"/>
+        <mel:tieneVariante rdf:resource="http://example.org/melanoma_es#variante_BRAF_VU33_1"/>
+        <mel:tieneVariante rdf:resource="http://example.org/melanoma_es#variante_NRAS_VU33_2"/>
+      </mel:Muestra>
+    </mel:tieneMuestra>
+  </mel:Paciente>
+  <mel:Variante rdf:about="http://example.org/melanoma_es#variante_ACAP3_VU22_2">
+    <mel:idVariante>ACAP3_VU22_2</mel:idVariante>
+    <mel:muestraTumoral>VU22</mel:muestraTumoral>
+    <mel:muestraNormal>NORMAL</mel:muestraNormal>
+    <mel:hgvsc>ENST00000X:c.123A&gt;T</mel:hgvsc>
+    <mel:hgvsp>p.Gly41*</mel:hgvsp>
+    <mel:hgvspCorto>p.G41*</mel:hgvspCorto>
+    <mel:observadaEnMuestra>
+      <mel:Muestra rdf:about="http://example.org/melanoma_es#muestra_VU22">
+        <mel:idMuestra>VU22</mel:idMuestra>
+        <mel:tipoMuestra>Primary</mel:tipoMuestra>
+        <mel:tmbNoSinonimas rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.1</mel:tmbNoSinonimas>
+        <mel:perteneceAPaciente rdf:resource="http://example.org/melanoma_es#paciente_P-2"/>
+        <mel:tienePresentacion rdf:resource="http://example.org/melanoma_es#presentacion_VU22"/>
+        <mel:tieneVariante rdf:resource="http://example.org/melanoma_es#variante_NLRC5_VU22_1"/>
+        <mel:tieneVariante rdf:resource="http://example.org/melanoma_es#variante_ACAP3_VU22_2"/>
+      </mel:Muestra>
+    </mel:observadaEnMuestra>
+    <mel:afectaAGen rdf:resource="http://example.org/melanoma_es#gen_ACAP3"/>
+    <mel:tieneUbicacion>
+      <mel:UbicacionVariante rdf:about="http://example.org/melanoma_es#ubicacion_ACAP3_VU22_2">
+        <mel:cromosoma>19</mel:cromosoma>
+        <mel:tieneCoordenadas rdf:resource="http://example.org/melanoma_es#coordenadas_ACAP3_VU22_2"/>
+      </mel:UbicacionVariante>
+    </mel:tieneUbicacion>
+    <mel:tieneClasificacion rdf:resource="http://example.org/melanoma_es#clasificacion_ACAP3_VU22_2"/>
+    <mel:tieneAlelos>
+      <mel:Alelos rdf:about="http://example.org/melanoma_es#alelos_ACAP3_VU22_2">
+        <mel:aleloReferencia>G</mel:aleloReferencia>
+        <mel:tieneAlelosTumor rdf:resource="http://example.org/melanoma_es#alelosTumor_ACAP3_VU22_2"/>
+      </mel:Alelos>
+    </mel:tieneAlelos>
+    <mel:tieneProfundidadSecuenciacion>
+      <mel:ProfundidadSecuenciacion rdf:about="http://example.org/melanoma_es#profSec_ACAP3_VU22_2">
+        <mel:tieneProfundidadTumor rdf:resource="http://example.org/melanoma_es#profTumor_ACAP3_VU22_2"/>
+      </mel:ProfundidadSecuenciacion>
+    </mel:tieneProfundidadSecuenciacion>
+  </mel:Variante>
+  <mel:Paciente rdf:about="http://example.org/melanoma_es#paciente_P-2">
+    <mel:idPaciente>P-2</mel:idPaciente>
+    <mel:estadoSupervivenciaGlobal>LIVING</mel:estadoSupervivenciaGlobal>
+    <mel:tieneSupervivencia>
+      <mel:Supervivencia rdf:about="http://example.org/melanoma_es#supervivencia_P-2">
+        <mel:mesesGlobal rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42.0</mel:mesesGlobal>
+        <mel:mesesLibreEnfermedad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30.0</mel:mesesLibreEnfermedad>
+      </mel:Supervivencia>
+    </mel:tieneSupervivencia>
+    <mel:tieneClinica>
+      <mel:Clinica rdf:about="http://example.org/melanoma_es#clinica_P-2">
+        <mel:tieneDemografia rdf:resource="http://example.org/melanoma_es#demografia_P-2"/>
+        <mel:tieneTumor rdf:resource="http://example.org/melanoma_es#tumor_P-2"/>
+      </mel:Clinica>
+    </mel:tieneClinica>
+    <mel:tieneRecurrencia>
+      <mel:Recurrencia rdf:about="http://example.org/melanoma_es#recurrencia_P-2">
+        <mel:metastasis>Yes</mel:metastasis>
+        <mel:mesesHastaRecurrencia rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.5</mel:mesesHastaRecurrencia>
+        <mel:sitioPrimeraRecurrencia>Lung</mel:sitioPrimeraRecurrencia>
+      </mel:Recurrencia>
+    </mel:tieneRecurrencia>
+    <mel:tieneTratamiento>
+      <mel:Tratamiento rdf:about="http://example.org/melanoma_es#tratamiento_P-2">
+        <mel:tratamientoRecibido>IL-2</mel:tratamientoRecibido>
+      </mel:Tratamiento>
+    </mel:tieneTratamiento>
+    <mel:tieneMuestra rdf:resource="http://example.org/melanoma_es#muestra_VU21"/>
+    <mel:tieneMuestra rdf:resource="http://example.org/melanoma_es#muestra_VU22"/>
+    <mel:tieneMuestra rdf:resource="http://example.org/melanoma_es#muestra_VU23"/>
+  </mel:Paciente>
+  <mel:Variante rdf:about="http://example.org/melanoma_es#variante_MUC16_VU11_1">
+    <mel:idVariante>MUC16_VU11_1</mel:idVariante>
+    <mel:muestraTumoral>VU11</mel:muestraTumoral>
+    <mel:muestraNormal>NORMAL</mel:muestraNormal>
+    <mel:hgvsc>ENST00000354700.5:c.1982C&gt;T</mel:hgvsc>
+    <mel:hgvsp>p.Ala661Val</mel:hgvsp>
+    <mel:hgvspCorto>p.A661V</mel:hgvspCorto>
+    <mel:observadaEnMuestra rdf:resource="http://example.org/melanoma_es#muestra_VU11"/>
+    <mel:afectaAGen>
+      <mel:Gen rdf:about="http://example.org/melanoma_es#gen_MUC16">
+        <mel:simboloGen>MUC16</mel:simboloGen>
+      </mel:Gen>
+    </mel:afectaAGen>
+    <mel:tieneUbicacion>
+      <mel:UbicacionVariante rdf:about="http://example.org/melanoma_es#ubicacion_MUC16_VU11_1">
+        <mel:cromosoma>1</mel:cromosoma>
+        <mel:tieneCoordenadas rdf:resource="http://example.org/melanoma_es#coordenadas_MUC16_VU11_1"/>
+      </mel:UbicacionVariante>
+    </mel:tieneUbicacion>
+    <mel:tieneClasificacion>
+      <mel:ClasificacionVariante rdf:about="http://example.org/melanoma_es#clasificacion_MUC16_VU11_1">
+        <mel:consecuencia>missense_variant</mel:consecuencia>
+        <mel:claseVariante>Missense_Mutation</mel:claseVariante>
+        <mel:tipoVariante>SNP</mel:tipoVariante>
+      </mel:ClasificacionVariante>
+    </mel:tieneClasificacion>
+    <mel:tieneAlelos>
+      <mel:Alelos rdf:about="http://example.org/melanoma_es#alelos_MUC16_VU11_1">
+        <mel:aleloReferencia>G</mel:aleloReferencia>
+        <mel:tieneAlelosTumor rdf:resource="http://example.org/melanoma_es#alelosTumor_MUC16_VU11_1"/>
+      </mel:Alelos>
+    </mel:tieneAlelos>
+    <mel:tieneProfundidadSecuenciacion>
+      <mel:ProfundidadSecuenciacion rdf:about="http://example.org/melanoma_es#profSec_MUC16_VU11_1">
+        <mel:tieneProfundidadTumor rdf:resource="http://example.org/melanoma_es#profTumor_MUC16_VU11_1"/>
+      </mel:ProfundidadSecuenciacion>
+    </mel:tieneProfundidadSecuenciacion>
+  </mel:Variante>
+  <mel:Variante rdf:about="http://example.org/melanoma_es#variante_BRAF_VU32_2">
+    <mel:idVariante>BRAF_VU32_2</mel:idVariante>
+    <mel:muestraTumoral>VU32</mel:muestraTumoral>
+    <mel:muestraNormal>NORMAL</mel:muestraNormal>
+    <mel:hgvsc>ENST00000X:c.123A&gt;T</mel:hgvsc>
+    <mel:hgvsp>p.Gly41*</mel:hgvsp>
+    <mel:hgvspCorto>p.G41*</mel:hgvspCorto>
+    <mel:observadaEnMuestra rdf:resource="http://example.org/melanoma_es#muestra_VU32"/>
+    <mel:afectaAGen rdf:resource="http://example.org/melanoma_es#gen_BRAF"/>
+    <mel:tieneUbicacion>
+      <mel:UbicacionVariante rdf:about="http://example.org/melanoma_es#ubicacion_BRAF_VU32_2">
+        <mel:cromosoma>19</mel:cromosoma>
+        <mel:tieneCoordenadas rdf:resource="http://example.org/melanoma_es#coordenadas_BRAF_VU32_2"/>
+      </mel:UbicacionVariante>
+    </mel:tieneUbicacion>
+    <mel:tieneClasificacion>
+      <mel:ClasificacionVariante rdf:about="http://example.org/melanoma_es#clasificacion_BRAF_VU32_2">
+        <mel:consecuencia>stop_gained</mel:consecuencia>
+        <mel:claseVariante>Nonsense_Mutation</mel:claseVariante>
+        <mel:tipoVariante>SNP</mel:tipoVariante>
+      </mel:ClasificacionVariante>
+    </mel:tieneClasificacion>
+    <mel:tieneAlelos>
+      <mel:Alelos rdf:about="http://example.org/melanoma_es#alelos_BRAF_VU32_2">
+        <mel:aleloReferencia>G</mel:aleloReferencia>
+        <mel:tieneAlelosTumor rdf:resource="http://example.org/melanoma_es#alelosTumor_BRAF_VU32_2"/>
+      </mel:Alelos>
+    </mel:tieneAlelos>
+    <mel:tieneProfundidadSecuenciacion>
+      <mel:ProfundidadSecuenciacion rdf:about="http://example.org/melanoma_es#profSec_BRAF_VU32_2">
+        <mel:tieneProfundidadTumor rdf:resource="http://example.org/melanoma_es#profTumor_BRAF_VU32_2"/>
+      </mel:ProfundidadSecuenciacion>
+    </mel:tieneProfundidadSecuenciacion>
+  </mel:Variante>
+  <mel:ProfundidadSecuenciacion rdf:about="http://example.org/melanoma_es#profSec_NRAS_VU33_2">
+    <mel:tieneProfundidadTumor>
+      <mel:ProfundidadTumor rdf:about="http://example.org/melanoma_es#profTumor_NRAS_VU33_2">
+        <mel:conteoRefTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</mel:conteoRefTumor>
+        <mel:conteoAltTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</mel:conteoAltTumor>
+        <mel:profundidadTotalTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</mel:profundidadTotalTumor>
+      </mel:ProfundidadTumor>
+    </mel:tieneProfundidadTumor>
+  </mel:ProfundidadSecuenciacion>
+  <mel:ClasificacionVariante rdf:about="http://example.org/melanoma_es#clasificacion_MUC16_VU43_2">
+    <mel:consecuencia>stop_gained</mel:consecuencia>
+    <mel:claseVariante>Nonsense_Mutation</mel:claseVariante>
+    <mel:tipoVariante>SNP</mel:tipoVariante>
+  </mel:ClasificacionVariante>
+  <mel:Alelos rdf:about="http://example.org/melanoma_es#alelos_BRAF_VU33_1">
+    <mel:aleloReferencia>G</mel:aleloReferencia>
+    <mel:tieneAlelosTumor>
+      <mel:AlelosTumor rdf:about="http://example.org/melanoma_es#alelosTumor_BRAF_VU33_1">
+        <mel:aleloTumor1>G</mel:aleloTumor1>
+      </mel:AlelosTumor>
+    </mel:tieneAlelosTumor>
+  </mel:Alelos>
+  <mel:Alelos rdf:about="http://example.org/melanoma_es#alelos_NLRC5_VU22_1">
+    <mel:aleloReferencia>G</mel:aleloReferencia>
+    <mel:tieneAlelosTumor>
+      <mel:AlelosTumor rdf:about="http://example.org/melanoma_es#alelosTumor_NLRC5_VU22_1">
+        <mel:aleloTumor1>G</mel:aleloTumor1>
+      </mel:AlelosTumor>
+    </mel:tieneAlelosTumor>
+  </mel:Alelos>
+  <mel:Coordenadas rdf:about="http://example.org/melanoma_es#coordenadas_ACAP3_VU13_2">
+    <mel:inicio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9056802</mel:inicio>
+    <mel:fin rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9056802</mel:fin>
+    <mel:hebra>+</mel:hebra>
+  </mel:Coordenadas>
+  <mel:Muestreo rdf:about="http://example.org/melanoma_es#presentacion_VU11">
+    <mel:estadioPresentacion>IIIB</mel:estadioPresentacion>
+    <mel:sitioPrimario>Plantar Foot</mel:sitioPrimario>
+  </mel:Muestreo>
+  <mel:Coordenadas rdf:about="http://example.org/melanoma_es#coordenadas_NLRC5_VU22_1">
+    <mel:inicio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1229961</mel:inicio>
+    <mel:fin rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1229961</mel:fin>
+    <mel:hebra>+</mel:hebra>
+  </mel:Coordenadas>
+  <mel:UbicacionVariante rdf:about="http://example.org/melanoma_es#ubicacion_MUC16_VU43_2">
+    <mel:cromosoma>19</mel:cromosoma>
+    <mel:tieneCoordenadas>
+      <mel:Coordenadas rdf:about="http://example.org/melanoma_es#coordenadas_MUC16_VU43_2">
+        <mel:inicio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9056832</mel:inicio>
+        <mel:fin rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9056832</mel:fin>
+        <mel:hebra>+</mel:hebra>
+      </mel:Coordenadas>
+    </mel:tieneCoordenadas>
+  </mel:UbicacionVariante>
+  <mel:Alelos rdf:about="http://example.org/melanoma_es#alelos_ACAP3_VU41_1">
+    <mel:aleloReferencia>G</mel:aleloReferencia>
+    <mel:tieneAlelosTumor>
+      <mel:AlelosTumor rdf:about="http://example.org/melanoma_es#alelosTumor_ACAP3_VU41_1">
+        <mel:aleloTumor1>G</mel:aleloTumor1>
+      </mel:AlelosTumor>
+    </mel:tieneAlelosTumor>
+  </mel:Alelos>
+  <mel:Supervivencia rdf:about="http://example.org/melanoma_es#supervivencia_P-1">
+    <mel:mesesGlobal rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">28.0</mel:mesesGlobal>
+    <mel:mesesLibreEnfermedad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">21.0</mel:mesesLibreEnfermedad>
+  </mel:Supervivencia>
+  <mel:AlelosTumor rdf:about="http://example.org/melanoma_es#alelosTumor_MUC16_VU11_1">
+    <mel:aleloTumor1>G</mel:aleloTumor1>
+  </mel:AlelosTumor>
+  <mel:ProfundidadTumor rdf:about="http://example.org/melanoma_es#profTumor_ACAP3_VU31_2">
+    <mel:conteoRefTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</mel:conteoRefTumor>
+    <mel:conteoAltTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</mel:conteoAltTumor>
+    <mel:profundidadTotalTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</mel:profundidadTotalTumor>
+  </mel:ProfundidadTumor>
+  <owl:Class rdf:about="http://example.org/melanoma_es#MuestraMetastasis">
+    <rdfs:label xml:lang="es">MuestraMetastasis</rdfs:label>
+    <owl:equivalentClass>
+      <owl:Class rdf:nodeID="N3829a5c59a3c4673a9e6a1ee591917b1">
+        <owl:intersectionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://example.org/melanoma_es#Muestra"/>
+          <owl:Restriction rdf:nodeID="N377f1432dfe9447baddd9a96d07601ff">
+            <owl:onProperty>
+              <owl:DatatypeProperty rdf:about="http://example.org/melanoma_es#tipoMuestra">
+                <rdfs:domain rdf:resource="http://example.org/melanoma_es#Muestra"/>
+                <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <rdfs:label xml:lang="es">tipoMuestra</rdfs:label>
+              </owl:DatatypeProperty>
+            </owl:onProperty>
+            <owl:hasValue>Metastasis</owl:hasValue>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <mel:Demografia rdf:about="http://example.org/melanoma_es#demografia_P-1">
+    <mel:edadDiagnostico rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">77</mel:edadDiagnostico>
+    <mel:sexo>Female</mel:sexo>
+    <mel:raza>Caucasian</mel:raza>
+  </mel:Demografia>
+  <owl:DatatypeProperty rdf:about="http://example.org/melanoma_es#estadoSupervivenciaGlobal">
+    <rdfs:domain rdf:resource="http://example.org/melanoma_es#Paciente"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="es">estadoSupervivenciaGlobal</rdfs:label>
+  </owl:DatatypeProperty>
+  <mel:Coordenadas rdf:about="http://example.org/melanoma_es#coordenadas_NLRC5_VU31_1">
+    <mel:inicio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1229970</mel:inicio>
+    <mel:fin rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1229970</mel:fin>
+    <mel:hebra>+</mel:hebra>
+  </mel:Coordenadas>
+  <mel:ProfundidadTumor rdf:about="http://example.org/melanoma_es#profTumor_NLRC5_VU31_1">
+    <mel:conteoRefTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</mel:conteoRefTumor>
+    <mel:conteoAltTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</mel:conteoAltTumor>
+    <mel:profundidadTotalTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</mel:profundidadTotalTumor>
+  </mel:ProfundidadTumor>
+  <mel:ProfundidadTumor rdf:about="http://example.org/melanoma_es#profTumor_ACAP3_VU22_2">
+    <mel:conteoRefTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</mel:conteoRefTumor>
+    <mel:conteoAltTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</mel:conteoAltTumor>
+    <mel:profundidadTotalTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</mel:profundidadTotalTumor>
+  </mel:ProfundidadTumor>
+  <mel:Tumor rdf:about="http://example.org/melanoma_es#tumor_P-2">
+    <mel:ulceracion>Yes</mel:ulceracion>
+    <mel:gangliosExaminados rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</mel:gangliosExaminados>
+  </mel:Tumor>
+  <mel:Variante rdf:about="http://example.org/melanoma_es#variante_NLRC5_VU22_1">
+    <mel:idVariante>NLRC5_VU22_1</mel:idVariante>
+    <mel:muestraTumoral>VU22</mel:muestraTumoral>
+    <mel:muestraNormal>NORMAL</mel:muestraNormal>
+    <mel:hgvsc>ENST00000354700.5:c.1982C&gt;T</mel:hgvsc>
+    <mel:hgvsp>p.Ala661Val</mel:hgvsp>
+    <mel:hgvspCorto>p.A661V</mel:hgvspCorto>
+    <mel:observadaEnMuestra rdf:resource="http://example.org/melanoma_es#muestra_VU22"/>
+    <mel:afectaAGen rdf:resource="http://example.org/melanoma_es#gen_NLRC5"/>
+    <mel:tieneUbicacion>
+      <mel:UbicacionVariante rdf:about="http://example.org/melanoma_es#ubicacion_NLRC5_VU22_1">
+        <mel:cromosoma>1</mel:cromosoma>
+        <mel:tieneCoordenadas rdf:resource="http://example.org/melanoma_es#coordenadas_NLRC5_VU22_1"/>
+      </mel:UbicacionVariante>
+    </mel:tieneUbicacion>
+    <mel:tieneClasificacion>
+      <mel:ClasificacionVariante rdf:about="http://example.org/melanoma_es#clasificacion_NLRC5_VU22_1">
+        <mel:consecuencia>missense_variant</mel:consecuencia>
+        <mel:claseVariante>Missense_Mutation</mel:claseVariante>
+        <mel:tipoVariante>SNP</mel:tipoVariante>
+      </mel:ClasificacionVariante>
+    </mel:tieneClasificacion>
+    <mel:tieneAlelos rdf:resource="http://example.org/melanoma_es#alelos_NLRC5_VU22_1"/>
+    <mel:tieneProfundidadSecuenciacion rdf:resource="http://example.org/melanoma_es#profSec_NLRC5_VU22_1"/>
+  </mel:Variante>
+  <mel:ClasificacionVariante rdf:about="http://example.org/melanoma_es#clasificacion_NRAS_VU33_2">
+    <mel:consecuencia>stop_gained</mel:consecuencia>
+    <mel:claseVariante>Nonsense_Mutation</mel:claseVariante>
+    <mel:tipoVariante>SNP</mel:tipoVariante>
+  </mel:ClasificacionVariante>
+  <owl:Class rdf:about="http://example.org/melanoma_es#Clinica">
+    <rdfs:label xml:lang="es">Clinica</rdfs:label>
+  </owl:Class>
+  <mel:Proteina rdf:about="http://example.org/melanoma_es#proteina_P15056">
+    <mel:accesoUniProt>P15056</mel:accesoUniProt>
+    <mel:nombreUniProt>BRAF_HUMAN</mel:nombreUniProt>
+    <mel:organismo>Homo sapiens</mel:organismo>
+    <mel:taxonomiaId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9606</mel:taxonomiaId>
+  </mel:Proteina>
+  <mel:UbicacionVariante rdf:about="http://example.org/melanoma_es#ubicacion_BRAF_VU33_1">
+    <mel:cromosoma>1</mel:cromosoma>
+    <mel:tieneCoordenadas>
+      <mel:Coordenadas rdf:about="http://example.org/melanoma_es#coordenadas_BRAF_VU33_1">
+        <mel:inicio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1229972</mel:inicio>
+        <mel:fin rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1229972</mel:fin>
+        <mel:hebra>+</mel:hebra>
+      </mel:Coordenadas>
+    </mel:tieneCoordenadas>
+  </mel:UbicacionVariante>
+  <mel:Coordenadas rdf:about="http://example.org/melanoma_es#coordenadas_ACAP3_VU41_1">
+    <mel:inicio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1229980</mel:inicio>
+    <mel:fin rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1229980</mel:fin>
+    <mel:hebra>+</mel:hebra>
+  </mel:Coordenadas>
+  <mel:Variante rdf:about="http://example.org/melanoma_es#variante_NLRC5_VU13_1">
+    <mel:idVariante>NLRC5_VU13_1</mel:idVariante>
+    <mel:muestraTumoral>VU13</mel:muestraTumoral>
+    <mel:muestraNormal>NORMAL</mel:muestraNormal>
+    <mel:hgvsc>ENST00000354700.5:c.1982C&gt;T</mel:hgvsc>
+    <mel:hgvsp>p.Ala661Val</mel:hgvsp>
+    <mel:hgvspCorto>p.A661V</mel:hgvspCorto>
+    <mel:observadaEnMuestra rdf:resource="http://example.org/melanoma_es#muestra_VU13"/>
+    <mel:afectaAGen rdf:resource="http://example.org/melanoma_es#gen_NLRC5"/>
+    <mel:tieneUbicacion>
+      <mel:UbicacionVariante rdf:about="http://example.org/melanoma_es#ubicacion_NLRC5_VU13_1">
+        <mel:cromosoma>1</mel:cromosoma>
+        <mel:tieneCoordenadas rdf:resource="http://example.org/melanoma_es#coordenadas_NLRC5_VU13_1"/>
+      </mel:UbicacionVariante>
+    </mel:tieneUbicacion>
+    <mel:tieneClasificacion rdf:resource="http://example.org/melanoma_es#clasificacion_NLRC5_VU13_1"/>
+    <mel:tieneAlelos>
+      <mel:Alelos rdf:about="http://example.org/melanoma_es#alelos_NLRC5_VU13_1">
+        <mel:aleloReferencia>G</mel:aleloReferencia>
+        <mel:tieneAlelosTumor rdf:resource="http://example.org/melanoma_es#alelosTumor_NLRC5_VU13_1"/>
+      </mel:Alelos>
+    </mel:tieneAlelos>
+    <mel:tieneProfundidadSecuenciacion rdf:resource="http://example.org/melanoma_es#profSec_NLRC5_VU13_1"/>
+  </mel:Variante>
+  <mel:Clinica rdf:about="http://example.org/melanoma_es#clinica_P-4">
+    <mel:tieneDemografia>
+      <mel:Demografia rdf:about="http://example.org/melanoma_es#demografia_P-4">
+        <mel:edadDiagnostico rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">55</mel:edadDiagnostico>
+        <mel:sexo>Female</mel:sexo>
+        <mel:raza>Caucasian</mel:raza>
+      </mel:Demografia>
+    </mel:tieneDemografia>
+    <mel:tieneTumor>
+      <mel:Tumor rdf:about="http://example.org/melanoma_es#tumor_P-4">
+        <mel:ulceracion>Yes</mel:ulceracion>
+        <mel:gangliosExaminados rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</mel:gangliosExaminados>
+      </mel:Tumor>
+    </mel:tieneTumor>
+  </mel:Clinica>
+  <mel:AlelosTumor rdf:about="http://example.org/melanoma_es#alelosTumor_ACAP3_VU32_1">
+    <mel:aleloTumor1>G</mel:aleloTumor1>
+  </mel:AlelosTumor>
+  <mel:Coordenadas rdf:about="http://example.org/melanoma_es#coordenadas_ACAP3_VU22_2">
+    <mel:inicio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9056811</mel:inicio>
+    <mel:fin rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9056811</mel:fin>
+    <mel:hebra>+</mel:hebra>
+  </mel:Coordenadas>
+  <mel:ClasificacionVariante rdf:about="http://example.org/melanoma_es#clasificacion_BRAF_VU42_1">
+    <mel:consecuencia>missense_variant</mel:consecuencia>
+    <mel:claseVariante>Missense_Mutation</mel:claseVariante>
+    <mel:tipoVariante>SNP</mel:tipoVariante>
+  </mel:ClasificacionVariante>
+  <mel:UbicacionVariante rdf:about="http://example.org/melanoma_es#ubicacion_NRAS_VU42_2">
+    <mel:cromosoma>19</mel:cromosoma>
+    <mel:tieneCoordenadas>
+      <mel:Coordenadas rdf:about="http://example.org/melanoma_es#coordenadas_NRAS_VU42_2">
+        <mel:inicio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9056831</mel:inicio>
+        <mel:fin rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9056831</mel:fin>
+        <mel:hebra>+</mel:hebra>
+      </mel:Coordenadas>
+    </mel:tieneCoordenadas>
+  </mel:UbicacionVariante>
+  <mel:Coordenadas rdf:about="http://example.org/melanoma_es#coordenadas_NRAS_VU43_1">
+    <mel:inicio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1229982</mel:inicio>
+    <mel:fin rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1229982</mel:fin>
+    <mel:hebra>+</mel:hebra>
+  </mel:Coordenadas>
+  <owl:Class rdf:about="http://example.org/melanoma_es#ProfundidadSecuenciacion">
+    <rdfs:label xml:lang="es">ProfundidadSecuenciacion</rdfs:label>
+  </owl:Class>
+  <mel:ProfundidadTumor rdf:about="http://example.org/melanoma_es#profTumor_MUTYH_VU11_2">
+    <mel:conteoRefTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</mel:conteoRefTumor>
+    <mel:conteoAltTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</mel:conteoAltTumor>
+    <mel:profundidadTotalTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</mel:profundidadTotalTumor>
+  </mel:ProfundidadTumor>
+  <mel:Variante rdf:about="http://example.org/melanoma_es#variante_BRAF_VU33_1">
+    <mel:idVariante>BRAF_VU33_1</mel:idVariante>
+    <mel:muestraTumoral>VU33</mel:muestraTumoral>
+    <mel:muestraNormal>NORMAL</mel:muestraNormal>
+    <mel:hgvsc>ENST00000354700.5:c.1982C&gt;T</mel:hgvsc>
+    <mel:hgvsp>p.Ala661Val</mel:hgvsp>
+    <mel:hgvspCorto>p.A661V</mel:hgvspCorto>
+    <mel:observadaEnMuestra rdf:resource="http://example.org/melanoma_es#muestra_VU33"/>
+    <mel:afectaAGen rdf:resource="http://example.org/melanoma_es#gen_BRAF"/>
+    <mel:tieneUbicacion rdf:resource="http://example.org/melanoma_es#ubicacion_BRAF_VU33_1"/>
+    <mel:tieneClasificacion>
+      <mel:ClasificacionVariante rdf:about="http://example.org/melanoma_es#clasificacion_BRAF_VU33_1">
+        <mel:consecuencia>missense_variant</mel:consecuencia>
+        <mel:claseVariante>Missense_Mutation</mel:claseVariante>
+        <mel:tipoVariante>SNP</mel:tipoVariante>
+      </mel:ClasificacionVariante>
+    </mel:tieneClasificacion>
+    <mel:tieneAlelos rdf:resource="http://example.org/melanoma_es#alelos_BRAF_VU33_1"/>
+    <mel:tieneProfundidadSecuenciacion>
+      <mel:ProfundidadSecuenciacion rdf:about="http://example.org/melanoma_es#profSec_BRAF_VU33_1">
+        <mel:tieneProfundidadTumor rdf:resource="http://example.org/melanoma_es#profTumor_BRAF_VU33_1"/>
+      </mel:ProfundidadSecuenciacion>
+    </mel:tieneProfundidadSecuenciacion>
+  </mel:Variante>
+  <mel:AlelosTumor rdf:about="http://example.org/melanoma_es#alelosTumor_MUTYH_VU21_1">
+    <mel:aleloTumor1>G</mel:aleloTumor1>
+  </mel:AlelosTumor>
+  <mel:ProfundidadTumor rdf:about="http://example.org/melanoma_es#profTumor_NLRC5_VU21_2">
+    <mel:conteoRefTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</mel:conteoRefTumor>
+    <mel:conteoAltTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</mel:conteoAltTumor>
+    <mel:profundidadTotalTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</mel:profundidadTotalTumor>
+  </mel:ProfundidadTumor>
+  <mel:Muestreo rdf:about="http://example.org/melanoma_es#presentacion_VU32">
+    <mel:estadioPresentacion>IIA</mel:estadioPresentacion>
+    <mel:sitioPrimario>Leg</mel:sitioPrimario>
+  </mel:Muestreo>
+  <owl:Class rdf:about="http://example.org/melanoma_es#Paciente">
+    <rdfs:label xml:lang="es">Paciente</rdfs:label>
+  </owl:Class>
+  <mel:ProfundidadTumor rdf:about="http://example.org/melanoma_es#profTumor_MUTYH_VU21_1">
+    <mel:conteoRefTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</mel:conteoRefTumor>
+    <mel:conteoAltTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</mel:conteoAltTumor>
+    <mel:profundidadTotalTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</mel:profundidadTotalTumor>
+  </mel:ProfundidadTumor>
+  <mel:Variante rdf:about="http://example.org/melanoma_es#variante_ACAP3_VU23_1">
+    <mel:idVariante>ACAP3_VU23_1</mel:idVariante>
+    <mel:muestraTumoral>VU23</mel:muestraTumoral>
+    <mel:muestraNormal>NORMAL</mel:muestraNormal>
+    <mel:hgvsc>ENST00000354700.5:c.1982C&gt;T</mel:hgvsc>
+    <mel:hgvsp>p.Ala661Val</mel:hgvsp>
+    <mel:hgvspCorto>p.A661V</mel:hgvspCorto>
+    <mel:observadaEnMuestra rdf:resource="http://example.org/melanoma_es#muestra_VU23"/>
+    <mel:afectaAGen rdf:resource="http://example.org/melanoma_es#gen_ACAP3"/>
+    <mel:tieneUbicacion rdf:resource="http://example.org/melanoma_es#ubicacion_ACAP3_VU23_1"/>
+    <mel:tieneClasificacion>
+      <mel:ClasificacionVariante rdf:about="http://example.org/melanoma_es#clasificacion_ACAP3_VU23_1">
+        <mel:consecuencia>missense_variant</mel:consecuencia>
+        <mel:claseVariante>Missense_Mutation</mel:claseVariante>
+        <mel:tipoVariante>SNP</mel:tipoVariante>
+      </mel:ClasificacionVariante>
+    </mel:tieneClasificacion>
+    <mel:tieneAlelos>
+      <mel:Alelos rdf:about="http://example.org/melanoma_es#alelos_ACAP3_VU23_1">
+        <mel:aleloReferencia>G</mel:aleloReferencia>
+        <mel:tieneAlelosTumor rdf:resource="http://example.org/melanoma_es#alelosTumor_ACAP3_VU23_1"/>
+      </mel:Alelos>
+    </mel:tieneAlelos>
+    <mel:tieneProfundidadSecuenciacion rdf:resource="http://example.org/melanoma_es#profSec_ACAP3_VU23_1"/>
+  </mel:Variante>
+  <mel:UbicacionVariante rdf:about="http://example.org/melanoma_es#ubicacion_ACAP3_VU41_1">
+    <mel:cromosoma>1</mel:cromosoma>
+    <mel:tieneCoordenadas rdf:resource="http://example.org/melanoma_es#coordenadas_ACAP3_VU41_1"/>
+  </mel:UbicacionVariante>
+  <owl:Class rdf:about="http://example.org/melanoma_es#Coordenadas">
+    <rdfs:label xml:lang="es">Coordenadas</rdfs:label>
+  </owl:Class>
+  <mel:Recurrencia rdf:about="http://example.org/melanoma_es#recurrencia_P-1">
+    <mel:metastasis>No</mel:metastasis>
+    <mel:mesesHastaRecurrencia rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">21.0</mel:mesesHastaRecurrencia>
+    <mel:sitioPrimeraRecurrencia>Inguinal LN</mel:sitioPrimeraRecurrencia>
+  </mel:Recurrencia>
+  <mel:Alelos rdf:about="http://example.org/melanoma_es#alelos_NRAS_VU33_2">
+    <mel:aleloReferencia>G</mel:aleloReferencia>
+    <mel:tieneAlelosTumor>
+      <mel:AlelosTumor rdf:about="http://example.org/melanoma_es#alelosTumor_NRAS_VU33_2">
+        <mel:aleloTumor1>A</mel:aleloTumor1>
+      </mel:AlelosTumor>
+    </mel:tieneAlelosTumor>
+  </mel:Alelos>
+  <mel:Paciente rdf:about="http://example.org/melanoma_es#paciente_P-1">
+    <rdf:type rdf:resource="http://example.org/melanoma_es#PacienteFallecido"/>
+    <mel:idPaciente>P-1</mel:idPaciente>
+    <mel:estadoSupervivenciaGlobal>DECEASED</mel:estadoSupervivenciaGlobal>
+    <mel:tieneSupervivencia rdf:resource="http://example.org/melanoma_es#supervivencia_P-1"/>
+    <mel:tieneClinica>
+      <mel:Clinica rdf:about="http://example.org/melanoma_es#clinica_P-1">
+        <mel:tieneDemografia rdf:resource="http://example.org/melanoma_es#demografia_P-1"/>
+        <mel:tieneTumor rdf:resource="http://example.org/melanoma_es#tumor_P-1"/>
+      </mel:Clinica>
+    </mel:tieneClinica>
+    <mel:tieneRecurrencia rdf:resource="http://example.org/melanoma_es#recurrencia_P-1"/>
+    <mel:tieneTratamiento>
+      <mel:Tratamiento rdf:about="http://example.org/melanoma_es#tratamiento_P-1">
+        <mel:tratamientoRecibido>No</mel:tratamientoRecibido>
+      </mel:Tratamiento>
+    </mel:tieneTratamiento>
+    <mel:tieneMuestra rdf:resource="http://example.org/melanoma_es#muestra_VU11"/>
+    <mel:tieneMuestra rdf:resource="http://example.org/melanoma_es#muestra_VU12"/>
+    <mel:tieneMuestra rdf:resource="http://example.org/melanoma_es#muestra_VU13"/>
+  </mel:Paciente>
+  <mel:Variante rdf:about="http://example.org/melanoma_es#variante_NRAS_VU33_2">
+    <mel:idVariante>NRAS_VU33_2</mel:idVariante>
+    <mel:muestraTumoral>VU33</mel:muestraTumoral>
+    <mel:muestraNormal>NORMAL</mel:muestraNormal>
+    <mel:hgvsc>ENST00000X:c.123A&gt;T</mel:hgvsc>
+    <mel:hgvsp>p.Gly41*</mel:hgvsp>
+    <mel:hgvspCorto>p.G41*</mel:hgvspCorto>
+    <mel:observadaEnMuestra rdf:resource="http://example.org/melanoma_es#muestra_VU33"/>
+    <mel:afectaAGen>
+      <mel:Gen rdf:about="http://example.org/melanoma_es#gen_NRAS">
+        <mel:simboloGen>NRAS</mel:simboloGen>
+      </mel:Gen>
+    </mel:afectaAGen>
+    <mel:tieneUbicacion>
+      <mel:UbicacionVariante rdf:about="http://example.org/melanoma_es#ubicacion_NRAS_VU33_2">
+        <mel:cromosoma>19</mel:cromosoma>
+        <mel:tieneCoordenadas rdf:resource="http://example.org/melanoma_es#coordenadas_NRAS_VU33_2"/>
+      </mel:UbicacionVariante>
+    </mel:tieneUbicacion>
+    <mel:tieneClasificacion rdf:resource="http://example.org/melanoma_es#clasificacion_NRAS_VU33_2"/>
+    <mel:tieneAlelos rdf:resource="http://example.org/melanoma_es#alelos_NRAS_VU33_2"/>
+    <mel:tieneProfundidadSecuenciacion rdf:resource="http://example.org/melanoma_es#profSec_NRAS_VU33_2"/>
+  </mel:Variante>
+  <mel:ProfundidadTumor rdf:about="http://example.org/melanoma_es#profTumor_NRAS_VU43_1">
+    <mel:conteoRefTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</mel:conteoRefTumor>
+    <mel:conteoAltTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</mel:conteoAltTumor>
+    <mel:profundidadTotalTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</mel:profundidadTotalTumor>
+  </mel:ProfundidadTumor>
+  <owl:Class rdf:about="http://example.org/melanoma_es#Recurrencia">
+    <rdfs:label xml:lang="es">Recurrencia</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.org/melanoma_es#PacienteFallecido">
+    <rdfs:label xml:lang="es">PacienteFallecido</rdfs:label>
+    <owl:equivalentClass>
+      <owl:Class rdf:nodeID="N8c8a82df1ac44cf4add5b831820cdf6a">
+        <owl:intersectionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://example.org/melanoma_es#Paciente"/>
+          <owl:Restriction rdf:nodeID="Nb850169b4eb84019ab689de3296b4a0d">
+            <owl:onProperty rdf:resource="http://example.org/melanoma_es#estadoSupervivenciaGlobal"/>
+            <owl:hasValue>DECEASED</owl:hasValue>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <mel:AlelosTumor rdf:about="http://example.org/melanoma_es#alelosTumor_ACAP3_VU23_1">
+    <mel:aleloTumor1>G</mel:aleloTumor1>
+  </mel:AlelosTumor>
+  <mel:Coordenadas rdf:about="http://example.org/melanoma_es#coordenadas_NLRC5_VU12_2">
+    <mel:inicio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9056801</mel:inicio>
+    <mel:fin rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9056801</mel:fin>
+    <mel:hebra>+</mel:hebra>
+  </mel:Coordenadas>
+  <mel:Coordenadas rdf:about="http://example.org/melanoma_es#coordenadas_NRAS_VU33_2">
+    <mel:inicio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9056822</mel:inicio>
+    <mel:fin rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9056822</mel:fin>
+    <mel:hebra>+</mel:hebra>
+  </mel:Coordenadas>
+  <mel:ProfundidadTumor rdf:about="http://example.org/melanoma_es#profTumor_BRAF_VU32_2">
+    <mel:conteoRefTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</mel:conteoRefTumor>
+    <mel:conteoAltTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</mel:conteoAltTumor>
+    <mel:profundidadTotalTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</mel:profundidadTotalTumor>
+  </mel:ProfundidadTumor>
+  <mel:ClasificacionVariante rdf:about="http://example.org/melanoma_es#clasificacion_ACAP3_VU41_1">
+    <mel:consecuencia>missense_variant</mel:consecuencia>
+    <mel:claseVariante>Missense_Mutation</mel:claseVariante>
+    <mel:tipoVariante>SNP</mel:tipoVariante>
+  </mel:ClasificacionVariante>
+  <mel:Coordenadas rdf:about="http://example.org/melanoma_es#coordenadas_MUC16_VU11_1">
+    <mel:inicio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1229950</mel:inicio>
+    <mel:fin rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1229950</mel:fin>
+    <mel:hebra>+</mel:hebra>
+  </mel:Coordenadas>
+  <mel:Coordenadas rdf:about="http://example.org/melanoma_es#coordenadas_NLRC5_VU13_1">
+    <mel:inicio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1229952</mel:inicio>
+    <mel:fin rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1229952</mel:fin>
+    <mel:hebra>+</mel:hebra>
+  </mel:Coordenadas>
+  <owl:Class rdf:about="http://example.org/melanoma_es#Demografia">
+    <rdfs:label xml:lang="es">Demografia</rdfs:label>
+  </owl:Class>
+  <mel:Alelos rdf:about="http://example.org/melanoma_es#alelos_BRAF_VU42_1">
+    <mel:aleloReferencia>G</mel:aleloReferencia>
+    <mel:tieneAlelosTumor>
+      <mel:AlelosTumor rdf:about="http://example.org/melanoma_es#alelosTumor_BRAF_VU42_1">
+        <mel:aleloTumor1>G</mel:aleloTumor1>
+      </mel:AlelosTumor>
+    </mel:tieneAlelosTumor>
+  </mel:Alelos>
+  <mel:Supervivencia rdf:about="http://example.org/melanoma_es#supervivencia_P-4">
+    <mel:mesesGlobal rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20.0</mel:mesesGlobal>
+    <mel:mesesLibreEnfermedad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">18.0</mel:mesesLibreEnfermedad>
+  </mel:Supervivencia>
+  <mel:Recurrencia rdf:about="http://example.org/melanoma_es#recurrencia_P-4">
+    <mel:metastasis>No</mel:metastasis>
+    <mel:mesesHastaRecurrencia rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12.0</mel:mesesHastaRecurrencia>
+    <mel:sitioPrimeraRecurrencia>Skin</mel:sitioPrimeraRecurrencia>
+  </mel:Recurrencia>
+  <mel:ProfundidadTumor rdf:about="http://example.org/melanoma_es#profTumor_MUTYH_VU12_1">
+    <mel:conteoRefTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</mel:conteoRefTumor>
+    <mel:conteoAltTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</mel:conteoAltTumor>
+    <mel:profundidadTotalTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</mel:profundidadTotalTumor>
+  </mel:ProfundidadTumor>
+  <owl:Class rdf:about="http://example.org/melanoma_es#Tumor">
+    <rdfs:label xml:lang="es">Tumor</rdfs:label>
+  </owl:Class>
+  <mel:ProfundidadSecuenciacion rdf:about="http://example.org/melanoma_es#profSec_MUC16_VU43_2">
+    <mel:tieneProfundidadTumor>
+      <mel:ProfundidadTumor rdf:about="http://example.org/melanoma_es#profTumor_MUC16_VU43_2">
+        <mel:conteoRefTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</mel:conteoRefTumor>
+        <mel:conteoAltTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</mel:conteoAltTumor>
+        <mel:profundidadTotalTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</mel:profundidadTotalTumor>
+      </mel:ProfundidadTumor>
+    </mel:tieneProfundidadTumor>
+  </mel:ProfundidadSecuenciacion>
+  <mel:Coordenadas rdf:about="http://example.org/melanoma_es#coordenadas_ACAP3_VU32_1">
+    <mel:inicio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1229971</mel:inicio>
+    <mel:fin rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1229971</mel:fin>
+    <mel:hebra>+</mel:hebra>
+  </mel:Coordenadas>
+  <mel:Muestreo rdf:about="http://example.org/melanoma_es#presentacion_VU22">
+    <mel:estadioPresentacion>IIA</mel:estadioPresentacion>
+    <mel:sitioPrimario>Leg</mel:sitioPrimario>
+  </mel:Muestreo>
+  <mel:Coordenadas rdf:about="http://example.org/melanoma_es#coordenadas_NLRC5_VU21_2">
+    <mel:inicio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9056810</mel:inicio>
+    <mel:fin rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9056810</mel:fin>
+    <mel:hebra>+</mel:hebra>
+  </mel:Coordenadas>
+  <mel:AlelosTumor rdf:about="http://example.org/melanoma_es#alelosTumor_BRAF_VU23_2">
+    <mel:aleloTumor1>A</mel:aleloTumor1>
+  </mel:AlelosTumor>
+  <mel:UbicacionVariante rdf:about="http://example.org/melanoma_es#ubicacion_BRAF_VU41_2">
+    <mel:cromosoma>19</mel:cromosoma>
+    <mel:tieneCoordenadas rdf:resource="http://example.org/melanoma_es#coordenadas_BRAF_VU41_2"/>
+  </mel:UbicacionVariante>
+  <mel:AlelosTumor rdf:about="http://example.org/melanoma_es#alelosTumor_NLRC5_VU21_2">
+    <mel:aleloTumor1>A</mel:aleloTumor1>
+  </mel:AlelosTumor>
+  <mel:AlelosTumor rdf:about="http://example.org/melanoma_es#alelosTumor_MUTYH_VU12_1">
+    <mel:aleloTumor1>G</mel:aleloTumor1>
+  </mel:AlelosTumor>
+  <mel:ProfundidadTumor rdf:about="http://example.org/melanoma_es#profTumor_ACAP3_VU13_2">
+    <mel:conteoRefTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</mel:conteoRefTumor>
+    <mel:conteoAltTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</mel:conteoAltTumor>
+    <mel:profundidadTotalTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</mel:profundidadTotalTumor>
+  </mel:ProfundidadTumor>
+  <mel:Muestreo rdf:about="http://example.org/melanoma_es#presentacion_VU13">
+    <mel:estadioPresentacion>M1a</mel:estadioPresentacion>
+    <mel:sitioPrimario>Thumb</mel:sitioPrimario>
+  </mel:Muestreo>
+  <mel:UbicacionVariante rdf:about="http://example.org/melanoma_es#ubicacion_BRAF_VU42_1">
+    <mel:cromosoma>1</mel:cromosoma>
+    <mel:tieneCoordenadas rdf:resource="http://example.org/melanoma_es#coordenadas_BRAF_VU42_1"/>
+  </mel:UbicacionVariante>
+  <mel:AlelosTumor rdf:about="http://example.org/melanoma_es#alelosTumor_ACAP3_VU13_2">
+    <mel:aleloTumor1>A</mel:aleloTumor1>
+  </mel:AlelosTumor>
+  <mel:ProfundidadTumor rdf:about="http://example.org/melanoma_es#profTumor_MUC16_VU11_1">
+    <mel:conteoRefTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</mel:conteoRefTumor>
+    <mel:conteoAltTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</mel:conteoAltTumor>
+    <mel:profundidadTotalTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</mel:profundidadTotalTumor>
+  </mel:ProfundidadTumor>
+  <mel:UbicacionVariante rdf:about="http://example.org/melanoma_es#ubicacion_NRAS_VU43_1">
+    <mel:cromosoma>1</mel:cromosoma>
+    <mel:tieneCoordenadas rdf:resource="http://example.org/melanoma_es#coordenadas_NRAS_VU43_1"/>
+  </mel:UbicacionVariante>
+  <mel:ProfundidadSecuenciacion rdf:about="http://example.org/melanoma_es#profSec_BRAF_VU42_1">
+    <mel:tieneProfundidadTumor>
+      <mel:ProfundidadTumor rdf:about="http://example.org/melanoma_es#profTumor_BRAF_VU42_1">
+        <mel:conteoRefTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</mel:conteoRefTumor>
+        <mel:conteoAltTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</mel:conteoAltTumor>
+        <mel:profundidadTotalTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</mel:profundidadTotalTumor>
+      </mel:ProfundidadTumor>
+    </mel:tieneProfundidadTumor>
+  </mel:ProfundidadSecuenciacion>
+  <mel:Demografia rdf:about="http://example.org/melanoma_es#demografia_P-3">
+    <mel:edadDiagnostico rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">39</mel:edadDiagnostico>
+    <mel:sexo>Male</mel:sexo>
+    <mel:raza>Caucasian</mel:raza>
+  </mel:Demografia>
+  <mel:Alelos rdf:about="http://example.org/melanoma_es#alelos_NRAS_VU43_1">
+    <mel:aleloReferencia>G</mel:aleloReferencia>
+    <mel:tieneAlelosTumor rdf:resource="http://example.org/melanoma_es#alelosTumor_NRAS_VU43_1"/>
+  </mel:Alelos>
+  <mel:Demografia rdf:about="http://example.org/melanoma_es#demografia_P-2">
+    <mel:edadDiagnostico rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</mel:edadDiagnostico>
+    <mel:sexo>Male</mel:sexo>
+    <mel:raza>Caucasian</mel:raza>
+  </mel:Demografia>
+  <mel:AlelosTumor rdf:about="http://example.org/melanoma_es#alelosTumor_BRAF_VU32_2">
+    <mel:aleloTumor1>A</mel:aleloTumor1>
+  </mel:AlelosTumor>
+  <mel:AlelosTumor rdf:about="http://example.org/melanoma_es#alelosTumor_MUTYH_VU11_2">
+    <mel:aleloTumor1>A</mel:aleloTumor1>
+  </mel:AlelosTumor>
+  <mel:Tumor rdf:about="http://example.org/melanoma_es#tumor_P-3">
+    <mel:ulceracion>No</mel:ulceracion>
+    <mel:gangliosExaminados rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</mel:gangliosExaminados>
+  </mel:Tumor>
+  <owl:Class rdf:about="http://example.org/melanoma_es#ProfundidadTumor">
+    <rdfs:label xml:lang="es">ProfundidadTumor</rdfs:label>
+  </owl:Class>
+  <mel:Muestreo rdf:about="http://example.org/melanoma_es#presentacion_VU31">
+    <mel:estadioPresentacion>IIIB</mel:estadioPresentacion>
+    <mel:sitioPrimario>Plantar Foot</mel:sitioPrimario>
+  </mel:Muestreo>
+  <mel:ClasificacionVariante rdf:about="http://example.org/melanoma_es#clasificacion_BRAF_VU41_2">
+    <mel:consecuencia>stop_gained</mel:consecuencia>
+    <mel:claseVariante>Nonsense_Mutation</mel:claseVariante>
+    <mel:tipoVariante>SNP</mel:tipoVariante>
+  </mel:ClasificacionVariante>
+  <mel:Muestreo rdf:about="http://example.org/melanoma_es#presentacion_VU21">
+    <mel:estadioPresentacion>IIIB</mel:estadioPresentacion>
+    <mel:sitioPrimario>Plantar Foot</mel:sitioPrimario>
+  </mel:Muestreo>
+  <owl:Class rdf:about="http://example.org/melanoma_es#Proteina">
+    <rdfs:label xml:lang="es">Proteina</rdfs:label>
+  </owl:Class>
+  <mel:ProfundidadTumor rdf:about="http://example.org/melanoma_es#profTumor_BRAF_VU33_1">
+    <mel:conteoRefTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</mel:conteoRefTumor>
+    <mel:conteoAltTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</mel:conteoAltTumor>
+    <mel:profundidadTotalTumor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</mel:profundidadTotalTumor>
+  </mel:ProfundidadTumor>
+  <owl:Class rdf:about="http://example.org/melanoma_es#Gen">
+    <rdfs:label xml:lang="es">Gen</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.org/melanoma_es#UbicacionVariante">
+    <rdfs:label xml:lang="es">UbicacionVariante</rdfs:label>
+  </owl:Class>
+  <mel:AlelosTumor rdf:about="http://example.org/melanoma_es#alelosTumor_MUC16_VU43_2">
+    <mel:aleloTumor1>A</mel:aleloTumor1>
+  </mel:AlelosTumor>
+  <owl:Class rdf:about="http://example.org/melanoma_es#Alelos">
+    <rdfs:label xml:lang="es">Alelos</rdfs:label>
+  </owl:Class>
+  <mel:Muestreo rdf:about="http://example.org/melanoma_es#presentacion_VU23">
+    <mel:estadioPresentacion>M1a</mel:estadioPresentacion>
+    <mel:sitioPrimario>Thumb</mel:sitioPrimario>
+  </mel:Muestreo>
+  <mel:AlelosTumor rdf:about="http://example.org/melanoma_es#alelosTumor_NLRC5_VU13_1">
+    <mel:aleloTumor1>G</mel:aleloTumor1>
+  </mel:AlelosTumor>
+  <mel:Tratamiento rdf:about="http://example.org/melanoma_es#tratamiento_P-4">
+    <mel:tratamientoRecibido>Ipi</mel:tratamientoRecibido>
+  </mel:Tratamiento>
+  <mel:ClasificacionVariante rdf:about="http://example.org/melanoma_es#clasificacion_NRAS_VU42_2">
+    <mel:consecuencia>stop_gained</mel:consecuencia>
+    <mel:claseVariante>Nonsense_Mutation</mel:claseVariante>
+    <mel:tipoVariante>SNP</mel:tipoVariante>
+  </mel:ClasificacionVariante>
+  <mel:Muestreo rdf:about="http://example.org/melanoma_es#presentacion_VU12">
+    <mel:estadioPresentacion>IIA</mel:estadioPresentacion>
+    <mel:sitioPrimario>Leg</mel:sitioPrimario>
+  </mel:Muestreo>
+  <mel:Alelos rdf:about="http://example.org/melanoma_es#alelos_MUC16_VU43_2">
+    <mel:aleloReferencia>G</mel:aleloReferencia>
+    <mel:tieneAlelosTumor rdf:resource="http://example.org/melanoma_es#alelosTumor_MUC16_VU43_2"/>
+  </mel:Alelos>
+  <mel:Coordenadas rdf:about="http://example.org/melanoma_es#coordenadas_BRAF_VU23_2">
+    <mel:inicio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9056812</mel:inicio>
+    <mel:fin rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9056812</mel:fin>
+    <mel:hebra>+</mel:hebra>
+  </mel:Coordenadas>
+  <owl:Class rdf:about="http://example.org/melanoma_es#Tratamiento">
+    <rdfs:label xml:lang="es">Tratamiento</rdfs:label>
+  </owl:Class>
+  <mel:ClasificacionVariante rdf:about="http://example.org/melanoma_es#clasificacion_NRAS_VU43_1">
+    <mel:consecuencia>missense_variant</mel:consecuencia>
+    <mel:claseVariante>Missense_Mutation</mel:claseVariante>
+    <mel:tipoVariante>SNP</mel:tipoVariante>
+  </mel:ClasificacionVariante>
+  <owl:Class rdf:about="http://example.org/melanoma_es#Muestreo">
+    <rdfs:label xml:lang="es">Muestreo</rdfs:label>
+  </owl:Class>
+  <mel:Coordenadas rdf:about="http://example.org/melanoma_es#coordenadas_MUTYH_VU11_2">
+    <mel:inicio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9056800</mel:inicio>
+    <mel:fin rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9056800</mel:fin>
+    <mel:hebra>+</mel:hebra>
+  </mel:Coordenadas>
+  <mel:ProfundidadSecuenciacion rdf:about="http://example.org/melanoma_es#profSec_NRAS_VU43_1">
+    <mel:tieneProfundidadTumor rdf:resource="http://example.org/melanoma_es#profTumor_NRAS_VU43_1"/>
+  </mel:ProfundidadSecuenciacion>
+  <owl:Class rdf:about="http://example.org/melanoma_es#Supervivencia">
+    <rdfs:label xml:lang="es">Supervivencia</rdfs:label>
+  </owl:Class>
+  <mel:Tumor rdf:about="http://example.org/melanoma_es#tumor_P-1">
+    <mel:ulceracion>No</mel:ulceracion>
+    <mel:gangliosExaminados rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</mel:gangliosExaminados>
+  </mel:Tumor>
+  <owl:Class rdf:about="http://example.org/melanoma_es#ClasificacionVariante">
+    <rdfs:label xml:lang="es">ClasificacionVariante</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.org/melanoma_es#Variante">
+    <rdfs:label xml:lang="es">Variante</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.org/melanoma_es#Muestra">
+    <rdfs:label xml:lang="es">Muestra</rdfs:label>
+  </owl:Class>
+  <mel:Coordenadas rdf:about="http://example.org/melanoma_es#coordenadas_ACAP3_VU31_2">
+    <mel:inicio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9056820</mel:inicio>
+    <mel:fin rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9056820</mel:fin>
+    <mel:hebra>+</mel:hebra>
+  </mel:Coordenadas>
+  <mel:ProfundidadSecuenciacion rdf:about="http://example.org/melanoma_es#profSec_NRAS_VU42_2">
+    <mel:tieneProfundidadTumor rdf:resource="http://example.org/melanoma_es#profTumor_NRAS_VU42_2"/>
+  </mel:ProfundidadSecuenciacion>
+  <mel:AlelosTumor rdf:about="http://example.org/melanoma_es#alelosTumor_ACAP3_VU22_2">
+    <mel:aleloTumor1>A</mel:aleloTumor1>
+  </mel:AlelosTumor>
+  <owl:Class rdf:about="http://example.org/melanoma_es#AlelosTumor">
+    <rdfs:label xml:lang="es">AlelosTumor</rdfs:label>
+  </owl:Class>
+  <mel:AlelosTumor rdf:about="http://example.org/melanoma_es#alelosTumor_ACAP3_VU31_2">
+    <mel:aleloTumor1>A</mel:aleloTumor1>
+  </mel:AlelosTumor>
+</rdf:RDF>

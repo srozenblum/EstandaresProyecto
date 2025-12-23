@@ -1,0 +1,93 @@
+# =========================================================
+# CONSULTAS SPARQL – Proyecto Estándares de Datos
+# Ontología: melanoma_es
+# =========================================================
+
+
+# ---------------------------------------------------------
+# Consulta 1 – Clases utilizadas en el grafo de datos
+# ---------------------------------------------------------
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT DISTINCT ?clase
+WHERE {
+  ?individuo rdf:type ?clase .
+}
+ORDER BY ?clase
+
+
+# ---------------------------------------------------------
+# Consulta 2 – individuos y sus clases pero solo instancias
+# ---------------------------------------------------------
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+SELECT DISTINCT ?individuo ?clase
+WHERE {
+  ?individuo rdf:type ?clase .
+  FILTER (
+    !isBlank(?individuo) &&
+    ?clase != owl:Class &&
+    ?clase != owl:ObjectProperty &&
+    ?clase != owl:DatatypeProperty &&
+    ?clase != rdf:Property
+  )
+}
+ORDER BY ?clase
+
+
+# ---------------------------------------------------------
+# Consulta 3 – Propiedades objeto utilizadas en el grafo
+# ---------------------------------------------------------
+SELECT DISTINCT ?propiedad
+WHERE {
+  ?sujeto ?propiedad ?objeto .
+  FILTER (!isLiteral(?objeto))
+}
+ORDER BY ?propiedad
+
+
+# ---------------------------------------------------------
+# Consulta 4 – Propiedades de datos y valores literales
+# ---------------------------------------------------------
+SELECT DISTINCT ?individuo ?propiedad ?valor
+WHERE {
+  ?individuo ?propiedad ?valor .
+  FILTER (isLiteral(?valor))
+  FILTER (!isBlank(?individuo))
+}
+ORDER BY ?propiedad
+
+
+# ---------------------------------------------------------
+# Consulta 5 – Tipos inferidos tras razonamiento OWL
+# ---------------------------------------------------------
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+SELECT DISTINCT ?individuo ?claseInferida
+WHERE {
+  ?individuo rdf:type ?claseInferida .
+  FILTER (
+    ?claseInferida != owl:NamedIndividual &&
+    ?claseInferida != owl:Thing
+  )
+}
+ORDER BY ?claseInferida
+
+
+# ---------------------------------------------------------
+# Consulta 6 – Número de variantes genéticas por gen
+# (unión semántica por símbolo de gen)
+# ---------------------------------------------------------
+PREFIX mel: <http://example.org/melanoma_es#>
+
+SELECT ?geneSymbol (COUNT(?variante) AS ?numVariantes)
+WHERE {
+  ?variante a mel:variants ;
+            mel:gene ?vg .
+
+  ?vg mel:symbol ?geneSymbol .
+}
+GROUP BY ?geneSymbol
+ORDER BY DESC(?numVariantes)
