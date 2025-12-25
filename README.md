@@ -38,6 +38,8 @@ El proyecto consta de cuatro fases automatizadas por un orquestador principal:
 
 La ontología ha sido diseñada y validada utilizando **Protégé**, reflejando fielmente la estructura de las colecciones almacenadas en MongoDB.
 
+Como parte de la capa semántica del proyecto, se diseñó en **Protégé** una ontología OWL que modela todas las interacciones existentes en la base de datos, tanto entre clases mediante propiedades de objeto como mediante propiedades de datos para valores literales. Se añadieron individuos manualmente en cantidad suficiente para garantizar que las consultas SPARQL produjeran resultados significativos, y se aplicó el razonador **HermiT** para inferir nuevo conocimiento y mejorar la accesibilidad de la información. Sobre esta ontología se diseñaron y ejecutaron **6 consultas SPARQL** con el objetivo de cubrir todo el espacio de búsqueda del modelo. Adicionalmente, se abordaron dos retos: (Reto 5) la generación automática de un **grafo RDF de tripletas** a partir de los datos almacenados en MongoDB mediante un script en Python utilizando **RDFlib**, y (Reto 6) la ejecución automática de dichas consultas SPARQL sobre el grafo RDF generado, almacenando los resultados de forma genérica según el tipo de consulta.
+
 ### 📐 Modelado Ontológico
 
 #### Clases principales
@@ -80,7 +82,7 @@ Se han añadido manualmente múltiples **individuos** para todas las clases prin
 
 ### 🤖 Razonamiento Automático
 
-Se ha aplicado el **razonador HermiT**  para inferir nuevo conocimiento a partir de clases definidas y restricciones.
+Se ha aplicado el **razonador HermiT** para inferir nuevo conocimiento a partir de clases definidas y restricciones.
 
 Ejemplos de inferencias:
 - `PacienteFallecido`: pacientes cuyo estado de supervivencia global es *DECEASED*.
@@ -111,6 +113,7 @@ codigo/
         ├── ontologia_es_ampliada_full.owl
         └── ontologia_es_ampliada_full_reasoned.owl
 
+```
 
 
 ## 📊 Tecnologías Utilizadas
