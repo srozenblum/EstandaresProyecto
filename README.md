@@ -106,11 +106,12 @@ Los archivos OWL del proyecto se encuentran en el directorio:
 
 ---
 
-├── codigo/
-│   ├── datos/                
-│   │   └── ontologia/
-│   │       ├── ontologia_.owl
-│   │       └── ontologia_reasoned.owl
+```text
+codigo/
+└── datos/
+    └── ontologia/
+        ├── ontologia_es_ampliada_full.owl
+        └── ontologia_es_ampliada_full_reasoned.owl
 
 
 ---
