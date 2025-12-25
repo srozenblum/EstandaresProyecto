@@ -104,7 +104,8 @@ Se han diseñado y ejecutado múltiples consultas **SPARQL** para cubrir todo el
 
 Los archivos OWL del proyecto se encuentran en el directorio:
 
-```text
+---
+
 ├── codigo/
 │   ├── datos/                
 │   │   └── ontologia/
@@ -113,6 +114,7 @@ Los archivos OWL del proyecto se encuentran en el directorio:
 
 
 ---
+
 
 ## 📊 Tecnologías Utilizadas
 
