@@ -104,8 +104,6 @@ Se han diseñado y ejecutado múltiples consultas **SPARQL** para cubrir todo el
 
 Los archivos OWL del proyecto se encuentran en el directorio:
 
----
-
 ```text
 codigo/
 └── datos/
@@ -113,8 +111,6 @@ codigo/
         ├── ontologia_es_ampliada_full.owl
         └── ontologia_es_ampliada_full_reasoned.owl
 
-
----
 
 
 ## 📊 Tecnologías Utilizadas
