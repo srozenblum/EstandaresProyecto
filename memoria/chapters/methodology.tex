@@ -108,7 +108,7 @@ Esta colección albergará la información específica de cada variante genómic
 	\end{itemize}
 \end{itemize}
 
-\subsection{Sistema de generación automática de reportes (Tarea 2)}
+\section{Sistema de generación automática de reportes (Tarea 2)}
 
 se desarrolló un sistema genérico para la generación automática de vistas HTML a partir de consultas realizadas sobre la base de datos MongoDB. Este sistema permite integrar tecnologías NoSQL con estándares de transformación documental, conectando MongoDB con XML, XSLT y HTML dentro de un mismo flujo de trabajo. El objetivo principal es permitir que cualquier consulta definida por el usuario pueda transformarse automáticamente en una vista visual sin necesidad de modificar el código del sistema.
 
@@ -309,3 +309,39 @@ hasta la generación final del documento HTML mediante XML y XSLT.
 	\label{fig:flujo_tarea2}
 \end{figure}
 
+\section{Diseño de la Ontología y Modelado Semántico (Tarea 3)} 
+
+Tras la consolidación de la base de datos NoSQL, se procedió al diseño de una ontología formal que capturase la semántica del dominio. El modelado se realizó en Protégé, estructurando el conocimiento en una jerarquía de clases que reflejan fielmente las entidades de la base de datos: \texttt{Paciente}, \texttt{Muestra}, \texttt{Variante}, \texttt{Gen} y \texttt{Proteina}. Para articular las interacciones entre estas clases, se definieron diversas \textit{Object Properties} (propiedades de objeto) que establecen los vínculos biológicos y clínicos, tales como la relación entre una variante y el gen al que afecta (\texttt{afectaAGen}) o la pertenencia de una muestra a un paciente determinado (\texttt{perteneceAPaciente}). Asimismo, se incorporaron \textit{Data Properties} (propiedades de datos) para integrar los literales y valores métricos, mapeando campos como la edad del diagnóstico, el símbolo del gen o las predicciones funcionales de impacto. 
+
+\subsection{Poblado, Inferencia y Razonamiento}
+
+El poblado de la ontología se abordó de manera dual. En una primera fase, se introdujeron individuos de forma manual en Protégé para validar la consistencia lógica del modelo y asegurar que las consultas SPARQL posteriores tuviesen un entorno de pruebas controlado. Una vez estructurado el grafo, se aplicó el razonador \textbf{HermiT}, cuya función principal es mejorar la accesibilidad de la información mediante la inferencia de tipos. Se configuraron reglas de lógica descriptiva para clasificar automáticamente a los individuos basándose en sus atributos; esto permite, por ejemplo, que el sistema identifique de forma autónoma estados clínicos críticos o tipos de muestras específicas, optimizando así la recuperación de información en las fases de consulta.
+
+\subsection{Estrategia de Consultas SPARQL y Cobertura del Espacio de Búsqueda}
+
+Con el objetivo de explotar el grafo de conocimiento, se diseñaron \textbf{seis consultas SPARQL }orientadas a cubrir la totalidad del espacio de búsqueda de la ontología. El diseño de estas consultas no fue aleatorio, sino que se estructuró para validar diferentes niveles de complejidad: desde la exploración de metadatos (clases y propiedades instanciadas) hasta la extracción de conocimiento inferido por el razonador. Se incluyeron consultas de \textbf{agregación} y \textbf{filtrado} semántico que permiten, por ejemplo, agrupar variantes por su impacto funcional o contabilizar alteraciones genómicas navegando a través de las relaciones entre variantes y genes, demostrando una capacidad de análisis superior a la que ofrecen los esquemas relacionales o documentales tradicionales.
+
+\subsection{Automatización y Scripts Genéricos (Reto)}
+
+Para escalar el sistema a un entorno de producción, se implementaron dos herramientas en Python utilizando la librería \textbf{RDFlib}. El primer script, \texttt{reto5.py}, automatiza la generación del grafo de tripletas RDF a partir de los documentos JSON de MongoDB, garantizando que cada registro sea transformado en un recurso semántico con su URI correspondiente. El segundo componente, \texttt{reto6.py}, se diseñó como un motor de ejecución de consultas con un carácter estrictamente genérico. Mediante la parametrización de la entrada, este script es capaz de cargar el grafo generado y ejecutar el archivo de consultas externas, permitiendo que el sistema sea reutilizable para cualquier ontología o conjunto de datos que siga un esquema compatible. Este enfoque desacopla la lógica de ejecución de la definición de las consultas, facilitando el mantenimiento y la escalabilidad del proyecto.
+
+\subsection{Resultados de la Automatización y Ejecución Genérica (Reto)}
+
+Uno de los hitos técnicos del proyecto fue la transición desatendida de los datos desde un entorno NoSQL hacia un entorno semántico. En esta sección se validan los resultados de los scripts de automatización.
+
+\subsubsection{Generación del Grafo mediante RDFlib (\texttt{reto5.py})}
+Tras la ejecución del script \texttt{reto5.py}, se obtuvo un archivo en formato Turtle (\texttt{.ttl}) que representa el grafo completo de la base de datos. El script logró mapear exitosamente los documentos JSON complejos hacia una estructura de tripletas. Se verificó que:
+\begin{itemize}
+    \item Se generaron URIs únicas y persistentes para cada paciente, muestra y variante.
+    \item Las colecciones anidadas de MongoDB fueron "aplanadas" correctamente en relaciones semánticas.
+    \item El archivo resultante es totalmente compatible con herramientas externas de validación RDF.
+\end{itemize}
+
+\subsubsection{Ejecución Genérica de Consultas (\texttt{reto6.py})}
+La validación final consistió en lanzar las seis consultas SPARQL mediante el script \texttt{reto6.py}. A diferencia de una ejecución manual en Protégé, este script demostró un comportamiento genérico:
+\begin{enumerate}
+    \item \textbf{Flexibilidad:} El programa cargó el grafo dinámicamente y procesó un archivo de texto con las seis consultas sin requerir cambios en el código fuente.
+    \item \textbf{Exportación de Resultados:} Por cada consulta ejecutada, el script generó automáticamente un archivo CSV en la carpeta de resultados. Esto facilita el análisis posterior de los datos por parte de bioinformáticos que utilicen herramientas de estadística como R o Python (Pandas).
+\end{enumerate}
+
+Este flujo de trabajo automatizado (MongoDB $\rightarrow$ RDF $\rightarrow$ SPARQL $\rightarrow$ CSV) representa una solución escalable para la integración de datos abiertos en oncología, permitiendo que nuevas muestras añadidas a la base de datos sean analizadas semánticamente en cuestión de segundos.

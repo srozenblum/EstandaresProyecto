@@ -1,8 +1,11 @@
 \chapter*{\centering Abstract}
 \addcontentsline{toc}{chapter}{Abstract}
 
+Este proyecto presenta el diseño e implementación de un ecosistema integral para la gestión, integración y explotación de datos clínico-genómicos de pacientes con melanoma acral. Partiendo de datos originales del estudio \textit{Liang 2017 (cBioPortal)}, se ha desarrollado un flujo de trabajo modular que comienza con un proceso de extracción, transformación y carga (ETL). Este proceso se ve enriquecido dinámicamente mediante el uso de las APIs de \textbf{OncoKB} y \textbf{UniProt}. La persistencia de la información se ha realizado sobre una base de datos NoSQL (\textbf{MongoDB}), utilizando esquemas documentales anidados para modelar de forma eficiente la complejidad jerárquica de la información biomédica.
 
-HOLA. PRUEBA. 
+Con el objetivo de facilitar la interpretación clínica, se ha implementado un sistema de generación de reportes interactivos basado en transformaciones semánticas \textbf{XML/XSLT}. Este enfoque permite un desacoplamiento efectivo entre la persistencia y la visualización de los datos. 
 
-\vspace{2in}
-\textbf{Keywords}: (e.g.Mobile computing, security, complexity, algorithms, image analysis, machine learning, information retrieval)
+El núcleo del trabajo reside en la incorporación de una capa semántica fundamentada en una ontología formal (\textbf{OWL}) diseñada en Protégé. Dicha capa habilita el uso del razonador \textbf{HermiT} para la inferencia automática de estados clínicos y clasificaciones diagnósticas. Finalmente, el sistema se ha integrado en el paradigma de \textbf{Linked Data} mediante la generación de grafos RDF y la ejecución de consultas \textbf{SPARQL} avanzadas. Los resultados obtenidos validan la viabilidad de combinar bases de datos NoSQL con tecnologías de la Web Semántica para proporcionar una plataforma robusta en el ámbito de la medicina de precisión.
+
+\vspace{0.5cm}
+\noindent \textbf{Palabras clave:} Melanoma Acral, MongoDB, Web Semántica, OWL, SPARQL, XML, Bioinformática.

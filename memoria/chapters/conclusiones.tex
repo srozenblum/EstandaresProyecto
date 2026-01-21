@@ -1,0 +1,48 @@
+\chapter{Conclusiones y Trabajo Futuro}
+\label{ch:conclusiones}
+
+\section{Logros alcanzados}
+
+En el marco de este proyecto, se ha logrado consolidar una infraestructura integral para la gestión y explotación de datos clínico-genómicos centrada en el melanoma acral. La implementación ha permitido unificar información inicialmente fragmentada de cBioPortal y enriquecerla mediante la conexión con bases de conocimiento de referencia como \textbf{OncoKB} y \textbf{UniProt}. El resultado final es un sistema que trasciende el simple almacenamiento, transformando datos brutos en conocimiento estructurado y procesable.
+
+\section{Valoración técnica del sistema}
+
+Desde una perspectiva técnica, el empleo del paradigma documental a través de \textbf{MongoDB} ha demostrado ser una elección idónea. La capacidad de gestionar la naturaleza jerárquica de los datos biomédicos sin las restricciones de los esquemas relacionales rígidos facilita enormemente la escalabilidad del sistema. El diseño anidado de las colecciones garantiza una alta eficiencia, permitiendo que la historia clínica y las alteraciones genómicas coexistan en un modelo coherente. 
+
+Por otro lado, el uso de transformaciones \textbf{XML/XSLT} dota al sistema de una gran versatilidad. El desacoplamiento logrado entre la persistencia y la presentación permite generar visualizaciones clínicas dinámicas sin comprometer la integridad estructural del repositorio.
+
+\section{Impacto de la capa semántica}
+
+El avance más significativo de esta propuesta reside en la incorporación de la capa semántica basada en el estándar \textbf{OWL}. La transición hacia el ecosistema de \textbf{Linked Data} permite que el sistema realice razonamiento automático mediante el razonador \textbf{HermiT}. Esta capacidad de inferencia es fundamental para descubrir estados clínicos y clasificaciones biológicas que no se encuentran explícitas en las fuentes originales, situando a esta plataforma como una herramienta potente para la medicina personalizada y la investigación oncológica avanzada.
+
+\section{Limitaciones y líneas futuras}
+
+A pesar de la solidez de los resultados, se han identificado áreas de mejora para futuras etapas de desarrollo:
+
+\begin{itemize}
+    \item \textbf{Enfoque multiómico:} Sería de gran valor incorporar datos de expresión génica (RNA-Seq) para obtener una visión más sistémica del tumor.
+    \item \textbf{Apertura de datos:} El desarrollo de un \textit{endpoint} SPARQL público facilitaría la federación de consultas con otros repositorios internacionales.
+    \item \textbf{Automatización avanzada:} La implementación de herramientas de mapeo automático como RML permitiría que el grafo RDF se actualice de forma desatendida conforme evolucione la base de datos MongoDB.
+\end{itemize}
+
+Estas líneas futuras aseguran que el proyecto no sea una solución estática, sino una base modular preparada para el apoyo continuo a la investigación biomédica.
+
+\begin{thebibliography}{99}
+
+\bibitem{liang2017} Liang, W. S., et al. (2017). \textit{Integrated genomic analyses of acral melanoma}. Genome Research, 27(10), 1625-1638. doi:10.1101/gr.223859.117.
+
+\bibitem{cbioportal} Gao, J., et al. (2013). \textit{Integrative analysis of complex cancer genomics and clinical profiles using the cBioPortal}. Science Signaling, 6(269), pl1.
+
+\bibitem{mongodb} MongoDB, Inc. \textit{MongoDB Documentation: The Document Database}. Disponible en: \url{https://www.mongodb.com/docs/}.
+
+\bibitem{w3c_rdf} W3C. \textit{Resource Description Framework (RDF) Concepts and Abstract Syntax}. Disponible en: \url{https://www.w3.org/TR/rdf11-concepts/}.
+
+\bibitem{w3c_owl} W3C. \textit{OWL 2 Web Ontology Language Document Overview}. Disponible en: \url{https://www.w3.org/TR/owl2-overview/}.
+
+\bibitem{w3c_sparql} W3C. \textit{SPARQL 1.1 Overview}. Disponible en: \url{https://www.w3.org/TR/sparql11-overview/}.
+
+\bibitem{rdflib} Team RDFLib. \textit{RDFLib v7.0.0 documentation}. Disponible en: \url{https://rdflib.readthedocs.io/}.
+
+\bibitem{lxml} Behnel, S., et al. \textit{lxml - XML and HTML with Python}. Disponible en: \url{https://lxml.de/}.
+
+\end{thebibliography}

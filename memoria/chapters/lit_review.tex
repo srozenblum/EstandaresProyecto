@@ -1,2 +1,33 @@
 \chapter{Literature Review}{\label{ch:lit_review}}
 
+En este capítulo se describe el marco metodológico y técnico empleado para el desarrollo del sistema integral de gestión de datos clínico-genómicos. El flujo de trabajo se ha diseñado siguiendo un enfoque modular que abarca desde la persistencia de datos en sistemas NoSQL hasta la representación avanzada del conocimiento mediante tecnologías de la Web Semántica.
+
+\section{Diseño y estructuración de la base de datos NoSQL}
+
+La fase inicial del proyecto consistió en el diseño de una base de datos NoSQL utilizando \textbf{MongoDB}. La elección de este sistema se fundamenta en su capacidad para gestionar la heterogeneidad de los datos biomédicos sin las restricciones de un esquema rígido. El diseño se estructuró en torno a tres colecciones principales interconectadas: \texttt{patients}, \texttt{samples} y \texttt{variants}. 
+
+Cada una de estas colecciones fue diseñada para cumplir con un mínimo de tres niveles de anidamiento jerárquico. Esto permite representar de forma natural relaciones complejas, como la localización genómica de las variantes o el historial detallado de tratamientos y seguimiento clínico. La integridad de la información se mantiene mediante un sistema de referencias cruzadas basado en identificadores únicos, asegurando la trazabilidad total desde el perfil demográfico del paciente hasta la mutación a nivel de nucleótido.
+
+\section{Pipeline ETL y proceso de enriquecimiento}
+
+Para transformar los datos crudos procedentes de cBioPortal en documentos estructurados, se desarrolló un pipeline de extracción, transformación y carga (ETL) implementado en el script \texttt{conversion\_mongobd.py}. Este flujo operativo comienza con una etapa de limpieza donde se normalizan las cadenas de texto y se gestionan los valores nulos para garantizar la consistencia del repositorio.
+
+Posteriormente, el script ejecuta funciones de reestructuración profunda que convierten las tablas planas en formato CSV hacia documentos JSON de alta complejidad jerárquica. Un aspecto fundamental de esta fase es el enriquecimiento dinámico en tiempo real. Mediante el consumo de las APIs de \textbf{OncoKB} y \textbf{UniProt}, el sistema recupera automáticamente información sobre la significancia oncológica de los genes y las funciones proteicas asociadas, integrando esta información externa directamente en las colecciones de soporte.
+
+\section{Arquitectura de reportes clínicos (XML/XSLT)}
+
+Con el fin de facilitar la interpretación de los datos, se implementó un sistema genérico de generación de reportes basado en el script \texttt{mongoxml\_to\_html.py}. Esta herramienta actúa como un motor de transformación semántica que desacopla la lógica de persistencia de la capa de presentación. 
+
+El proceso se inicia con la ejecución de consultas de agregación en MongoDB, definidas externamente en el archivo \texttt{queries.txt}. Los resultados obtenidos se procesan mediante la librería \texttt{lxml} para generar un documento intermedio en formato XML que preserva la estructura anidada original. Finalmente, se aplica una hoja de estilos \texttt{template.xslt} para transformar el XML en una interfaz HTML interactiva, incorporando funcionalidades como el colapsado dinámico de variantes para mejorar la usabilidad del reporte clínico.
+
+\section{Modelado ontológico y representación del conocimiento}
+
+Para alcanzar la interoperabilidad semántica, se diseñó la ontología formal \texttt{melanoma\_es} utilizando el editor Protégé. Este modelo organiza el dominio mediante una red de clases y propiedades que definen las interacciones biológicas y clínicas fundamentales. 
+
+La ontología incorpora lógica descriptiva avanzada para permitir el uso del razonador \textbf{HermiT}. Se configuraron reglas de equivalencia para la clasificación automática de individuos, lo que permite que el sistema infiera de forma autónoma el estado clínico de los pacientes o la naturaleza de las muestras tumorales. Este proceso asegura que el conocimiento extraído sea consistente con los estándares internacionales de la Web Semántica.
+
+\section{Implementación de grafos RDF y motor SPARQL}
+
+La fase final traslada los datos NoSQL hacia el paradigma de los datos enlazados. Mediante el script \texttt{reto5.py}, se automatizó la conversión de los documentos JSON en un grafo de tripletas RDF, asignando identificadores únicos (URIs) a cada recurso. 
+
+Para la explotación de este grafo, se implementó el script \texttt{reto6.py}, diseñado como un motor genérico de ejecución de consultas SPARQL. Este script es capaz de cargar dinámicamente el grafo generado y procesar consultas complejas de agregación y filtrado. Esto permite realizar análisis bioinformáticos que atraviesan todos los niveles jerárquicos de la ontología, extrayendo tanto la información explícita como el conocimiento inferido por el razonador lógico.

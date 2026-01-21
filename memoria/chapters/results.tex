@@ -1,6 +1,6 @@
 \chapter{Results}{\label{ch:results}}
 
-\subsection{Sistema de generación automática de reportes (Tarea 2)}
+\section{Sistema de generación automática de reportes (Tarea 2)}
 
 En esta sección se muestran los resultados obtenidos tras la ejecución del script genérico desarrollado en la Tarea 2. El sistema procesa consultas MongoDB, genera documentos XML intermedios y aplica una plantilla XSLT para producir vistas HTML finales.
 
@@ -47,3 +47,89 @@ El sistema se probó con tres consultas diferentes, todas ellas con estructuras
 de salida distintas. En todos los casos se generaron correctamente los
 documentos XML y HTML, demostrando la capacidad genérica del script para
 adaptarse a distintas consultas sin necesidad de modificar el código.
+
+\section{Estructura de la Ontología y Jerarquía de Clases (Tarea 3)}
+
+Como resultado del modelado semántico, se ha obtenido una jerarquía de clases sólida que refleja todas las entidades del dominio de melanoma acral (Figura \ref{fig:jerarquia_protege}). En la imagen se puede apreciar la organización de las clases raíz bajo \texttt{owl:Thing}, destacando la creación de clases definidas o equivalentes, identificadas por el icono de las tres líneas horizontales. 
+
+Clases como \texttt{MuestraMetastasis} (subclase de \texttt{Muestra}) y \texttt{PacienteFallecido} (subclase de \texttt{Paciente}) han sido configuradas mediante lógica descriptiva. Esto permite que el sistema no solo almacene datos, sino que sea capaz de categorizar individuos automáticamente en función de sus propiedades diagnósticas y de supervivencia, cumpliendo así con el objetivo de mejorar la accesibilidad y la semántica de la información clínica.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.3\textwidth]{figs/class.png}
+    \caption{Jerarquía de clases de la ontología \texttt{melanoma\_es} en Protégé, mostrando la estructura jerárquica y las clases definidas para el razonamiento automático.}
+    \label{fig:jerarquia_protege}
+\end{figure}
+
+\subsection{Análisis de resultados mediante consultas SPARQL}
+
+Una vez generado el grafo de conocimiento en formato Turtle (\texttt{.ttl}) y validado mediante el razonador, se procedió a la explotación de los datos mediante el lenguaje de consulta SPARQL. El objetivo de estas consultas es demostrar la capacidad del sistema para integrar información jerárquica y semántica que sería costosa de obtener mediante lenguajes de consulta tradicionales.
+
+\subsubsection{Exploración de la topología y atributos del grafo}
+
+Las consultas 3 y 4 se centraron en validar la estructura del grafo generado a partir de la base de datos NoSQL. La \textbf{Consulta 3} permite identificar todas las propiedades de objeto (\textit{Object Properties}) que han sido instanciadas, lo que verifica que las relaciones definidas en la ontología (como \texttt{afectaAGen} o \texttt{tieneMuestra}) se han mapeado correctamente desde MongoDB. Por otro lado, la \textbf{Consulta 4} extrae los valores literales (\textit{Data Properties}), asegurando que los identificadores, fechas y métricas clínicas son accesibles y mantienen su tipado correcto.
+
+\subsubsection{Validación estructural e inventario de recursos (Consultas 1 a 4)}
+
+Antes de proceder al análisis biológico, se ejecutaron cuatro consultas orientadas a validar la integridad del grafo generado por el script \texttt{reto5.py}.
+
+La \textbf{Consulta 1} y la \textbf{Consulta 2} permitieron verificar el mapeo de clases. Mientras que la primera listó todas las clases presentes (\texttt{mel:Paciente}, \texttt{mel:Variante}, etc.), la segunda filtró exclusivamente los individuos con nombre, asegurando que no existieran nodos huérfanos o "blank nodes" inesperados que dificultaran la trazabilidad.
+
+Por otro lado, las \textbf{Consultas 3 y 4} se diseñaron para auditar el contenido del grafo. La Consulta 3 extrajo todas las \textit{Object Properties} activas (como \texttt{mel:afectaAGen}), confirmando que la red de relaciones entre entidades clínicas y genómicas se mantenía fiel al diseño original de MongoDB. Finalmente, la Consulta 4 recuperó los valores literales (\textit{Data Properties}), validando que tipos de datos sensibles como fechas (\texttt{xsd:date}) y recuentos genómicos (\texttt{xsd:integer}) se importaron con el tipado correcto. Este paso previo de auditoría fue esencial para garantizar que los resultados de las consultas posteriores (5 y 6) fueran biológicamente coherentes.
+
+\subsubsection{Validación del razonamiento semántico}
+
+La \textbf{Consulta 5} es crítica para evaluar el éxito de la integración semántica. Su objetivo es listar los tipos o clases a los que pertenece cada individuo tras la ejecución del razonador OWL. 
+
+\begin{listing}[H]
+\begin{minted}[frame=lines, fontsize=\footnotesize, linenos]{sparql}
+# ---------------------------------------------------------
+# Consulta 5 – Tipos inferidos tras razonamiento OWL
+# ---------------------------------------------------------
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+SELECT DISTINCT ?individuo ?claseInferida
+WHERE {
+  ?individuo rdf:type ?claseInferida .
+  FILTER (
+    ?claseInferida != owl:NamedIndividual &&
+    ?claseInferida != owl:Thing
+  )
+}
+ORDER BY ?claseInferida
+\end{minted}
+\caption{Consulta para extraer clases inferidas por el razonador.}
+\label{lst:sparql_inferencia}
+\end{listing}
+
+Los resultados de esta consulta confirmaron que el sistema clasifica automáticamente a los pacientes según su estado clínico. Individuos que en la base de datos original solo poseían el atributo "DECEASED" aparecen aquí clasificados bajo la clase \texttt{PacienteFallecido}, demostrando que el grafo de conocimiento es capaz de interpretar la lógica médica definida en la ontología.
+
+\subsubsection{Análisis genómico: Variantes por gen (Consulta 6)}
+
+La consulta final representa la utilidad práctica del sistema para un bioinformático. Esta consulta realiza un recuento de las variantes genéticas identificadas, agrupándolas por el símbolo del gen afectado. Para ello, la consulta debe navegar a través de la relación semántica entre la variante y la entidad genómica correspondiente.
+
+\begin{listing}[H]
+\begin{minted}[frame=lines, fontsize=\footnotesize, linenos]{sparql}
+# ---------------------------------------------------------
+# Consulta 6 – Número de variantes genéticas por gen
+# ---------------------------------------------------------
+PREFIX mel: <http://example.org/melanoma_es#>
+
+SELECT ?geneSymbol (COUNT(?variante) AS ?numVariantes)
+WHERE {
+  ?variante a mel:variants ;
+            mel:gene ?vg .
+  ?vg mel:symbol ?geneSymbol .
+}
+GROUP BY ?geneSymbol
+ORDER BY DESC(?numVariantes)
+\end{minted}
+\caption{Consulta SPARQL de agregación para el conteo de variantes por gen.}
+\label{lst:sparql_conteo}
+\end{listing}
+
+\textbf{Interpretación de resultados:}
+Esta consulta revela la distribución de mutaciones en la cohorte de melanoma acral estudiada. Los resultados obtenidos muestran, por ejemplo, una alta incidencia de variantes en genes como \texttt{ACAP3}, \texttt{NLRC5} y \texttt{MUTYH}. 
+
+La importancia de este resultado radica en que SPARQL permite realizar este conteo de forma directa sobre el grafo de conocimiento, sin necesidad de realizar múltiples \textit{joins} manuales como ocurriría en SQL o procesos de filtrado complejos en scripts externos. Al estar los datos "enlazados", el sistema entiende que una variante "pertenece" a un gen y puede realizar la agregación semántica de forma nativa. Esto facilita la identificación de genes frecuentemente mutados (\textit{drivers}) en el estudio, proporcionando una herramienta de análisis poderosa para la investigación oncológica.
