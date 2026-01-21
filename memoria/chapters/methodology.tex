@@ -107,3 +107,205 @@ Esta colección albergará la información específica de cada variante genómic
 		\end{itemize}
 	\end{itemize}
 \end{itemize}
+
+\subsection{Sistema de generación automática de reportes (Tarea 2)}
+
+se desarrolló un sistema genérico para la generación automática de vistas HTML a partir de consultas realizadas sobre la base de datos MongoDB. Este sistema permite integrar tecnologías NoSQL con estándares de transformación documental, conectando MongoDB con XML, XSLT y HTML dentro de un mismo flujo de trabajo. El objetivo principal es permitir que cualquier consulta definida por el usuario pueda transformarse automáticamente en una vista visual sin necesidad de modificar el código del sistema.
+
+
+
+\subsubsection{Diseño de las consultas MongoDB }
+
+Para la Tarea 2 se diseñaron tres consultas sobre MongoDB empleando el framework de agregación (\texttt{aggregate}) con el objetivo de obtener documentos JSON con suficiente riqueza y anidamiento como para: (i) explotar las relaciones definidas entre colecciones en la Tarea 1 y (ii) generar posteriormente vistas HTML significativas mediante transformación a XML y XSLT. Las consultas se definieron en un fichero externo \texttt{queries.txt}, de forma que el sistema pudiera ejecutarlas sin necesidad de modificar el código Python, manteniendo así un comportamiento genérico y reutilizable.
+
+Desde un punto de vista de diseño, las tres consultas cubren tres niveles de exploración: una vista centrada en el paciente (pacientes--muestras--variantes), una vista centrada en la variante enriquecida con conocimiento externo (OncoKB) y contexto clínico (paciente y muestra), y una vista ``completa'' orientada a inspección (variant--sample--patient). En todas ellas se aplican operadores de agregación como \texttt{\$lookup}, \texttt{\$unwind}, \texttt{\$project} y filtros por expresiones (\texttt{\$expr}) para realizar uniones equivalentes a \emph{joins} relacionales, pero preservando la estructura jerárquica propia de MongoDB.
+
+\paragraph{Consulta 1: \texttt{patients\_samples\_variants} (vista integrada por paciente)}
+
+Esta consulta parte de la colección \texttt{patients} y construye un documento agregado que integra la información clínica y de supervivencia del paciente junto con sus muestras y variantes asociadas. El flujo principal es:
+
+\begin{itemize}
+	\item \textbf{Limitación de resultados} (\texttt{\$limit: 20}) para controlar el tamaño de salida y facilitar pruebas y generación rápida de HTML.
+	\item \textbf{Unión patients $\rightarrow$ samples} mediante \texttt{\$lookup} usando como clave \texttt{patient\_id} (en \texttt{patients}) y \texttt{patient.id} (en \texttt{samples}). El resultado se incorpora como un array \texttt{samples}.
+	\item \textbf{Unión samples $\rightarrow$ variants} usando \texttt{\$lookup} con \texttt{pipeline} y variables (\texttt{let}). Se crea la variable \texttt{sample\_ids} con la lista \texttt{\$samples.sample\_id} y se filtran variantes con \texttt{\$expr} y \texttt{\$in}.
+	\item \textbf{Selección de campos} mediante \texttt{\$project}, devolviendo \texttt{patient\_id}, \texttt{clinical}, \texttt{survival}, \texttt{recurrence}, \texttt{samples} y un resumen de \texttt{variants}.
+\end{itemize}
+
+Esta consulta genera una vista integrada de historia clínica con información clínica y genómica combinada.
+
+\paragraph{Consulta 2: \texttt{variants\_with\_oncokb} (enriquecimiento externo)}
+
+La segunda consulta se centra en la colección \texttt{variants} y combina información genómica con conocimiento externo de \texttt{oncokb\_genes} y el contexto clínico:
+
+\begin{itemize}
+	\item \textbf{Limitación} (\texttt{\$limit: 20}).
+	\item \textbf{Unión variants $\rightarrow$ oncokb\_genes} con \texttt{\$lookup} usando \texttt{gene.symbol}.
+	\item \textbf{Unión variants $\rightarrow$ samples} usando \texttt{samples.tumor\_sample} $\rightarrow$ \texttt{sample\_id}.
+	\item \textbf{Unión samples $\rightarrow$ patients} usando \texttt{sample.patient.id} $\rightarrow$ \texttt{patient\_id}.
+	\item \textbf{Normalización} con \texttt{\$unwind}.
+	\item \textbf{Proyección final} usando \texttt{\$arrayElemAt} para extraer valores de \texttt{oncokb}.
+\end{itemize}
+
+Esta consulta transforma datos crudos en datos interpretados con valor biológico.
+
+\paragraph{Consulta 3: \texttt{variants\_full\_info} (vista completa)}
+
+Esta consulta genera una vista completa que conecta cada variante con su muestra y paciente:
+
+\begin{itemize}
+	\item \textbf{Limitación} (\texttt{\$limit: 20}).
+	\item \textbf{Unión variants $\rightarrow$ samples} con \texttt{\$lookup}.
+	\item \textbf{Normalización} con \texttt{\$unwind: "\$sample"}.
+	\item \textbf{Unión samples $\rightarrow$ patients} con \texttt{\$lookup}.
+	\item \textbf{Segundo \texttt{\$unwind}} para obtener un único documento por variante.
+\end{itemize}
+
+\paragraph{Consideraciones de diseño}
+
+\begin{itemize}
+	\item Uso de \texttt{\$limit} para pruebas controladas.
+	\item Empleo de \texttt{\$project} para reducir tamaño de salida.
+	\item Uso de \texttt{\$lookup} con \texttt{pipeline} para relaciones basadas en listas.
+	\item Recomendación de indexar \texttt{patient\_id}, \texttt{sample\_id} y \texttt{samples.tumor\_sample}.
+\end{itemize}
+
+\subsubsection{Transformación de JSON a XML }
+
+Una vez ejecutada cada consulta sobre MongoDB, el resultado se obtiene como una lista de documentos JSON (Python \texttt{list} de \texttt{dict}) que conserva la estructura anidada original del modelo de datos. En este proyecto, los documentos devueltos pueden contener múltiples niveles de anidamiento y heterogeneidad estructural: diccionarios (objetos), listas (arrays) y valores primitivos, además de campos con nombres no directamente compatibles con XML (por ejemplo, \texttt{\_id} o claves con puntos). Por ello, se implementó una conversión \textbf{genérica, recursiva y robusta} que permite transformar \emph{cualquier} salida JSON en un árbol XML válido y navegable, sin asumir un esquema fijo.
+
+\paragraph{Normalización de claves para XML}
+MongoDB permite nombres de campos que no siempre son válidos como etiquetas XML. Para resolverlo, el script implementa una función de normalización (\texttt{normalize\_key}) que:
+\begin{itemize}
+	\item Convierte el campo especial \texttt{\_id} en \texttt{id}, evitando el carácter \texttt{\_} inicial como etiqueta principal y facilitando su lectura en XSLT.
+	\item Sustituye el carácter punto \texttt{.} por guion bajo \texttt{\_} (p.ej., \texttt{patient.id} $\rightarrow$ \texttt{patient\_id}), ya que las etiquetas XML no permiten puntos en el nombre.
+	\item Sustituye el símbolo \texttt{\$} por el prefijo \texttt{DOLLAR\_}, evitando colisiones con sintaxis propia de MongoDB.
+\end{itemize}
+Esta normalización permite que el XML resultante sea \textbf{válido}, consistente y transformable mediante XSLT sin necesidad de lógica adicional para tratar casos especiales.
+
+\paragraph{Conversión recursiva de estructuras JSON}
+La transformación se realiza mediante dos funciones: \texttt{json\_to\_xml} (crea la raíz) y \texttt{build\_xml} (recorre recursivamente la estructura). La idea principal es mapear cada tipo JSON a una representación XML explícita:
+
+\begin{itemize}
+	\item \textbf{Diccionarios (objetos):} se representan como un nodo con atributo \texttt{type="object"} y se crea un subelemento por cada par clave--valor. Cada clave se normaliza y se convierte en una etiqueta XML.
+	\item \textbf{Listas (arrays):} se representan como un nodo con atributo \texttt{type="list"} y cada elemento se encapsula en una etiqueta \texttt{element}. Esto unifica el tratamiento de listas aunque contengan objetos complejos o valores simples.
+	\item \textbf{Valores primitivos (string, int, float, boolean, null):} se serializan como texto dentro del nodo. En el caso de \texttt{null}, se escribe una cadena vacía para evitar errores de transformación.
+\end{itemize}
+
+Este enfoque es especialmente útil en bases de datos NoSQL, donde el esquema puede variar entre documentos y donde pueden existir arrays de objetos con niveles profundos (por ejemplo, un paciente que contiene múltiples muestras, y cada muestra variantes, y cada variante anotaciones y metadatos). La recursividad garantiza que la conversión funcione correctamente independientemente de la profundidad del anidamiento.
+
+\paragraph{Estructura XML resultante}
+El XML generado se construye siempre bajo una raíz \texttt{<root>}, y dado que las consultas devuelven una lista de documentos, el nivel inmediatamente inferior suele ser un conjunto de \texttt{<element>} (uno por documento). A modo ilustrativo, la salida sigue el patrón:
+
+\begin{verbatim}
+	<root type="list">
+	<element type="object">
+	<patient_id>...</patient_id>
+	<clinical type="object">...</clinical>
+	<samples type="list">
+	<element type="object">...</element>
+	</samples>
+	</element>
+	</root>
+\end{verbatim}
+
+La inclusión del atributo \texttt{type} (con valores \texttt{object} o \texttt{list}) aporta semántica adicional que facilita el diseño de plantillas XSLT, ya que permite distinguir explícitamente entre nodos que representan objetos y nodos que representan colecciones.
+
+\paragraph{Serialización y persistencia del XML}
+Finalmente, el árbol XML se serializa a disco mediante \texttt{lxml.etree.ElementTree.write} con \texttt{pretty\_print=true} y codificación \texttt{UTF-8}. Para cada consulta se genera un fichero independiente con nombre \texttt{<consulta>.xml}, permitiendo depuración y trazabilidad del flujo:
+
+\begin{itemize}
+	\item Comprobar que la consulta devuelve datos antes de aplicar XSLT.
+	\item Validar que la estructura XML coincide con lo esperado por la plantilla.
+	\item Reutilizar el XML como salida intermedia interoperable.
+\end{itemize}
+
+En conjunto, esta etapa asegura una transformación fiable desde JSON (flexible y anidado) hacia XML (estructurado y estándar), habilitando la fase posterior de generación de HTML mediante XSLT.
+
+\subsubsection{Aplicación de XSLT y generación de HTML}
+
+Una vez obtenido el documento XML de salida para cada consulta, el siguiente paso consiste en transformar dicho XML en una vista HTML legible y reutilizable mediante una hoja de estilo XSLT. En esta tarea se optó por XSLT 1.0 debido a su amplia compatibilidad y a su facilidad para definir transformaciones declarativas basadas en patrones. La plantilla \texttt{template.xslt} está diseñada con un enfoque \textbf{genérico}, de manera que pueda aplicarse a distintos resultados de consulta siempre que el XML de entrada mantenga la estructura común generada por el script (raíz \texttt{root} con elementos \texttt{element} y atributo \texttt{type} para diferenciar objetos y listas).
+
+\paragraph{Estrategia general de visualización}
+La plantilla implementa una estrategia de renderizado basada en tablas HTML anidadas. A nivel superior, el resultado completo se presenta como una tabla donde:
+\begin{itemize}
+	\item Las \textbf{columnas} se generan dinámicamente a partir de las claves del primer registro (\texttt{root/element[1]/*}), evitando codificar nombres de campos fijos.
+	\item Las \textbf{filas} se generan recorriendo cada documento de salida (\texttt{root/element}).
+\end{itemize}
+Este diseño es especialmente útil en MongoDB, donde las consultas pueden devolver estructuras con distintos campos o subdocumentos dependiendo de la etapa del pipeline. De esta forma, la plantilla se adapta automáticamente a la salida sin necesidad de reescribir HTML para cada consulta.
+
+\paragraph{Uso del atributo \texttt{type} para distinguir objetos y listas}
+La conversión JSON$\rightarrow$XML introdujo el atributo \texttt{type} con valores \texttt{object} y \texttt{list}. Esta decisión simplifica significativamente el XSLT, permitiendo aplicar renderizado condicional con \texttt{xsl:choose}:
+\begin{itemize}
+	\item Si \texttt{@type='object'}, el contenido se representa como una tabla interna de pares clave--valor.
+	\item Si \texttt{@type='list'}, el contenido se renderiza como una lista de elementos, que puede ser a su vez una lista de objetos o una lista de valores simples.
+	\item Si no existe \texttt{@type}, el contenido se interpreta como valor simple (texto) y se inserta directamente en la celda HTML.
+\end{itemize}
+Gracias a esta semántica, la plantilla puede recorrer estructuras anidadas de forma robusta, incluso cuando aparecen objetos dentro de objetos y listas dentro de objetos.
+
+\paragraph{Plantillas reutilizables: \texttt{renderObject} y \texttt{renderList}}
+Para evitar duplicación de lógica, la transformación se apoya en dos plantillas nombradas:
+
+\begin{itemize}
+	\item \textbf{\texttt{renderObject}:} recibe un nodo que representa un objeto (\texttt{type="object"}) y genera una tabla anidada donde cada fila corresponde a una clave y su valor. En cada valor se vuelve a aplicar una lógica recursiva: si el valor es otro objeto se vuelve a invocar \texttt{renderObject}; si es una lista se invoca \texttt{renderList}; y si es simple se imprime el texto.
+	\item \textbf{\texttt{renderList}:} recibe un nodo lista (\texttt{type="list"}) y diferencia tres casos: (i) lista de objetos (cuando \texttt{element/*} existe), (ii) lista de valores simples (cuando \texttt{element} no tiene subnodos) y (iii) un caso especial para listas de variantes.
+\end{itemize}
+
+Esta separación permite que el HTML final mantenga una estructura coherente: objetos como tablas clave--valor y listas como colecciones de bloques repetidos, favoreciendo la legibilidad.
+
+\paragraph{Caso especial: visualización colapsable de variantes}
+Debido a la naturaleza del dominio genómico, la colección de variantes puede ser voluminosa incluso tras aplicar limitaciones (\texttt{\$limit}) y proyecciones. Para evitar generar páginas HTML excesivamente largas, la plantilla define un \textbf{caso especial} para el nodo \texttt{variants} dentro de \texttt{renderList}. En este caso:
+
+\begin{itemize}
+	\item Se construye un identificador único con \texttt{generate-id(\$node)} para cada bloque de variantes.
+	\item Se muestra un \textbf{resumen} con el número de variantes (\texttt{../variants\_count}) junto a un botón ``Mostrar / Ocultar''.
+	\item Las variantes se renderizan en un contenedor HTML inicialmente oculto (\texttt{style="display:none"}), que se puede desplegar bajo demanda.
+\end{itemize}
+
+Este comportamiento se implementa con un pequeño fragmento de JavaScript embebido (\texttt{toggleVisibility(id)}), que alterna la visibilidad de cada bloque. El objetivo es mejorar la usabilidad del reporte y reducir la sobrecarga visual cuando existen múltiples variantes asociadas a un mismo paciente o muestra.
+
+\paragraph{Estilos y legibilidad del reporte}
+La plantilla incluye estilos CSS básicos (tipografía, márgenes, bordes y colores de cabecera) para presentar la información de forma clara. Se utiliza \texttt{border-collapse} y un sombreado ligero en \texttt{th} para diferenciar encabezados de datos, y la clase \texttt{nested-table} permite ajustar el espaciado de tablas internas, manteniendo la jerarquía visual.
+
+\paragraph{Salida HTML y desacoplamiento del diseño}
+El uso de XSLT permite desacoplar el \textbf{diseño} del \textbf{proceso de consulta} y transformación. Así, es posible:
+\begin{itemize}
+	\item modificar la presentación (colores, estructura, agrupaciones) sin tocar el script Python,
+	\item reutilizar el mismo XSLT para varias consultas,
+	\item o definir plantillas específicas por consulta manteniendo el mismo XML intermedio.
+\end{itemize}
+
+En resumen, la etapa XSLT convierte resultados complejos provenientes de MongoDB en vistas HTML estructuradas y navegables, manteniendo un enfoque genérico y reutilizable, y añadiendo mecanismos de interacción (colapsado) para mejorar la exploración de listas voluminosas como las variantes genéticas.
+
+\subsubsection{Script genérico}
+
+El script desarrollado para esta tarea ha sido diseñado con un enfoque \textbf{genérico y reutilizable}, de forma que pueda aplicarse no solo a la base de datos de melanoma utilizada en el proyecto, sino también a cualquier otra base de datos MongoDB con estructura jerárquica compatible. Para ello, el programa no contiene nombres de colecciones ni campos codificados de manera fija, sino que interpreta dinámicamente la información proporcionada por el usuario en tiempo de ejecución.
+
+La entrada del script se define completamente mediante argumentos por línea de comandos, que permiten especificar:
+\begin{itemize}
+	\item La \textbf{URI de conexión} a MongoDB.
+	\item El \textbf{nombre de la base de datos}.
+	\item Un \textbf{archivo de texto} con la definición de las consultas en formato MongoDB (find o aggregate).
+	\item Un \textbf{documento XSLT} con la plantilla de visualización.
+	\item El \textbf{directorio de salida} para los ficheros generados.
+\end{itemize}
+
+Gracias a esta parametrización, el mismo script puede reutilizarse para distintas bases de datos, distintas consultas y distintos formatos de presentación, sin necesidad de modificar el código fuente.
+
+Asimismo, el programa es capaz de procesar consultas de distinta complejidad, incluyendo pipelines de agregación con \texttt{\$lookup}, \texttt{\$project}, \texttt{\$unwind} y otras etapas propias de MongoDB. Esto permite explotar relaciones entre colecciones y generar vistas enriquecidas sin acoplar el script a un esquema concreto.
+
+En definitiva, el carácter genérico del script convierte esta herramienta en un componente flexible dentro del flujo de trabajo, permitiendo su reutilización en otros proyectos que requieran transformar resultados MongoDB a XML y posteriormente a HTML mediante XSLT.
+
+\subsubsection{Flujo completo}
+\label{sec:flujo_tarea2}
+
+La Figura~\ref{fig:flujo_tarea2} muestra el flujo completo del proceso
+implementado en la Tarea 2, desde la entrada de credenciales y consultas
+hasta la generación final del documento HTML mediante XML y XSLT.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.95\textwidth]{figs/FlujoTarea2.png}
+	\caption{Flujo completo del proceso MongoDB → XML → XSLT → HTML.}
+	\label{fig:flujo_tarea2}
+\end{figure}
+

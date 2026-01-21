@@ -1,2 +1,49 @@
 \chapter{Results}{\label{ch:results}}
 
+\subsection{Sistema de generación automática de reportes (Tarea 2)}
+
+En esta sección se muestran los resultados obtenidos tras la ejecución del script genérico desarrollado en la Tarea 2. El sistema procesa consultas MongoDB, genera documentos XML intermedios y aplica una plantilla XSLT para producir vistas HTML finales.
+
+La ejecución se realizó mediante el siguiente comando:
+
+\begin{verbatim}
+	python mongoxml_to_html.py \
+	--uri <URI_MONGO> \
+	--db EstadaresProyecto \
+	--queries queries.txt \
+	--xslt template.xslt \
+	--outdir resultados/mongo_a_html
+\end{verbatim}
+
+\subsubsection{Resultados XML}
+
+Tras ejecutar el script, se generan automáticamente documentos XML
+correspondientes a cada consulta definida en el archivo \texttt{queries.txt}.
+La Figura~\ref{fig:xml_resultado} muestra un ejemplo del XML generado.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{figs/xml_ejemplo.png}
+	\caption{Ejemplo de documento XML generado a partir de una consulta MongoDB.}
+	\label{fig:xml_resultado}
+\end{figure}
+
+\subsubsection{Resultados HTML}
+
+Posteriormente, cada documento XML es transformado mediante la plantilla XSLT,
+obteniéndose un archivo HTML con una visualización estructurada y navegable.
+La Figura~\ref{fig:html_resultado} muestra un ejemplo del resultado final.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.95\textwidth]{figs/html_ejemplo.png}
+	\caption{Vista HTML generada automáticamente a partir del XML mediante XSLT.}
+	\label{fig:html_resultado}
+\end{figure}
+
+
+
+El sistema se probó con tres consultas diferentes, todas ellas con estructuras
+de salida distintas. En todos los casos se generaron correctamente los
+documentos XML y HTML, demostrando la capacidad genérica del script para
+adaptarse a distintas consultas sin necesidad de modificar el código.
